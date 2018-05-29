@@ -1,0 +1,2884 @@
+                        MPI RSPT
+ RSPt version number:         rspt.6.0102221136
+ Git hash of master, current: 06889a3   06889a3
+ compiler flags             : -O2                                                     
+
+                   MPI Task Configuration
+ Tasks in k-point parallelization:                  96
+ Tasks in intra-k-point parallelization:             1
+ Total MPI tasks:                                   96
+                   FFT Configuration
+                  single-threaded FFTW3
+ 
+ Readin: Please, set the env variable
+  RSPT_SCRATCH to point to your scratch directory.
+
+
+
+                           RSPT
+                        OUTPUT for :
+ LABEL                                                          
+      time             date             host
+     11.44         29 May 2018          nid01551
+
+c Parameters (para.glo):
+      integer     ncqpar, ntppar, nclpar, nlmpar, nsdpar, nthpar
+     >          , nchpar, norpar, nrppar, nktpar, nttpar, nespar
+     >          , ntlpar, nylpar, optpar, nptpar, ntepar
+      parameter (
+     >     ncqpar=         N/A
+     >   , ntppar=     3, nclpar=     4
+     >   , nlmpar=     8, nsdpar=     2
+     >   , nthpar=    95, nchpar=    85
+     >   , norpar=    24, nrppar=   543
+     >   , nktpar=   121, nttpar=     0
+     >   , nespar=     1, ntlpar=     3
+     >   , nylpar=    48, optpar=  5000
+     >          )
+      parameter (nptpar = nrppar + 100, ntepar = ntlpar * nespar)
+c fix these
+      integer     nftpar, nprpar, nkwpar, newpar, nutpar
+      parameter (nftpar=512, nprpar=9, nkwpar=1, newpar=1, nutpar=1)
+
+readin: DMFT requires that prnt(7) and prnt(8) are set to T
+
+  ntype    lm  lmwp     valence
+      3     8     8        32.0
+       warpin      warpmt        pmix
+            T           T       0.050
+       fulrel      spipol  iterations
+            F           T           1
+ control variables :
+     +    1    +    2    +    3    +    4    +    5    +    6    +    7
+ FFTFFFTTTFFFFFFFFFFFTFTFFFFFFFFTFFFFTFFFFFFFTFFFFFFFFFFFFFFFTFFFFFTTFFFF
+
+      Exchange-Correlation function ...
+         Hedin-Lundqvist: vonBarth-Hedin interpolation, RPA scaling     
+
+    ntl     .   nes     .     .           .           .   log(epst)
+      3     1     1     1     1         0.0         0.0     -38.000
+   tail      ( t )**2     ( tR )**2         .     ?  .  .  .
+      1     0.3000000    18.7230000     0.000     0  1  0  1
+      2    -2.3000000  -143.5430000     0.000     0  1  0  1
+      3    -1.5000000   -93.6150000     0.000     0  1  0  1
+
+ Bravais lattice basis / 7.90000000 ... R(i,j) = R_i(j)
+  .000000000000000 -.500000000000000  1.00000000000000
+ -.500000000000000  .000000000000000  1.00000000000000
+  .500000000000000  .500000000000000  .000000000000000
+
+ Reciprocal lattice basis * 7.90000000 / twopi ... G(i,j) = G_i(j)
+  1.00000000000000 -1.00000000000000  .500000000000000
+ -1.00000000000000  1.00000000000000  .500000000000000
+  1.00000000000000  1.00000000000000  .500000000000000
+
+ unit cell volume: 
+       .500000000000000 * 7.90000000**3
+       .119366207318921 * 7.90000000**3 * 4pi/3
+
+ Procedures:
+ Diagonalization    ... 2
+
+ Brillouin zone integration ...
+
+ Brillouin zone vectors :  1 point sets
+          set        nkbz       iwsum
+            1         121         432
+
+     Integration method:
+     Special points with Fermi smearing ...
+          kT(mRy)     Ecut/kT
+            0.500     320.000
+      Spin axis ...
+                 x                 y                 z
+  0.00000000000000  0.00000000000000  0.00000000000000
+             alpha              beta             gamma
+  0.00000000000000  0.00000000000000  0.00000000000000
+          Field strength        Field star   Mix Ratio
+                  0.0000                 1    0.100000
+ Type     Z     e   Sites   Harmonics
+    1  28.0 18.00       1          25
+            S       Sco/S       Sex/S       Sws/S     ScoFlag
+    2.0264080   1.2092256   1.0000000   1.0000000           v
+                       dx                r1   Nmt
+      2.5000000000000E-02   2.642631829E-06   543
+ G*t/2pi:                 1                   2                   3
+        0.0000000000000E+00 0.0000000000000E+00 0.0000000000000E+00
+       Core    Levels :   n           k         occ        flag
+                          1          -1       2.000           0
+                          2          -1       2.000           0
+                          2           1       2.000           0
+                          2          -2       4.000           0
+                          3          -1       2.000           0
+                          3           1       2.000           0
+                          3          -2       4.000           0
+      Valence levels:
+           e  l  spin  n  i
+           1  0  down  4  0
+                   up  4  0
+              1  down  4  0
+                   up  4  0
+              2  down  3 -1
+                   up  3 -1
+              3  down  4  0
+                   up  4  0
+              4  down  5  0
+                   up  5  0
+              5  down  6  0
+                   up  6  0
+              6  down  7  0
+                   up  7  0
+              7  down  8  0
+                   up  8  0
+              8  down  9  0
+                   up  9  0
+ Type     Z     e   Sites   Harmonics
+    2  28.0 18.00       1          25
+            S       Sco/S       Sex/S       Sws/S     ScoFlag
+    2.0264080   1.2092256   1.0000000   1.0000000           v
+                       dx                r1   Nmt
+      2.5000000000000E-02   2.642631829E-06   543
+ G*t/2pi:                 1                   2                   3
+        0.0000000000000E+00 0.0000000000000E+00 5.0000000000000E-01
+       Core    Levels :   n           k         occ        flag
+                          1          -1       2.000           0
+                          2          -1       2.000           0
+                          2           1       2.000           0
+                          2          -2       4.000           0
+                          3          -1       2.000           0
+                          3           1       2.000           0
+                          3          -2       4.000           0
+      Valence levels:
+           e  l  spin  n  i
+           1  0  down  4  0
+                   up  4  0
+              1  down  4  0
+                   up  4  0
+              2  down  3 -1
+                   up  3 -1
+              3  down  4  0
+                   up  4  0
+              4  down  5  0
+                   up  5  0
+              5  down  6  0
+                   up  6  0
+              6  down  7  0
+                   up  7  0
+              7  down  8  0
+                   up  8  0
+              8  down  9  0
+                   up  9  0
+ Type     Z     e   Sites   Harmonics
+    3   8.0  2.00       2          45
+            S       Sco/S       Sex/S       Sws/S     ScoFlag
+    1.7278895   1.4181373   1.0000000   1.0000000           v
+                       dx                r1   Nmt
+      2.5000000000000E-02   1.116084044E-05   479
+ G*t/2pi:                 1                   2                   3
+        5.0000000000000E-01 5.0000000000000E-01 2.5000000000000E-01
+        5.0000000000000E-01 5.0000000000000E-01-2.5000000000000E-01
+       Core    Levels :   n           k         occ        flag
+                          1          -1       2.000           0
+      Valence levels:
+           e  l  spin  n  i
+           1  0  down  2  0
+                   up  2  0
+              1  down  2  0
+                   up  2  0
+              2  down  3  0
+                   up  3  0
+              3  down  4  0
+                   up  4  0
+              4  down  5  0
+                   up  5  0
+              5  down  6  0
+                   up  6  0
+              6  down  7  0
+                   up  7  0
+              7  down  8  0
+                   up  8  0
+              8  down  9  0
+                   up  9  0
+
+ Valence Basis Functions.
+        Bases    MD    EV
+           24   176    82
+        t  a  l  e     tail         
+        1  1  0  1        1
+        1  1  0  1        2
+        1  1  0  1        3
+        1  1  1  1        1
+        1  1  1  1        2
+        1  1  1  1        3
+        1  1  2  1        1
+        1  1  2  1        2
+        2  1  0  1        1
+        2  1  0  1        2
+        2  1  0  1        3
+        2  1  1  1        1
+        2  1  1  1        2
+        2  1  1  1        3
+        2  1  2  1        1
+        2  1  2  1        2
+        3  2  0  1        1
+        3  2  0  1        2
+        3  2  0  1        3
+        3  2  1  1        1
+        3  2  1  1        2
+        3  2  1  1        3
+        3  2  2  1        1
+        3  2  2  1        2
+
+ unit cell volume:  246.519500000000
+    radius of V/N:  2.45038443
+       muffin tins      interstitial   v(I)/vcell
+  112.928854044437  133.590645955562  .541907013260869
+ FT initialization done
+
+ Shift unit cell vectors. In Wyckof coordinates, :
+     a                dx                dy                dz
+     3  .000000000000000  .000000000000000  .000000000000000
+     4  .000000000000000  .000000000000000  .000000000000000
+
+ New unit cell vectors in Wyckoff coordinates:
+     a                 x                 y                 z
+     1  .000000000000000  .000000000000000  .000000000000000
+     2 -.000000000000000  .000000000000000  .500000000000000
+     3  .500000000000000  .500000000000000  .250000000000000
+     4  .500000000000000  .500000000000000 -.250000000000000
+ Reciprocal lattice read from gvector
+
+ Reciprocal lattice:
+       Group:  4      Grid(-Mi:Mi):  M = ( 12, 12, 24)
+       stars     vectors               max * S_a
+        7969       30625         77.564784738283
+ TIME: RLGEN:      0.003m in,      0.000m added,      0.003m total
+
+ setchi: this lattice has inversion symmetry
+         cut on interstitial potential:  0.1110223024625E-15
+ TIME: SETCHI:      0.003m in,      0.000m added,      0.003m total
+
+ Bravais lattice:
+       Group:  4      Grid(-Mi:Mi):  M = ( 12, 12, 24)
+       stars     vectors               max / S_a
+        7969       30625         142.14807924524
+ TIME: BLGEN:      0.003m in,      0.000m added,      0.003m total
+
+ Nearest neighbors: min_{b+R} |b+R-a|, |b+R-a| < 1.1 (min|R|= 5.5861436)
+  ta  tb         d/L        2S/d   d(au)    d(A)    a    b
+   1   3 .5000000000 .9504550556 3.95000 2.09025    1    3
+       3 .5000000000 .9504550556 3.95000 2.09025    1    4
+       2 .7071067811 .7255123231 5.58614 2.95606    1    2
+       1 .7071067811 .7255123231 5.58614 2.95606    1    1
+   2   3 .5000000000 .9504550556 3.95000 2.09025    2    3
+       3 .5000000000 .9504550556 3.95000 2.09025    2    4
+       1 .7071067811 .7255123231 5.58614 2.95606    2    1
+       2 .7071067811 .7255123231 5.58614 2.95606    2    2
+   3   1 .5000000000 .9504550556 3.95000 2.09025    3    1
+       2 .5000000000 .9504550556 3.95000 2.09025    3    2
+       3 .7071067811 .6186341070 5.58614 2.95606    3    4
+       3 .7071067811 .6186341070 5.58614 2.95606    3    3
+ TIME: COUNTN:      0.003m in,      0.000m added,      0.003m total
+ TIME: ORDINSTEP:      0.003m in,      0.000m added,      0.003m total
+ TIME: INIT_GAUNT:      0.003m in,      0.000m added,      0.003m total
+ Readpot:
+       2 spins in the input potential
+      25 harmonics in the input potential for type       1
+      25 harmonics in the input potential for type       2
+      45 harmonics in the input potential for type       3
+    7969 stars in the input potential
+ TIME: GETPOT:      0.003m in,      0.001m added,      0.003m total
+ TIME: GETEP:      0.004m in,      0.000m added,      0.004m total
+
+ Muffin tin energies
+
+   type         smt   nmt         sws   nws
+      1   2.0264080   543   2.0264080   543
+   spin           Q          xl        vinf
+      1   0.0000000   0.4872667   0.1147484
+   L  n      e(d~L)      e(d=0)        e(c)        d(c)     e(d=do)          do
+   0  4  .092218254  .092218254  .915221681 -1.00000000
+   1  4  .279038420  1.09699862  2.02166933 -1.09430286
+   2  3 -.977761838  .166453473  .514496208 -1.91387918
+   3  4 -.276855212  3.82871293  5.00833915 -1.37919296
+   4  5 -.040595628  6.83212532  8.32517312 -1.43991709
+   5  6  .137407878  10.2890594  12.0588083 -1.50962508
+   6  7  .290729125  14.2504677  16.2868637 -1.57973878
+   7  8  .430831302  18.7280862  21.0279791 -1.64859359
+   8  9  .562948396  23.7249762  26.2879130 -1.71578216
+   spin           Q          xl        vinf
+      2   0.0000000   0.4965626   0.1406276
+   L  n      e(d~L)      e(d=0)        e(c)        d(c)     e(d=do)          do
+   0  4  .036364682  .036364682  .854352476 -1.00000000
+   1  4  .220629126  1.03707884  1.95939949 -1.09628595
+   2  3 -1.04309740  .053035637  .389952386 -2.01328480
+   3  4 -.309179959  3.78166538  4.95612747 -1.38298211
+   4  5 -.067431648  6.79230574  8.28200140 -1.44230378
+   5  6  .113842396  10.2532291  12.0204092 -1.51144169
+   6  7  .269414592  14.2174136  16.2517125 -1.58121924
+   7  8  .411173013  18.6971468  20.9952662 -1.64984475
+   8  9  .544561356  23.6957287  26.2571304 -1.71686440
+
+   type         smt   nmt         sws   nws
+      2   2.0264080   543   2.0264080   543
+   spin           Q          xl        vinf
+      1   0.0000000   0.4965626   0.1406276
+   L  n      e(d~L)      e(d=0)        e(c)        d(c)     e(d=do)          do
+   0  4  .036364682  .036364682  .854352476 -1.00000000
+   1  4  .220629126  1.03707884  1.95939949 -1.09628595
+   2  3 -1.04309740  .053035637  .389952386 -2.01328480
+   3  4 -.309179959  3.78166538  4.95612747 -1.38298211
+   4  5 -.067431648  6.79230574  8.28200140 -1.44230378
+   5  6  .113842396  10.2532291  12.0204092 -1.51144169
+   6  7  .269414592  14.2174136  16.2517125 -1.58121924
+   7  8  .411173013  18.6971468  20.9952662 -1.64984475
+   8  9  .544561356  23.6957287  26.2571304 -1.71686440
+   spin           Q          xl        vinf
+      2   0.0000000   0.4872667   0.1147484
+   L  n      e(d~L)      e(d=0)        e(c)        d(c)     e(d=do)          do
+   0  4  .092218254  .092218254  .915221681 -1.00000000
+   1  4  .279038420  1.09699862  2.02166933 -1.09430286
+   2  3 -.977761838  .166453473  .514496208 -1.91387918
+   3  4 -.276855212  3.82871293  5.00833915 -1.37919296
+   4  5 -.040595628  6.83212532  8.32517312 -1.43991709
+   5  6  .137407878  10.2890594  12.0588083 -1.50962508
+   6  7  .290729125  14.2504677  16.2868637 -1.57973878
+   7  8  .430831302  18.7280862  21.0279791 -1.64859359
+   8  9  .562948396  23.7249762  26.2879130 -1.71578216
+
+   type         smt   nmt         sws   nws
+      3   1.7278895   479   1.7278895   479
+   spin           Q          xl        vinf
+      1   0.0000000   0.5261384   0.0795096
+   L  n      e(d~L)      e(d=0)        e(c)        d(c)     e(d=do)          do
+   0  2 -1.64247645 -1.64247645 -.721886059 -2.16473766
+   1  2 -1.12230302 -.439760588  .261449661 -1.38771137
+   2  3 -.221651335  2.73890922  4.08638132 -1.26267910
+   3  4  .098519194  6.03319211  7.78817617 -1.33757895
+   4  5  .328846955  9.99267146  12.1161456 -1.41594833
+   5  6  .525969815  14.6671890  17.1482046 -1.49241222
+   6  7  .707000370  20.0658296  22.9014588 -1.56625543
+   7  8  .879013504  26.1889291  29.3794132 -1.63751915
+   8  9  1.04547658  33.0343636  36.5814195 -1.70640587
+   spin           Q          xl        vinf
+      2   0.0000000   0.5261384   0.0795096
+   L  n      e(d~L)      e(d=0)        e(c)        d(c)     e(d=do)          do
+   0  2 -1.64247645 -1.64247645 -.721886059 -2.16473766
+   1  2 -1.12230302 -.439760588  .261449661 -1.38771137
+   2  3 -.221651335  2.73890922  4.08638132 -1.26267910
+   3  4  .098519194  6.03319211  7.78817617 -1.33757895
+   4  5  .328846955  9.99267146  12.1161456 -1.41594833
+   5  6  .525969815  14.6671890  17.1482046 -1.49241222
+   6  7  .707000370  20.0658296  22.9014588 -1.56625543
+   7  8  .879013504  26.1889291  29.3794132 -1.63751915
+   8  9  1.04547658  33.0343636  36.5814195 -1.70640587
+
+      Energy parameters ...                          energy reset
+                                                     | npr(mt) .ne. npr
+                                                     | | e < e1(ws)
+        t  e  l  spin  n mt           E       D(mt)  | | | e > e2
+        1  1  0  down  4  4   0.1531129      -0.066  - - - -
+                   up  4  4   0.1106669      -0.081  - - - -
+              1  down  4  4   0.1843353       0.857  - - * -
+                   up  4  4   0.1377470       0.847  - - * -
+              2  down  3  3   0.5144962      -1.914  * - - -
+                   up  3  3   0.3899524      -2.013  * - - -
+              3  down  4  4   0.2615021       2.498  - - * -
+                   up  4  4   0.2413847       2.491  - - * -
+              4  down  5  5   0.1369493       3.704  - - * -
+                   up  5  5   0.1675162       3.681  - - * -
+              5  down  6  6   0.1783055       4.762  - - * -
+                   up  6  6   0.1601778       4.760  - - * -
+              6  down  7  7   0.1432848       5.817  - - * -
+                   up  7  7   0.1849595       5.799  - - * -
+              7  down  8  8   0.2539776       6.819  - - * -
+                   up  8  8   0.2338993       6.819  - - * -
+              8  down  9  9   0.1641571       7.863  - - * -
+                   up  9  9   0.1877754       7.854  - - * -
+        2  1  0  down  4  4   0.1106669      -0.081  - - - -
+                   up  4  4   0.1531129      -0.066  - - - -
+              1  down  4  4   0.1377470       0.847  - - * -
+                   up  4  4   0.1843353       0.857  - - * -
+              2  down  3  3   0.3899524      -2.013  * - - -
+                   up  3  3   0.5144962      -1.914  * - - -
+              3  down  4  4   0.2413847       2.491  - - * -
+                   up  4  4   0.2615021       2.498  - - * -
+              4  down  5  5   0.1675162       3.681  - - * -
+                   up  5  5   0.1369493       3.704  - - * -
+              5  down  6  6   0.1601778       4.760  - - * -
+                   up  6  6   0.1783055       4.762  - - * -
+              6  down  7  7   0.1849595       5.799  - - * -
+                   up  7  7   0.1432848       5.817  - - * -
+              7  down  8  8   0.2338993       6.819  - - * -
+                   up  8  8   0.2539776       6.819  - - * -
+              8  down  9  9   0.1877754       7.854  - - * -
+                   up  9  9   0.1641571       7.863  - - * -
+        3  1  0  down  2  2  -0.6410239      -2.503  - - - *
+                   up  2  2  -0.6410239      -2.503  - - - *
+              1  down  2  2   0.3062248      -1.520  - - - *
+                   up  2  2   0.3062248      -1.520  - - - *
+              2  down  3  3   0.6162980       1.354  - - * -
+                   up  3  3   0.6162980       1.354  - - * -
+              3  down  4  4   0.5445644       2.615  - - * -
+                   up  4  4   0.5445644       2.615  - - * -
+              4  down  5  5   0.5842400       3.702  - - * -
+                   up  5  5   0.5842400       3.702  - - * -
+              5  down  6  6   0.4874393       4.784  - - * -
+                   up  6  6   0.4874393       4.784  - - * -
+              6  down  7  7   0.5228713       5.813  - - * -
+                   up  7  7   0.5228713       5.813  - - * -
+              7  down  8  8   0.4785809       6.847  - - * -
+                   up  8  8   0.4785809       6.847  - - * -
+              8  down  9  9   0.5184000       7.859  - - * -
+                   up  9  9   0.5184000       7.859  - - * -
+ TIME: setene:      0.004m in,      0.000m added,      0.004m total
+
+ Interstitial kinetic energy parameters
+  3 energies
+     n           kappa^2
+     1        .300000000
+     2       -2.29999999
+     3       -1.50000000
+ TIME: SENTLS:      0.004m in,      0.000m added,      0.004m total
+
+      Radial functions ...
+        t  l  e  spin  n           E           u         ru'
+        1  0  1  down  4  .153112872 -.674372963  .044174218
+                   up  4  .110666911 -.671159048  .054046655
+           1  1  down  4  .184335319  .759800725  .650889111
+                   up  4  .137746965  .758905282  .642466195
+           2  1  down  3  .514496208  .222550340 -.425934463
+                   up  3  .389952386  .211015573 -.424834447
+           3  1  down  4  .261502110  .965034828  2.41071262
+                   up  4  .241384734  .963112702  2.39902551
+           4  1  down  5  .136949303  1.11070618  4.11449818
+                   up  5  .167516209  1.10795303  4.07869663
+           5  1  down  6  .178305454  1.22235531  5.82025239
+                   up  6  .160177785  1.22181101  5.81545431
+           6  1  down  7  .143284769  1.32307998  7.69591450
+                   up  7  .184959493  1.32138166  7.66256237
+           7  1  down  8  .253977600  1.41207281  9.62873667
+                   up  8  .233899315  1.41188571  9.62762486
+           8  1  down  9  .164157139  1.49849038  11.7826287
+                   up  9  .187775428  1.49767327  11.7623981
+        2  0  1  down  4  .110666911 -.671159048  .054046655
+                   up  4  .153112872 -.674372963  .044174218
+           1  1  down  4  .137746965  .758905282  .642466195
+                   up  4  .184335319  .759800725  .650889111
+           2  1  down  3  .389952386  .211015573 -.424834447
+                   up  3  .514496208  .222550340 -.425934463
+           3  1  down  4  .241384734  .963112702  2.39902551
+                   up  4  .261502110  .965034828  2.41071262
+           4  1  down  5  .167516209  1.10795303  4.07869663
+                   up  5  .136949303  1.11070618  4.11449818
+           5  1  down  6  .160177785  1.22181101  5.81545431
+                   up  6  .178305454  1.22235531  5.82025239
+           6  1  down  7  .184959493  1.32138166  7.66256237
+                   up  7  .143284769  1.32307998  7.69591450
+           7  1  down  8  .233899315  1.41188571  9.62762486
+                   up  8  .253977600  1.41207281  9.62873667
+           8  1  down  9  .187775428  1.49767327  11.7623981
+                   up  9  .164157139  1.49849038  11.7826287
+        3  0  1  down  2 -.641023886 -.359604191  .900243608
+                   up  2 -.641023886 -.359604191  .900243608
+           1  1  down  2  .306224848  .435108078 -.661508926
+                   up  2  .306224848  .435108078 -.661508926
+           2  1  down  3  .616297998  1.04364220  1.41308690
+                   up  3  .616297998  1.04364220  1.41308690
+           3  1  down  4  .544564370  1.25935880  3.29296430
+                   up  4  .544564370  1.25935880  3.29296430
+           4  1  down  5  .584239961  1.41859221  5.25161304
+                   up  5  .584239961  1.41859221  5.25161304
+           5  1  down  6  .487439340  1.55961284  7.46145685
+                   up  6  .487439340  1.55961284  7.46145685
+           6  1  down  7  .522871293  1.68300391  9.78279944
+                   up  7  .522871293  1.68300391  9.78279944
+           7  1  down  8  .478580943  1.79819733  12.3121351
+                   up  8  .478580943  1.79819733  12.3121351
+           8  1  down  9  .518399956  1.90431210  14.9668215
+                   up  9  .518399956  1.90431210  14.9668215
+        t  l  e  spin  n  <du/de**2>       du/de   r(du/de)'
+        1  0  1  down  4  .008263127  .097294825  .725399187
+                   up  4  .008400025  .098348722  .727356609
+           1  1  down  4  .009372372 -.068015590 -.707793985
+                   up  4  .009004163 -.069704517 -.709303103
+           2  1  down  3  .378882265 -.546604867 -1.17175069
+                   up  3  .396638956 -.561775110 -1.20811687
+           3  1  down  4  .002311910 -.055045713 -.648870444
+                   up  4  .002356840 -.055454003 -.650514675
+           4  1  down  5  .000828425 -.037017487 -.581408907
+                   up  5  .000843431 -.037281123 -.582628912
+           5  1  down  6  .000413766 -.028291575 -.538398252
+                   up  6  .000416073 -.028347717 -.538794283
+           6  1  down  7  .000233739 -.022672239 -.504816831
+                   up  7  .000235976 -.022756314 -.505381791
+           7  1  down  8  .000145352 -.018869195 -.478088043
+                   up  8  .000145690 -.018883796 -.478236094
+           8  1  down  9  .000094304 -.015961710 -.454758945
+                   up  9  .000094728 -.015988680 -.455003770
+        2  0  1  down  4  .008400025  .098348722  .727356609
+                   up  4  .008263127  .097294825  .725399187
+           1  1  down  4  .009004163 -.069704517 -.709303103
+                   up  4  .009372372 -.068015590 -.707793985
+           2  1  down  3  .396638956 -.561775110 -1.20811687
+                   up  3  .378882265 -.546604867 -1.17175069
+           3  1  down  4  .002356840 -.055454003 -.650514675
+                   up  4  .002311910 -.055045713 -.648870444
+           4  1  down  5  .000843431 -.037281123 -.582628912
+                   up  5  .000828425 -.037017487 -.581408907
+           5  1  down  6  .000416073 -.028347717 -.538794283
+                   up  6  .000413766 -.028291575 -.538398252
+           6  1  down  7  .000235976 -.022756314 -.505381791
+                   up  7  .000233739 -.022672239 -.504816831
+           7  1  down  8  .000145690 -.018883796 -.478236094
+                   up  8  .000145352 -.018869195 -.478088043
+           8  1  down  9  .000094728 -.015988680 -.455003770
+                   up  9  .000094304 -.015961710 -.454758945
+        3  0  1  down  2  .064588051  .304589696  .846867845
+                   up  2  .064588051  .304589696  .846867845
+           1  1  down  2  .076699021 -.313934940 -.852913844
+                   up  2  .076699021 -.313934940 -.852913844
+           2  1  down  3  .003019919 -.074212710 -.655034034
+                   up  3  .003019919 -.074212710 -.655034034
+           3  1  down  4  .000892236 -.045554967 -.578662525
+                   up  4  .000892236 -.045554967 -.578662525
+           4  1  down  5  .000395750 -.033074540 -.530389747
+                   up  5  .000395750 -.033074540 -.530389747
+           5  1  down  6  .000205238 -.025567720 -.493363577
+                   up  6  .000205238 -.025567720 -.493363577
+           6  1  down  7  .000119627 -.020717417 -.464245804
+                   up  7  .000119627 -.020717417 -.464245804
+           7  1  down  8  .000074471 -.017231255 -.439756730
+                   up  8  .000074471 -.017231255 -.439756730
+           8  1  down  9  .000049140 -.014667280 -.419100278
+                   up  9  .000049140 -.014667280 -.419100278
+ TIME: xmt:      0.004m in,      0.000m added,      0.004m total
+ TIME: CONVOPOT:      0.004m in,      0.001m added,      0.005m total
+
+ splitting parameters for structure functions.
+        nstgm        gcut nstrm        rcut   lmx          t2         eta
+          173   5.2153926   161  21.1980710    10   0.3000000   0.4663065
+                                                   -2.3000000   0.4405818
+                                                   -1.5000000   0.4517818
+  EIGEN: Allocating arrays for the diagonalization.
+  EIGEN: Starting the k-point loop.
+ TIME: EIGEN:      0.005m in,      0.015m added,      0.020m total
+
+ Cpulog for EIGEN:
+             FC+VI              STRC           O+T Int            O+H Mt
+            .00613            .00093            .00006            .00620
+              Diag               <I>
+            .00020            .00006
+
+      Electron entropy
+         T   =  78.9466932 K
+         S/k =  .000000000
+         N   =  31.9999999
+
+ Eigenvalue sum:  8.90677987955151
+ fermi energy =  6.2959053832106E-01
+        D(ef) =  2.7272952985366E-09
+ eigenvalues within   160.000000 mRy of E Fermi ...   486
+
+ TIME: FERMI:      0.020m in,      0.000m added,      0.020m total
+ TIME: EIGEN0:      0.005m in,      0.015m added,      0.020m total
+ 
+ 
+ +---------------------------- BRIANNA --------------------------------+
+ 
+ ***********************************************
+      Initialization of the DMFT code
+ ***********************************************
+ 
+ Readin: Setting the temperature to   5.000000000000000E-004
+
+ Data misc:
+   lda_efsave (fermi energy from lda):   0.62959054
+   lda_zval (number of valence electrons):  32.0000
+
+ Smearing data:
+   lda_smear%method (Method for integrating over the BZ):        0
+   lda_smear%width (Smearing width):   0.0005
+   lda_smear%cutoff (Cutoff for smearing): 320.0000
+
+ Data k-points:
+   lda_kpoints%nkb (number of k-points in the irreducible bz):      121
+   lda_kpoints%bztw (total number of k-points in the reducible bz):      432
+   lda_kpoints%iwght(:) (k-point weight) 
+   lda_kpoints%length (bravais lattice length)   7.90000000
+   lda_kpoints%bl (bravais lattice vectors):
+      0.00000000      -3.95000000       7.90000000
+     -3.95000000       0.00000000       7.90000000
+      3.95000000       3.95000000       0.00000000
+   lda_kpoints%rl (reciprocal lattice vectors):
+      0.79533991      -0.79533991       0.39766996
+     -0.79533991       0.79533991       0.39766996
+      0.79533991       0.79533991       0.39766996
+
+ Data spin:
+   Rotation matrix from cartesian coordinates to spin coordinates (srot)
+      1.00000000       0.00000000       0.00000000
+      0.00000000       1.00000000       0.00000000
+      0.00000000       0.00000000       1.00000000
+
+ Data base:
+   lda_base%md (total number of basis vectors):  176
+   lda_base%mds (total number of basis vectors/number of spins (from nspmat)):   88
+   lda_base%mdp (number of elements in the lower triangular part of H ):    15576
+   lda_base%mx (total number of eigenvalues):   82
+   lda_base%nspmat (number of spins in the matrix part):    2
+   lda_base%nspden (number of spins in the density part):    2
+   lda_base%fulrel (spin-orbit coupling:         F
+
+ Info:
+   uctypes (Number of types):    3
+
+ Data:
+   lda_type(type)%sites (Number of sites for type)
+   lda_type(type)%begsite (Start site for type)
+   lda_type(type)%endsite (End site for type)
+   type sitesof begsite endsite npt
+      1       1       0       1     543
+      2       1       1       2     543
+      3       2       2       4     479
+
+ Info:
+   ucsites (Number of sites per unit cell?) is    4
+
+ Data:
+   lda_site(site)%lbasend        (last index of site in lda_basesite)
+   Rotation matrices from cartesian coordinates to local coordinates (trot)
+   site:      1      lbasend:            8
+      0.50000000       0.50000000      -0.70710678
+      0.50000000       0.50000000       0.70710678
+      0.70710678      -0.70710678       0.00000000
+   site:      2      lbasend:           16
+      0.50000000       0.50000000      -0.70710678
+      0.50000000       0.50000000       0.70710678
+      0.70710678      -0.70710678       0.00000000
+   site:      3      lbasend:           24
+      0.50000000       0.50000000      -0.70710678
+      0.50000000       0.50000000       0.70710678
+      0.70710678      -0.70710678       0.00000000
+   site:      4      lbasend:           32
+     -0.50000000      -0.50000000       0.70710678
+     -0.50000000      -0.50000000      -0.70710678
+      0.70710678      -0.70710678       0.00000000
+
+ Info:
+   lbases (Number of sites sumed over all basis vectors):   32
+
+ Info:
+   nlt-basis vector = basis vector defined by n,l,e and tail. Like in data.
+   nlt-basis vector site: A nlt-basis vector belongs to a type which can have several sites.
+                          This is an index over all the individual sites of the nlt-basis vectors.
+
+ Data:
+   lda_basesite(i)%a (site for a nlt-basis vector site i)
+   lda_basesite(i)%e (energy set for a nlt-basis vector site i)
+   lda_basesite(i)%t (type for a nlt-basis vector site i)
+   lda_basesite(i)%l (l for a nlt-basis vector site i)
+   lda_basesite(i)%d (start index for the corresponding nltm-basis)
+   vec site i     a     e     t     l     d
+            1     1     1     1     0     0
+            2     1     1     1     0     1
+            3     1     1     1     0     2
+            4     1     1     1     1     3
+            5     1     1     1     1     6
+            6     1     1     1     1     9
+            7     1     1     1     2    12
+            8     1     1     1     2    17
+            9     2     1     2     0    22
+           10     2     1     2     0    23
+           11     2     1     2     0    24
+           12     2     1     2     1    25
+           13     2     1     2     1    28
+           14     2     1     2     1    31
+           15     2     1     2     2    34
+           16     2     1     2     2    39
+           17     3     1     3     0    44
+           18     3     1     3     0    45
+           19     3     1     3     0    46
+           20     3     1     3     1    47
+           21     3     1     3     1    50
+           22     3     1     3     1    53
+           23     3     1     3     2    56
+           24     3     1     3     2    61
+           25     4     1     3     0    66
+           26     4     1     3     0    67
+           27     4     1     3     0    68
+           28     4     1     3     1    69
+           29     4     1     3     1    72
+           30     4     1     3     1    75
+           31     4     1     3     2    78
+           32     4     1     3     2    83
+
+ Info:
+   lda_basevec(i) contains information about basis vector i.
+   Allocating lda_basevec(lda_base%mds)
+
+
+ Data:
+   lda_basevec(i)%a (site for nltm-basis vector i)
+   lda_basevec(i)%e (energy set for nltm-basis vector i)
+   lda_basevec(i)%t (tail for nltm-basis vector i)
+   lda_basevec(i)%l (l for nltm-basis vector i)
+   lda_basevec(i)%d (index of m for nltm-basis vector i)
+                  m (corresponding m for nltm-basis vector i)
+   Index    i     a     e     t     l     d     m
+            1     1     1     1     0     1     0
+            2     1     1     2     0     1     0
+            3     1     1     3     0     1     0
+            4     1     1     1     1     2    -1
+            5     1     1     1     1     3     0
+            6     1     1     1     1     4     1
+            7     1     1     2     1     2    -1
+            8     1     1     2     1     3     0
+            9     1     1     2     1     4     1
+           10     1     1     3     1     2    -1
+           11     1     1     3     1     3     0
+           12     1     1     3     1     4     1
+           13     1     1     1     2     5    -2
+           14     1     1     1     2     6    -1
+           15     1     1     1     2     7     0
+           16     1     1     1     2     8     1
+           17     1     1     1     2     9     2
+           18     1     1     2     2     5    -2
+           19     1     1     2     2     6    -1
+           20     1     1     2     2     7     0
+           21     1     1     2     2     8     1
+           22     1     1     2     2     9     2
+           23     2     1     1     0     1     0
+           24     2     1     2     0     1     0
+           25     2     1     3     0     1     0
+           26     2     1     1     1     2    -1
+           27     2     1     1     1     3     0
+           28     2     1     1     1     4     1
+           29     2     1     2     1     2    -1
+           30     2     1     2     1     3     0
+           31     2     1     2     1     4     1
+           32     2     1     3     1     2    -1
+           33     2     1     3     1     3     0
+           34     2     1     3     1     4     1
+           35     2     1     1     2     5    -2
+           36     2     1     1     2     6    -1
+           37     2     1     1     2     7     0
+           38     2     1     1     2     8     1
+           39     2     1     1     2     9     2
+           40     2     1     2     2     5    -2
+           41     2     1     2     2     6    -1
+           42     2     1     2     2     7     0
+           43     2     1     2     2     8     1
+           44     2     1     2     2     9     2
+           45     3     1     1     0     1     0
+           46     3     1     2     0     1     0
+           47     3     1     3     0     1     0
+           48     3     1     1     1     2    -1
+           49     3     1     1     1     3     0
+           50     3     1     1     1     4     1
+           51     3     1     2     1     2    -1
+           52     3     1     2     1     3     0
+           53     3     1     2     1     4     1
+           54     3     1     3     1     2    -1
+           55     3     1     3     1     3     0
+           56     3     1     3     1     4     1
+           57     3     1     1     2     5    -2
+           58     3     1     1     2     6    -1
+           59     3     1     1     2     7     0
+           60     3     1     1     2     8     1
+           61     3     1     1     2     9     2
+           62     3     1     2     2     5    -2
+           63     3     1     2     2     6    -1
+           64     3     1     2     2     7     0
+           65     3     1     2     2     8     1
+           66     3     1     2     2     9     2
+           67     4     1     1     0     1     0
+           68     4     1     2     0     1     0
+           69     4     1     3     0     1     0
+           70     4     1     1     1     2    -1
+           71     4     1     1     1     3     0
+           72     4     1     1     1     4     1
+           73     4     1     2     1     2    -1
+           74     4     1     2     1     3     0
+           75     4     1     2     1     4     1
+           76     4     1     3     1     2    -1
+           77     4     1     3     1     3     0
+           78     4     1     3     1     4     1
+           79     4     1     1     2     5    -2
+           80     4     1     1     2     6    -1
+           81     4     1     1     2     7     0
+           82     4     1     1     2     8     1
+           83     4     1     1     2     9     2
+           84     4     1     2     2     5    -2
+           85     4     1     2     2     6    -1
+           86     4     1     2     2     7     0
+           87     4     1     2     2     8     1
+           88     4     1     2     2     9     2
+
+ Data:
+   lda_mt%sfdim (=nsf * mds)   28512
+   lda_mt%nsf (=(lm+1)**2 * number of atoms in cell (ncell) )     324
+   lda_mt%lm (= number of harmonics used in the expansion of the potential?)   8
+
+  
+ readcluster: Info: U and J will be mapped to slater parameters trough empirical
+  rules.
+ readcluster: Info: The Slater parameters are going to be scaled from eV to Ry.
+ Info: Converting U/J:  8.0000000 0.9000000   =>   F0,F2,F4,F6:   0.587989  0.569897  0.356186  0.000000
+ readcluster: Info: U and J will be mapped to slater parameters trough empirical
+  rules.
+ readcluster: Info: The Slater parameters are going to be scaled from eV to Ry.
+ Info: Converting U/J:  8.0000000 0.9000000   =>   F0,F2,F4,F6:   0.587989  0.569897  0.356186  0.000000
+ Readin: Setting the number of matsubara frequencies to     1     1     0     0
+ Readin: Info: Since nmats_tail < 1 the dynamical part of the asymptotics can not be calculated.
+ Readin: Changing mixing%sigdiff_factor to 0d0. The chemical potential will be
+         converged before a new self-energy is calculated. To only run the solver once
+         per csc-iteration, set sig_acc to a high value.
+ 
+ ***********************************************
+     Formated and processed input data
+ ***********************************************
+ matsubara
+      1     1     0     0                        ! nmats nmats_head nmats_log nmats_tail
+ 
+ energymesh
+   1001  -1.00   1.00 0.0010                     ! nemesh emin emax eim
+ 
+ inputoutput
+   T  T                                          ! readsig csc
+ 
+ convergency
+  1.00E-06 1.00E-05 999 999                      ! ndelta sigma_acc maxiter maxsolveriter
+
+ projection
+   1                                             ! basis_type
+
+ debug
+ Renorm_corr                                                                                         
+
+ verbose
+ Solver Dc Projection Interface                                                                      
+
+ mixing
+   3  0.15000  0.00000                           ! mix_method max_slope sigdiff_factor
+
+ cluster
+   1                                             ! ntot [eV] [UJ] [Cf]
+   1  2  1  1  3  0.5880  0.5699  0.3562         ! ID F0 [F2 [F4 [F6]]] or U [J]
+   2  2  1.0000  0.0000                          ! solver_type DC sigma_mix [tensmom_mag]
+
+ cluster
+   1                                             ! ntot [eV] [UJ] [Cf]
+   2  2  1  1  3  0.5880  0.5699  0.3562         ! ID F0 [F2 [F4 [F6]]] or U [J]
+   2  2  1.0000  0.0000                          ! solver_type DC sigma_mix [tensmom_mag]
+
+
+ ***********************************************
+      Initialization of cluster 0102010103        
+ ***********************************************
+ 
+      ID 0102010103     Cluster site ids:
+ IDs for cluster site    1
+   1  2  1  1  3
+  
+      ID 0102010103     Projection matrix
+ Real part:
+   0.000000  0.707107  0.000000  0.000000  0.000000  0.000000  0.000000  0.000000  0.000000  0.000000
+   0.000000  0.000000  0.000000  0.707107  0.000000  0.000000  0.000000  0.000000  0.000000  0.000000
+   1.000000  0.000000  0.000000  0.000000  0.000000  0.000000  0.000000  0.000000  0.000000  0.000000
+   0.000000  0.000000  0.000000 -0.707107  0.000000  0.000000  0.000000  0.000000  0.000000  0.000000
+   0.000000  0.707107  0.000000  0.000000  0.000000  0.000000  0.000000  0.000000  0.000000  0.000000
+   0.000000  0.000000  0.000000  0.000000  0.000000  0.000000  0.707107  0.000000  0.000000  0.000000
+   0.000000  0.000000  0.000000  0.000000  0.000000  0.000000  0.000000  0.000000  0.707107  0.000000
+   0.000000  0.000000  0.000000  0.000000  0.000000  1.000000  0.000000  0.000000  0.000000  0.000000
+   0.000000  0.000000  0.000000  0.000000  0.000000  0.000000  0.000000  0.000000 -0.707107  0.000000
+   0.000000  0.000000  0.000000  0.000000  0.000000  0.000000  0.707107  0.000000  0.000000  0.000000
+ Imaginary part:
+   0.000000  0.000000  0.000000  0.000000  0.707107  0.000000  0.000000  0.000000  0.000000  0.000000
+   0.000000  0.000000  0.707107  0.000000  0.000000  0.000000  0.000000  0.000000  0.000000  0.000000
+   0.000000  0.000000  0.000000  0.000000  0.000000  0.000000  0.000000  0.000000  0.000000  0.000000
+   0.000000  0.000000  0.707107  0.000000  0.000000  0.000000  0.000000  0.000000  0.000000  0.000000
+   0.000000  0.000000  0.000000  0.000000 -0.707107  0.000000  0.000000  0.000000  0.000000  0.000000
+   0.000000  0.000000  0.000000  0.000000  0.000000  0.000000  0.000000  0.000000  0.000000  0.707107
+   0.000000  0.000000  0.000000  0.000000  0.000000  0.000000  0.000000  0.707107  0.000000  0.000000
+   0.000000  0.000000  0.000000  0.000000  0.000000  0.000000  0.000000  0.000000  0.000000  0.000000
+   0.000000  0.000000  0.000000  0.000000  0.000000  0.000000  0.000000  0.707107  0.000000  0.000000
+   0.000000  0.000000  0.000000  0.000000  0.000000  0.000000  0.000000  0.000000  0.000000 -0.707107
+  
+      ID 0102010103     Projection matrix (spin-packed, and Sz along spin axis)
+ Real part: site =           1
+   0.000000  0.707107  0.000000  0.000000  0.000000  0.000000  0.000000  0.000000  0.000000  0.000000
+   0.000000  0.000000  0.000000  0.707107  0.000000  0.000000  0.000000  0.000000  0.000000  0.000000
+   1.000000  0.000000  0.000000  0.000000  0.000000  0.000000  0.000000  0.000000  0.000000  0.000000
+   0.000000  0.000000  0.000000 -0.707107  0.000000  0.000000  0.000000  0.000000  0.000000  0.000000
+   0.000000  0.707107  0.000000  0.000000  0.000000  0.000000  0.000000  0.000000  0.000000  0.000000
+   0.000000  0.000000  0.000000  0.000000  0.000000  0.000000  0.707107  0.000000  0.000000  0.000000
+   0.000000  0.000000  0.000000  0.000000  0.000000  0.000000  0.000000  0.000000  0.707107  0.000000
+   0.000000  0.000000  0.000000  0.000000  0.000000  1.000000  0.000000  0.000000  0.000000  0.000000
+   0.000000  0.000000  0.000000  0.000000  0.000000  0.000000  0.000000  0.000000 -0.707107  0.000000
+   0.000000  0.000000  0.000000  0.000000  0.000000  0.000000  0.707107  0.000000  0.000000  0.000000
+ Imaginary part:
+   0.000000  0.000000  0.000000  0.000000  0.707107  0.000000  0.000000  0.000000  0.000000  0.000000
+   0.000000  0.000000  0.707107  0.000000  0.000000  0.000000  0.000000  0.000000  0.000000  0.000000
+   0.000000  0.000000  0.000000  0.000000  0.000000  0.000000  0.000000  0.000000  0.000000  0.000000
+   0.000000  0.000000  0.707107  0.000000  0.000000  0.000000  0.000000  0.000000  0.000000  0.000000
+   0.000000  0.000000  0.000000  0.000000 -0.707107  0.000000  0.000000  0.000000  0.000000  0.000000
+   0.000000  0.000000  0.000000  0.000000  0.000000  0.000000  0.000000  0.000000  0.000000  0.707107
+   0.000000  0.000000  0.000000  0.000000  0.000000  0.000000  0.000000  0.707107  0.000000  0.000000
+   0.000000  0.000000  0.000000  0.000000  0.000000  0.000000  0.000000  0.000000  0.000000  0.000000
+   0.000000  0.000000  0.000000  0.000000  0.000000  0.000000  0.000000  0.707107  0.000000  0.000000
+   0.000000  0.000000  0.000000  0.000000  0.000000  0.000000  0.000000  0.000000  0.000000 -0.707107
+  
+ ***********************************************
+      Initialization of cluster 0202010103        
+ ***********************************************
+ 
+      ID 0202010103     Cluster site ids:
+ IDs for cluster site    1
+   2  2  1  1  3
+  
+      ID 0202010103     Projection matrix
+ Real part:
+   0.000000  0.707107  0.000000  0.000000  0.000000  0.000000  0.000000  0.000000  0.000000  0.000000
+   0.000000  0.000000  0.000000  0.707107  0.000000  0.000000  0.000000  0.000000  0.000000  0.000000
+   1.000000  0.000000  0.000000  0.000000  0.000000  0.000000  0.000000  0.000000  0.000000  0.000000
+   0.000000  0.000000  0.000000 -0.707107  0.000000  0.000000  0.000000  0.000000  0.000000  0.000000
+   0.000000  0.707107  0.000000  0.000000  0.000000  0.000000  0.000000  0.000000  0.000000  0.000000
+   0.000000  0.000000  0.000000  0.000000  0.000000  0.000000  0.707107  0.000000  0.000000  0.000000
+   0.000000  0.000000  0.000000  0.000000  0.000000  0.000000  0.000000  0.000000  0.707107  0.000000
+   0.000000  0.000000  0.000000  0.000000  0.000000  1.000000  0.000000  0.000000  0.000000  0.000000
+   0.000000  0.000000  0.000000  0.000000  0.000000  0.000000  0.000000  0.000000 -0.707107  0.000000
+   0.000000  0.000000  0.000000  0.000000  0.000000  0.000000  0.707107  0.000000  0.000000  0.000000
+ Imaginary part:
+   0.000000  0.000000  0.000000  0.000000  0.707107  0.000000  0.000000  0.000000  0.000000  0.000000
+   0.000000  0.000000  0.707107  0.000000  0.000000  0.000000  0.000000  0.000000  0.000000  0.000000
+   0.000000  0.000000  0.000000  0.000000  0.000000  0.000000  0.000000  0.000000  0.000000  0.000000
+   0.000000  0.000000  0.707107  0.000000  0.000000  0.000000  0.000000  0.000000  0.000000  0.000000
+   0.000000  0.000000  0.000000  0.000000 -0.707107  0.000000  0.000000  0.000000  0.000000  0.000000
+   0.000000  0.000000  0.000000  0.000000  0.000000  0.000000  0.000000  0.000000  0.000000  0.707107
+   0.000000  0.000000  0.000000  0.000000  0.000000  0.000000  0.000000  0.707107  0.000000  0.000000
+   0.000000  0.000000  0.000000  0.000000  0.000000  0.000000  0.000000  0.000000  0.000000  0.000000
+   0.000000  0.000000  0.000000  0.000000  0.000000  0.000000  0.000000  0.707107  0.000000  0.000000
+   0.000000  0.000000  0.000000  0.000000  0.000000  0.000000  0.000000  0.000000  0.000000 -0.707107
+  
+      ID 0202010103     Projection matrix (spin-packed, and Sz along spin axis)
+ Real part: site =           1
+   0.000000  0.707107  0.000000  0.000000  0.000000  0.000000  0.000000  0.000000  0.000000  0.000000
+   0.000000  0.000000  0.000000  0.707107  0.000000  0.000000  0.000000  0.000000  0.000000  0.000000
+   1.000000  0.000000  0.000000  0.000000  0.000000  0.000000  0.000000  0.000000  0.000000  0.000000
+   0.000000  0.000000  0.000000 -0.707107  0.000000  0.000000  0.000000  0.000000  0.000000  0.000000
+   0.000000  0.707107  0.000000  0.000000  0.000000  0.000000  0.000000  0.000000  0.000000  0.000000
+   0.000000  0.000000  0.000000  0.000000  0.000000  0.000000  0.707107  0.000000  0.000000  0.000000
+   0.000000  0.000000  0.000000  0.000000  0.000000  0.000000  0.000000  0.000000  0.707107  0.000000
+   0.000000  0.000000  0.000000  0.000000  0.000000  1.000000  0.000000  0.000000  0.000000  0.000000
+   0.000000  0.000000  0.000000  0.000000  0.000000  0.000000  0.000000  0.000000 -0.707107  0.000000
+   0.000000  0.000000  0.000000  0.000000  0.000000  0.000000  0.707107  0.000000  0.000000  0.000000
+ Imaginary part:
+   0.000000  0.000000  0.000000  0.000000  0.707107  0.000000  0.000000  0.000000  0.000000  0.000000
+   0.000000  0.000000  0.707107  0.000000  0.000000  0.000000  0.000000  0.000000  0.000000  0.000000
+   0.000000  0.000000  0.000000  0.000000  0.000000  0.000000  0.000000  0.000000  0.000000  0.000000
+   0.000000  0.000000  0.707107  0.000000  0.000000  0.000000  0.000000  0.000000  0.000000  0.000000
+   0.000000  0.000000  0.000000  0.000000 -0.707107  0.000000  0.000000  0.000000  0.000000  0.000000
+   0.000000  0.000000  0.000000  0.000000  0.000000  0.000000  0.000000  0.000000  0.000000  0.707107
+   0.000000  0.000000  0.000000  0.000000  0.000000  0.000000  0.000000  0.707107  0.000000  0.000000
+   0.000000  0.000000  0.000000  0.000000  0.000000  0.000000  0.000000  0.000000  0.000000  0.000000
+   0.000000  0.000000  0.000000  0.000000  0.000000  0.000000  0.000000  0.707107  0.000000  0.000000
+   0.000000  0.000000  0.000000  0.000000  0.000000  0.000000  0.000000  0.000000  0.000000 -0.707107
+  
+
+      ID 0102010103     Transformation to the local cf basis:
+ Irreducible representations (irr. rep., state)
+   3  3  3  4  4  3  3  3  4  4
+   1  1  1  1  1  1  1  1  1  1
+   1  1  1  1  1  2  2  2  2  2
+ Real:
+   1.000000  0.000000  0.000000  0.000000  0.000000  0.000000  0.000000  0.000000  0.000000  0.000000
+   0.000000  1.000000  0.000000  0.000000  0.000000  0.000000  0.000000  0.000000  0.000000  0.000000
+   0.000000  0.000000  0.000000  1.000000  0.000000  0.000000  0.000000  0.000000  0.000000  0.000000
+   0.000000  0.000000  0.000000  0.000000  1.000000  0.000000  0.000000  0.000000  0.000000  0.000000
+   0.000000  0.000000  1.000000  0.000000  0.000000  0.000000  0.000000  0.000000  0.000000  0.000000
+   0.000000  0.000000  0.000000  0.000000  0.000000  1.000000  0.000000  0.000000  0.000000  0.000000
+   0.000000  0.000000  0.000000  0.000000  0.000000  0.000000  1.000000  0.000000  0.000000  0.000000
+   0.000000  0.000000  0.000000  0.000000  0.000000  0.000000  0.000000  0.000000  1.000000  0.000000
+   0.000000  0.000000  0.000000  0.000000  0.000000  0.000000  0.000000  0.000000  0.000000  1.000000
+   0.000000  0.000000  0.000000  0.000000  0.000000  0.000000  0.000000  1.000000  0.000000  0.000000
+ Imag:
+   0.000000  0.000000  0.000000  0.000000  0.000000  0.000000  0.000000  0.000000  0.000000  0.000000
+   0.000000  0.000000  0.000000  0.000000  0.000000  0.000000  0.000000  0.000000  0.000000  0.000000
+   0.000000  0.000000  0.000000  0.000000  0.000000  0.000000  0.000000  0.000000  0.000000  0.000000
+   0.000000  0.000000  0.000000  0.000000  0.000000  0.000000  0.000000  0.000000  0.000000  0.000000
+   0.000000  0.000000  0.000000  0.000000  0.000000  0.000000  0.000000  0.000000  0.000000  0.000000
+   0.000000  0.000000  0.000000  0.000000  0.000000  0.000000  0.000000  0.000000  0.000000  0.000000
+   0.000000  0.000000  0.000000  0.000000  0.000000  0.000000  0.000000  0.000000  0.000000  0.000000
+   0.000000  0.000000  0.000000  0.000000  0.000000  0.000000  0.000000  0.000000  0.000000  0.000000
+   0.000000  0.000000  0.000000  0.000000  0.000000  0.000000  0.000000  0.000000  0.000000  0.000000
+   0.000000  0.000000  0.000000  0.000000  0.000000  0.000000  0.000000  0.000000  0.000000  0.000000
+
+      ID 0202010103     Transformation to the local cf basis:
+ Irreducible representations (irr. rep., state)
+   3  3  3  4  4  3  3  3  4  4
+   1  1  1  1  1  1  1  1  1  1
+   1  1  1  1  1  2  2  2  2  2
+ Real:
+   1.000000  0.000000  0.000000  0.000000  0.000000  0.000000  0.000000  0.000000  0.000000  0.000000
+   0.000000  1.000000  0.000000  0.000000  0.000000  0.000000  0.000000  0.000000  0.000000  0.000000
+   0.000000  0.000000  0.000000  1.000000  0.000000  0.000000  0.000000  0.000000  0.000000  0.000000
+   0.000000  0.000000  0.000000  0.000000  1.000000  0.000000  0.000000  0.000000  0.000000  0.000000
+   0.000000  0.000000  1.000000  0.000000  0.000000  0.000000  0.000000  0.000000  0.000000  0.000000
+   0.000000  0.000000  0.000000  0.000000  0.000000  1.000000  0.000000  0.000000  0.000000  0.000000
+   0.000000  0.000000  0.000000  0.000000  0.000000  0.000000  1.000000  0.000000  0.000000  0.000000
+   0.000000  0.000000  0.000000  0.000000  0.000000  0.000000  0.000000  0.000000  1.000000  0.000000
+   0.000000  0.000000  0.000000  0.000000  0.000000  0.000000  0.000000  0.000000  0.000000  1.000000
+   0.000000  0.000000  0.000000  0.000000  0.000000  0.000000  0.000000  1.000000  0.000000  0.000000
+ Imag:
+   0.000000  0.000000  0.000000  0.000000  0.000000  0.000000  0.000000  0.000000  0.000000  0.000000
+   0.000000  0.000000  0.000000  0.000000  0.000000  0.000000  0.000000  0.000000  0.000000  0.000000
+   0.000000  0.000000  0.000000  0.000000  0.000000  0.000000  0.000000  0.000000  0.000000  0.000000
+   0.000000  0.000000  0.000000  0.000000  0.000000  0.000000  0.000000  0.000000  0.000000  0.000000
+   0.000000  0.000000  0.000000  0.000000  0.000000  0.000000  0.000000  0.000000  0.000000  0.000000
+   0.000000  0.000000  0.000000  0.000000  0.000000  0.000000  0.000000  0.000000  0.000000  0.000000
+   0.000000  0.000000  0.000000  0.000000  0.000000  0.000000  0.000000  0.000000  0.000000  0.000000
+   0.000000  0.000000  0.000000  0.000000  0.000000  0.000000  0.000000  0.000000  0.000000  0.000000
+   0.000000  0.000000  0.000000  0.000000  0.000000  0.000000  0.000000  0.000000  0.000000  0.000000
+   0.000000  0.000000  0.000000  0.000000  0.000000  0.000000  0.000000  0.000000  0.000000  0.000000
+ Locust: Muffin Tin Head basis
+ ***********************************************
+       ID 0102010103     Initial local properties
+ ***********************************************
+ 
+       ID 0102010103     Local hamiltonian:
+ Real part:
+  0.66984073290 -0.00000424832  0.00000000000  0.00000000000  0.01291901466  0.00000000000  0.00000000000  0.00000000000  0.00000000000  0.00000000000
+ -0.00000424832  0.66237474204 -0.00000000000 -0.00000000000  0.00000057235  0.00000000000  0.00000000000  0.00000000000  0.00000000000  0.00000000000
+  0.00000000000 -0.00000000000  0.67730015652  0.01491459478  0.00000000000  0.00000000000  0.00000000000  0.00000000000  0.00000000000  0.00000000000
+  0.00000000000 -0.00000000000  0.01491459478  0.67730545257 -0.00000000000  0.00000000000  0.00000000000  0.00000000000  0.00000000000  0.00000000000
+  0.01291901466  0.00000057235  0.00000000000 -0.00000000000  0.68475851755  0.00000000000  0.00000000000  0.00000000000  0.00000000000  0.00000000000
+  0.00000000000  0.00000000000  0.00000000000  0.00000000000  0.00000000000  0.54710676756 -0.00000970717  0.00000000000  0.00000000000 -0.03219571212
+  0.00000000000  0.00000000000  0.00000000000  0.00000000000  0.00000000000 -0.00000970717  0.56567923732 -0.00000000000 -0.00000000000 -0.00000819720
+  0.00000000000  0.00000000000  0.00000000000  0.00000000000  0.00000000000  0.00000000000 -0.00000000000  0.52848466851 -0.03718788709  0.00000000000
+  0.00000000000  0.00000000000  0.00000000000  0.00000000000  0.00000000000  0.00000000000 -0.00000000000 -0.03718788709  0.52852589048 -0.00000000000
+  0.00000000000  0.00000000000  0.00000000000  0.00000000000  0.00000000000 -0.03219571212 -0.00000819720  0.00000000000 -0.00000000000  0.50989709056
+ Imag part:
+  0.00000000000 -0.00000000001 -0.00000000000 -0.00000000000 -0.00000000006  0.00000000000  0.00000000000  0.00000000000  0.00000000000  0.00000000000
+  0.00000000001  0.00000000000  0.00000000000 -0.00000000000  0.00000000000  0.00000000000  0.00000000000  0.00000000000  0.00000000000  0.00000000000
+  0.00000000000 -0.00000000000  0.00000000000  0.00000000003 -0.00000000000  0.00000000000  0.00000000000  0.00000000000  0.00000000000  0.00000000000
+  0.00000000000  0.00000000000 -0.00000000003  0.00000000000 -0.00000000000  0.00000000000  0.00000000000  0.00000000000  0.00000000000  0.00000000000
+  0.00000000006 -0.00000000000  0.00000000000  0.00000000000  0.00000000000  0.00000000000  0.00000000000  0.00000000000  0.00000000000  0.00000000000
+  0.00000000000  0.00000000000  0.00000000000  0.00000000000  0.00000000000  0.00000000000 -0.00000000013 -0.00000000000  0.00000000000 -0.00000000008
+  0.00000000000  0.00000000000  0.00000000000  0.00000000000  0.00000000000  0.00000000013  0.00000000000  0.00000000000  0.00000000000 -0.00000000007
+  0.00000000000  0.00000000000  0.00000000000  0.00000000000  0.00000000000  0.00000000000 -0.00000000000  0.00000000000  0.00000000008  0.00000000000
+  0.00000000000  0.00000000000  0.00000000000  0.00000000000  0.00000000000 -0.00000000000 -0.00000000000 -0.00000000008  0.00000000000 -0.00000000000
+  0.00000000000  0.00000000000  0.00000000000  0.00000000000  0.00000000000  0.00000000008  0.00000000007  0.00000000000  0.00000000000  0.00000000000
+  
+       ID 0102010103 Local overlap matrix before normalization (close to 1)
+ Real part:
+  0.97554132396  0.00000000222  0.00000000000  0.00000000000 -0.00003098082  0.00000000000  0.00000000000  0.00000000000  0.00000000000  0.00000000000
+  0.00000000222  0.97555920960 -0.00000000000 -0.00000000000 -0.00000000792  0.00000000000  0.00000000000  0.00000000000  0.00000000000  0.00000000000
+  0.00000000000 -0.00000000000  0.97552341483 -0.00003577625  0.00000000000  0.00000000000  0.00000000000  0.00000000000  0.00000000000  0.00000000000
+  0.00000000000 -0.00000000000 -0.00003577625  0.97552343560 -0.00000000000  0.00000000000  0.00000000000  0.00000000000  0.00000000000  0.00000000000
+ -0.00003098082 -0.00000000792  0.00000000000 -0.00000000000  0.97550553070  0.00000000000  0.00000000000  0.00000000000  0.00000000000  0.00000000000
+  0.00000000000  0.00000000000  0.00000000000  0.00000000000  0.00000000000  0.97837986924  0.00000000034  0.00000000000  0.00000000000 -0.00003083218
+  0.00000000000  0.00000000000  0.00000000000  0.00000000000  0.00000000000  0.00000000034  0.97839767266 -0.00000000000  0.00000000000  0.00000000729
+  0.00000000000  0.00000000000  0.00000000000  0.00000000000  0.00000000000  0.00000000000 -0.00000000000  0.97836209050 -0.00003559790  0.00000000000
+  0.00000000000  0.00000000000  0.00000000000  0.00000000000  0.00000000000  0.00000000000  0.00000000000 -0.00003559790  0.97836206883 -0.00000000000
+  0.00000000000  0.00000000000  0.00000000000  0.00000000000  0.00000000000 -0.00003083218  0.00000000729  0.00000000000 -0.00000000000  0.97834428767
+ Imag part:
+  0.00000000000 -0.00000000000 -0.00000000000  0.00000000000  0.00000000000  0.00000000000  0.00000000000  0.00000000000  0.00000000000  0.00000000000
+  0.00000000000  0.00000000000  0.00000000000 -0.00000000000 -0.00000000001  0.00000000000  0.00000000000  0.00000000000  0.00000000000  0.00000000000
+  0.00000000000 -0.00000000000  0.00000000000  0.00000000001  0.00000000000  0.00000000000  0.00000000000  0.00000000000  0.00000000000  0.00000000000
+  0.00000000000  0.00000000000 -0.00000000001  0.00000000000 -0.00000000000  0.00000000000  0.00000000000  0.00000000000  0.00000000000  0.00000000000
+ -0.00000000000  0.00000000001 -0.00000000000  0.00000000000  0.00000000000  0.00000000000  0.00000000000  0.00000000000  0.00000000000  0.00000000000
+  0.00000000000  0.00000000000  0.00000000000  0.00000000000  0.00000000000  0.00000000000 -0.00000000001 -0.00000000000 -0.00000000000  0.00000000000
+  0.00000000000  0.00000000000  0.00000000000  0.00000000000  0.00000000000  0.00000000001  0.00000000000  0.00000000000 -0.00000000000  0.00000000002
+  0.00000000000  0.00000000000  0.00000000000  0.00000000000  0.00000000000  0.00000000000 -0.00000000000  0.00000000000  0.00000000000 -0.00000000000
+  0.00000000000  0.00000000000  0.00000000000  0.00000000000  0.00000000000  0.00000000000  0.00000000000 -0.00000000000  0.00000000000 -0.00000000000
+  0.00000000000  0.00000000000  0.00000000000  0.00000000000  0.00000000000 -0.00000000000 -0.00000000002  0.00000000000  0.00000000000  0.00000000000
+ ***********************************************
+       ID 0202010103     Initial local properties
+ ***********************************************
+ 
+       ID 0202010103     Local hamiltonian:
+ Real part:
+  0.54710676739 -0.00000970723  0.00000000000  0.00000000000 -0.03219571214  0.00000000000  0.00000000000  0.00000000000  0.00000000000  0.00000000000
+ -0.00000970723  0.56567923713 -0.00000000000 -0.00000000000 -0.00000819732  0.00000000000  0.00000000000  0.00000000000  0.00000000000  0.00000000000
+  0.00000000000 -0.00000000000  0.52848466825 -0.03718788721  0.00000000000  0.00000000000  0.00000000000  0.00000000000  0.00000000000  0.00000000000
+  0.00000000000 -0.00000000000 -0.03718788721  0.52852589014 -0.00000000000  0.00000000000  0.00000000000  0.00000000000  0.00000000000  0.00000000000
+ -0.03219571214 -0.00000819732  0.00000000000 -0.00000000000  0.50989709064  0.00000000000  0.00000000000  0.00000000000  0.00000000000  0.00000000000
+  0.00000000000  0.00000000000  0.00000000000  0.00000000000  0.00000000000  0.66984073294 -0.00000424838  0.00000000000  0.00000000000  0.01291901466
+  0.00000000000  0.00000000000  0.00000000000  0.00000000000  0.00000000000 -0.00000424838  0.66237474196 -0.00000000000 -0.00000000000  0.00000057255
+  0.00000000000  0.00000000000  0.00000000000  0.00000000000  0.00000000000  0.00000000000 -0.00000000000  0.67730015620  0.01491459489  0.00000000000
+  0.00000000000  0.00000000000  0.00000000000  0.00000000000  0.00000000000  0.00000000000 -0.00000000000  0.01491459489  0.67730545276 -0.00000000000
+  0.00000000000  0.00000000000  0.00000000000  0.00000000000  0.00000000000  0.01291901466  0.00000057255  0.00000000000 -0.00000000000  0.68475851757
+ Imag part:
+  0.00000000000  0.00000000001  0.00000000000  0.00000000000  0.00000000003  0.00000000000  0.00000000000  0.00000000000  0.00000000000  0.00000000000
+ -0.00000000001  0.00000000000  0.00000000000  0.00000000000 -0.00000000004  0.00000000000  0.00000000000  0.00000000000  0.00000000000  0.00000000000
+ -0.00000000000  0.00000000000  0.00000000000 -0.00000000008  0.00000000000  0.00000000000  0.00000000000  0.00000000000  0.00000000000  0.00000000000
+ -0.00000000000 -0.00000000000  0.00000000008  0.00000000000 -0.00000000000  0.00000000000  0.00000000000  0.00000000000  0.00000000000  0.00000000000
+ -0.00000000003  0.00000000004 -0.00000000000  0.00000000000  0.00000000000  0.00000000000  0.00000000000  0.00000000000  0.00000000000  0.00000000000
+  0.00000000000  0.00000000000  0.00000000000  0.00000000000  0.00000000000  0.00000000000  0.00000000007  0.00000000000 -0.00000000000  0.00000000004
+  0.00000000000  0.00000000000  0.00000000000  0.00000000000  0.00000000000 -0.00000000007  0.00000000000  0.00000000000  0.00000000000 -0.00000000003
+  0.00000000000  0.00000000000  0.00000000000  0.00000000000  0.00000000000 -0.00000000000  0.00000000000  0.00000000000 -0.00000000013  0.00000000000
+  0.00000000000  0.00000000000  0.00000000000  0.00000000000  0.00000000000  0.00000000000 -0.00000000000  0.00000000013  0.00000000000 -0.00000000000
+  0.00000000000  0.00000000000  0.00000000000  0.00000000000  0.00000000000 -0.00000000004  0.00000000003 -0.00000000000  0.00000000000  0.00000000000
+  
+       ID 0202010103 Local overlap matrix before normalization (close to 1)
+ Real part:
+  0.97837986928  0.00000000033  0.00000000000  0.00000000000 -0.00003083218  0.00000000000  0.00000000000  0.00000000000  0.00000000000  0.00000000000
+  0.00000000033  0.97839767264 -0.00000000000  0.00000000000  0.00000000730  0.00000000000  0.00000000000  0.00000000000  0.00000000000  0.00000000000
+  0.00000000000 -0.00000000000  0.97836209050 -0.00003559789  0.00000000000  0.00000000000  0.00000000000  0.00000000000  0.00000000000  0.00000000000
+  0.00000000000  0.00000000000 -0.00003559789  0.97836206882 -0.00000000000  0.00000000000  0.00000000000  0.00000000000  0.00000000000  0.00000000000
+ -0.00003083218  0.00000000730  0.00000000000 -0.00000000000  0.97834428769  0.00000000000  0.00000000000  0.00000000000  0.00000000000  0.00000000000
+  0.00000000000  0.00000000000  0.00000000000  0.00000000000  0.00000000000  0.97554132395  0.00000000222  0.00000000000  0.00000000000 -0.00003098083
+  0.00000000000  0.00000000000  0.00000000000  0.00000000000  0.00000000000  0.00000000222  0.97555920958 -0.00000000000 -0.00000000000 -0.00000000790
+  0.00000000000  0.00000000000  0.00000000000  0.00000000000  0.00000000000  0.00000000000 -0.00000000000  0.97552341483 -0.00003577625  0.00000000000
+  0.00000000000  0.00000000000  0.00000000000  0.00000000000  0.00000000000  0.00000000000 -0.00000000000 -0.00003577625  0.97552343557 -0.00000000000
+  0.00000000000  0.00000000000  0.00000000000  0.00000000000  0.00000000000 -0.00003098083 -0.00000000790  0.00000000000 -0.00000000000  0.97550553069
+ Imag part:
+  0.00000000000 -0.00000000001  0.00000000000  0.00000000000 -0.00000000001  0.00000000000  0.00000000000  0.00000000000  0.00000000000  0.00000000000
+  0.00000000001  0.00000000000 -0.00000000000 -0.00000000000  0.00000000000  0.00000000000  0.00000000000  0.00000000000  0.00000000000  0.00000000000
+  0.00000000000  0.00000000000  0.00000000000 -0.00000000001  0.00000000000  0.00000000000  0.00000000000  0.00000000000  0.00000000000  0.00000000000
+ -0.00000000000  0.00000000000  0.00000000001  0.00000000000 -0.00000000000  0.00000000000  0.00000000000  0.00000000000  0.00000000000  0.00000000000
+  0.00000000001 -0.00000000000 -0.00000000000  0.00000000000  0.00000000000  0.00000000000  0.00000000000  0.00000000000  0.00000000000  0.00000000000
+  0.00000000000  0.00000000000  0.00000000000  0.00000000000  0.00000000000  0.00000000000  0.00000000000  0.00000000000  0.00000000000 -0.00000000000
+  0.00000000000  0.00000000000  0.00000000000  0.00000000000  0.00000000000 -0.00000000000  0.00000000000  0.00000000000  0.00000000000 -0.00000000000
+  0.00000000000  0.00000000000  0.00000000000  0.00000000000  0.00000000000  0.00000000000 -0.00000000000  0.00000000000 -0.00000000001  0.00000000000
+  0.00000000000  0.00000000000  0.00000000000  0.00000000000  0.00000000000 -0.00000000000 -0.00000000000  0.00000000001  0.00000000000 -0.00000000000
+  0.00000000000  0.00000000000  0.00000000000  0.00000000000  0.00000000000  0.00000000000  0.00000000000 -0.00000000000  0.00000000000  0.00000000000
+ 
+ ***********************************************
+       ID 0102010103     Spherically averaged Coloumb parameters
+ ***********************************************
+ Hubbard U: 0.5879892   Hubbard J: 0.0661488
+ ***********************************************
+       ID 0202010103     Spherically averaged Coloumb parameters
+ ***********************************************
+ Hubbard U: 0.5879892   Hubbard J: 0.0661488
+
+  
+ ***********************************************
+      Reading sigma from file
+ ***********************************************
+  ttt_old vs ttt              =   5.000000000000000E-004  5.000000000000000E-004
+  nmsl_old vs nmsl            =            1           1
+  nwisdom_old vs nwisdom      =            2           2
+  emeshsize_old vs emeshsize  =         1001        1001
+  nfermi_old vs nfermi        =          501         501
+  emeshdiff_old vs emeshdiff  =   2.000000000000000E-003  2.000000000000000E-003
+     Miscellanous info: 
+  green_mu                    =   0.748052222077716     
+  green_mu_old                =   0.748052222077716     
+ read_sigma: The sig_real array was not provided. Calling the pade routines.
+ selfenergy_pade: Static self-energy => sig_real = sig.
+ read_sigma: The sig_real array was not provided. Calling the pade routines.
+ selfenergy_pade: Static self-energy => sig_real = sig.
+ 
+ 
+ ############### Iteration nr.   1 ##############
+ 
+ ***************** Green's function summary ****************
+ It :  1,         mu =           0.748052222078
+ Total occupation    =          32.000000000000
+ Sigdiff             =           0.000000468882
+ ***********************************************************
+ green_cycle: Cycle the DMFT loop to calculate the local green's function.
+ 
+ 
+ ############### Iteration nr.   2 ##############
+ 
+ Griffin: The local dmtx is projected from the global dmtx
+      ID: 0102010103    Galitskii-Migdal Energy from local rho:         -9.282235E-01
+      ID: 0202010103    Galitskii-Migdal Energy from local rho:         -9.282235E-01
+ ***************** Green's function summary ****************
+ It :  2,         mu =           0.748052222078
+ Total occupation    =          32.000000000000
+ Sigdiff             =           0.000000468882
+ ***********************************************************
+  
+ ***********************************************
+      Local properties
+ ***********************************************
+  
+      ID 0102010103     Local dmtx: rho
+ Real:
+   0.74110247 -0.00000691 -0.00000000  0.00000000 -0.36766886  0.00000000  0.00000000  0.00000000  0.00000000  0.00000000
+  -0.00000691  0.95335542  0.00000000  0.00000000 -0.00003660  0.00000000  0.00000000  0.00000000  0.00000000  0.00000000
+  -0.00000000  0.00000000  0.52870408 -0.42457290 -0.00000000  0.00000000  0.00000000  0.00000000  0.00000000  0.00000000
+   0.00000000  0.00000000 -0.42457290  0.52882744  0.00000000  0.00000000  0.00000000  0.00000000  0.00000000  0.00000000
+  -0.36766886 -0.00003660 -0.00000000  0.00000000  0.31643761  0.00000000  0.00000000  0.00000000  0.00000000  0.00000000
+   0.00000000  0.00000000  0.00000000  0.00000000  0.00000000  0.96220372  0.00000585 -0.00000000 -0.00000000  0.00826523
+   0.00000000  0.00000000  0.00000000  0.00000000  0.00000000  0.00000585  0.95744244  0.00000000  0.00000000  0.00001619
+   0.00000000  0.00000000  0.00000000  0.00000000  0.00000000 -0.00000000  0.00000000  0.96703215  0.00955554 -0.00000000
+   0.00000000  0.00000000  0.00000000  0.00000000  0.00000000 -0.00000000  0.00000000  0.00955554  0.96697347  0.00000000
+   0.00000000  0.00000000  0.00000000  0.00000000  0.00000000  0.00826523  0.00001619 -0.00000000  0.00000000  0.97179945
+ Imag:
+  -0.00000000 -0.00000000  0.00000000  0.00000000 -0.00000000  0.00000000  0.00000000  0.00000000  0.00000000  0.00000000
+   0.00000000 -0.00000000 -0.00000000  0.00000000  0.00000000  0.00000000  0.00000000  0.00000000  0.00000000  0.00000000
+  -0.00000000  0.00000000  0.00000000 -0.00000000  0.00000000  0.00000000  0.00000000  0.00000000  0.00000000  0.00000000
+  -0.00000000 -0.00000000  0.00000000 -0.00000000  0.00000000  0.00000000  0.00000000  0.00000000  0.00000000  0.00000000
+   0.00000000 -0.00000000  0.00000000 -0.00000000 -0.00000000  0.00000000  0.00000000  0.00000000  0.00000000  0.00000000
+   0.00000000  0.00000000  0.00000000  0.00000000  0.00000000  0.00000000  0.00000000  0.00000000  0.00000000 -0.00000000
+   0.00000000  0.00000000  0.00000000  0.00000000  0.00000000 -0.00000000  0.00000000 -0.00000000  0.00000000 -0.00000000
+   0.00000000  0.00000000  0.00000000  0.00000000  0.00000000  0.00000000  0.00000000  0.00000000 -0.00000000  0.00000000
+   0.00000000  0.00000000  0.00000000  0.00000000  0.00000000 -0.00000000 -0.00000000  0.00000000  0.00000000  0.00000000
+   0.00000000  0.00000000  0.00000000  0.00000000  0.00000000  0.00000000  0.00000000 -0.00000000  0.00000000  0.00000000
+ 
+      ID:0102010103 c   Occupation:                       7.893878E+00
+      ID:0102010103 c   Energy [Tr(HG)]:                  4.623128E+00
+                                                             Cartesian        Spin axis
+      ID:0102010103 c   Spin moment [Sx] (mu_B):          0.000000E+00     0.000000E+00
+      ID:0102010103 c   Spin moment [Sy] (mu_B):          0.000000E+00     0.000000E+00
+      ID:0102010103 c   Spin moment [Sz] (mu_B):          1.759062E+00     1.759062E+00
+      ID:0102010103 c   Total Spin moment [S] (mu_B):     1.759062E+00     1.759062E+00
+      ID:0102010103 c   Orbital moment [Lx] (mu_B):      -3.963683E-12    -3.963683E-12
+      ID:0102010103 c   Orbital moment [Ly] (mu_B):       3.963434E-12     3.963434E-12
+      ID:0102010103 c   Orbital moment [Lz] (mu_B):      -1.321043E-15    -1.321043E-15
+      ID:0102010103 c   Total Orbital moment [L] (mu_B):  5.605318E-12     5.605318E-12
+      ID:0102010103 c   Total moment [Jx=Lx+Sx] (mu_B):  -3.963683E-12    -3.963683E-12
+      ID:0102010103 c   Total moment [Jy=Ly+Sy] (mu_B):   3.963434E-12     3.963434E-12
+      ID:0102010103 c   Total moment [Jz=Lz+Sz] (mu_B):   1.759062E+00     1.759062E+00
+      ID:0102010103 c   Total moment [J=L+S] (mu_B):      1.759062E+00     1.759062E+00
+      ID:0102010103 c   Direction of S (Cartesian):       0.00000000  0.00000000  1.00000000
+      ID:0102010103 c   Direction of L (Cartesian):      -0.70712896  0.70708456 -0.00023568
+      ID:0102010103 c   Direction of J (Cartesian):      -0.00000000  0.00000000  1.00000000
+      ID:0102010103 c   Angle between L and S vec (deg): 90.01350328
+  
+  
+      ID 0202010103     Local dmtx: rho
+ Real:
+   0.96220372  0.00000585 -0.00000000 -0.00000000  0.00826523  0.00000000  0.00000000  0.00000000  0.00000000  0.00000000
+   0.00000585  0.95744244  0.00000000  0.00000000  0.00001619  0.00000000  0.00000000  0.00000000  0.00000000  0.00000000
+  -0.00000000  0.00000000  0.96703215  0.00955554 -0.00000000  0.00000000  0.00000000  0.00000000  0.00000000  0.00000000
+  -0.00000000  0.00000000  0.00955554  0.96697347  0.00000000  0.00000000  0.00000000  0.00000000  0.00000000  0.00000000
+   0.00826523  0.00001619 -0.00000000  0.00000000  0.97179944  0.00000000  0.00000000  0.00000000  0.00000000  0.00000000
+   0.00000000  0.00000000  0.00000000  0.00000000  0.00000000  0.74110247 -0.00000691 -0.00000000  0.00000000 -0.36766886
+   0.00000000  0.00000000  0.00000000  0.00000000  0.00000000 -0.00000691  0.95335542  0.00000000  0.00000000 -0.00003660
+   0.00000000  0.00000000  0.00000000  0.00000000  0.00000000 -0.00000000  0.00000000  0.52870408 -0.42457290 -0.00000000
+   0.00000000  0.00000000  0.00000000  0.00000000  0.00000000  0.00000000  0.00000000 -0.42457290  0.52882744  0.00000000
+   0.00000000  0.00000000  0.00000000  0.00000000  0.00000000 -0.36766886 -0.00003660 -0.00000000  0.00000000  0.31643761
+ Imag:
+  -0.00000000  0.00000000  0.00000000  0.00000000  0.00000000  0.00000000  0.00000000  0.00000000  0.00000000  0.00000000
+  -0.00000000  0.00000000  0.00000000  0.00000000 -0.00000000  0.00000000  0.00000000  0.00000000  0.00000000  0.00000000
+   0.00000000 -0.00000000 -0.00000000  0.00000000  0.00000000  0.00000000  0.00000000  0.00000000  0.00000000  0.00000000
+  -0.00000000 -0.00000000 -0.00000000 -0.00000000 -0.00000000  0.00000000  0.00000000  0.00000000  0.00000000  0.00000000
+  -0.00000000  0.00000000  0.00000000  0.00000000  0.00000000  0.00000000  0.00000000  0.00000000  0.00000000  0.00000000
+   0.00000000  0.00000000  0.00000000  0.00000000  0.00000000  0.00000000 -0.00000000  0.00000000 -0.00000000  0.00000000
+   0.00000000  0.00000000  0.00000000  0.00000000  0.00000000  0.00000000  0.00000000  0.00000000 -0.00000000  0.00000000
+   0.00000000  0.00000000  0.00000000  0.00000000  0.00000000 -0.00000000  0.00000000 -0.00000000 -0.00000000 -0.00000000
+   0.00000000  0.00000000  0.00000000  0.00000000  0.00000000  0.00000000  0.00000000  0.00000000  0.00000000  0.00000000
+   0.00000000  0.00000000  0.00000000  0.00000000  0.00000000 -0.00000000 -0.00000000  0.00000000 -0.00000000  0.00000000
+ 
+      ID:0202010103 c   Occupation:                       7.893878E+00
+      ID:0202010103 c   Energy [Tr(HG)]:                  4.623128E+00
+                                                             Cartesian        Spin axis
+      ID:0202010103 c   Spin moment [Sx] (mu_B):          0.000000E+00     0.000000E+00
+      ID:0202010103 c   Spin moment [Sy] (mu_B):          0.000000E+00     0.000000E+00
+      ID:0202010103 c   Spin moment [Sz] (mu_B):         -1.759062E+00    -1.759062E+00
+      ID:0202010103 c   Total Spin moment [S] (mu_B):     1.759062E+00     1.759062E+00
+      ID:0202010103 c   Orbital moment [Lx] (mu_B):      -2.237433E-11    -2.237433E-11
+      ID:0202010103 c   Orbital moment [Ly] (mu_B):       2.237409E-11     2.237409E-11
+      ID:0202010103 c   Orbital moment [Lz] (mu_B):      -1.321043E-15    -1.321043E-15
+      ID:0202010103 c   Total Orbital moment [L] (mu_B):  3.164191E-11     3.164191E-11
+      ID:0202010103 c   Total moment [Jx=Lx+Sx] (mu_B):  -2.237433E-11    -2.237433E-11
+      ID:0202010103 c   Total moment [Jy=Ly+Sy] (mu_B):   2.237409E-11     2.237409E-11
+      ID:0202010103 c   Total moment [Jz=Lz+Sz] (mu_B):  -1.759062E+00    -1.759062E+00
+      ID:0202010103 c   Total moment [J=L+S] (mu_B):      1.759062E+00     1.759062E+00
+      ID:0202010103 c   Direction of S (Cartesian):       0.00000000  0.00000000 -1.00000000
+      ID:0202010103 c   Direction of L (Cartesian):      -0.70711071  0.70710285 -0.00004175
+      ID:0202010103 c   Direction of J (Cartesian):      -0.00000000  0.00000000 -1.00000000
+      ID:0202010103 c   Angle between L and S vec (deg): 89.99760791
+  
+ 
+ ***********************************************
+    green_cycle: local problem for cluster 0202010103
+ ***********************************************
+ 
+ ***********************************************
+      ID 0202010103     Double_counting Data
+ ***********************************************
+ Orbital sets:     1     1        1     1
+ Occupation:     7.8938782     7.8938782     Tr(rho^2):     7.4057580     7.4057580
+ Spin moments:     0.0000000     0.0000000    -1.7570242           0.0000000     0.0000000    -1.7570242
+      FLL double counting
+ Double counting energy:    15.1785643
+ 
+ 
+      ID 0202010103     Double counting correction
+ Real:
+     4.061397   -0.000000    0.000000    0.000000    0.000000    0.000000    0.000000    0.000000    0.000000    0.000000
+    -0.000000    4.061397    0.000000    0.000000   -0.000000    0.000000    0.000000    0.000000    0.000000    0.000000
+     0.000000    0.000000    4.061397    0.000000   -0.000000    0.000000    0.000000    0.000000    0.000000    0.000000
+     0.000000    0.000000    0.000000    4.061397   -0.000000    0.000000    0.000000    0.000000    0.000000    0.000000
+     0.000000   -0.000000   -0.000000   -0.000000    4.061397    0.000000    0.000000    0.000000    0.000000    0.000000
+     0.000000    0.000000    0.000000    0.000000    0.000000    4.177622    0.000000   -0.000000   -0.000000   -0.000000
+     0.000000    0.000000    0.000000    0.000000    0.000000    0.000000    4.177622   -0.000000   -0.000000    0.000000
+     0.000000    0.000000    0.000000    0.000000    0.000000   -0.000000   -0.000000    4.177622   -0.000000    0.000000
+     0.000000    0.000000    0.000000    0.000000    0.000000   -0.000000   -0.000000   -0.000000    4.177622    0.000000
+     0.000000    0.000000    0.000000    0.000000    0.000000   -0.000000    0.000000    0.000000    0.000000    4.177622
+ Imag:
+     0.000000    0.000000   -0.000000   -0.000000    0.000000    0.000000    0.000000    0.000000    0.000000    0.000000
+    -0.000000   -0.000000   -0.000000    0.000000   -0.000000    0.000000    0.000000    0.000000    0.000000    0.000000
+     0.000000    0.000000   -0.000000    0.000000   -0.000000    0.000000    0.000000    0.000000    0.000000    0.000000
+     0.000000   -0.000000   -0.000000   -0.000000   -0.000000    0.000000    0.000000    0.000000    0.000000    0.000000
+     0.000000    0.000000    0.000000    0.000000   -0.000000    0.000000    0.000000    0.000000    0.000000    0.000000
+     0.000000    0.000000    0.000000    0.000000    0.000000   -0.000000   -0.000000    0.000000    0.000000    0.000000
+     0.000000    0.000000    0.000000    0.000000    0.000000    0.000000    0.000000    0.000000   -0.000000    0.000000
+     0.000000    0.000000    0.000000    0.000000    0.000000   -0.000000   -0.000000    0.000000   -0.000000    0.000000
+     0.000000    0.000000    0.000000    0.000000    0.000000   -0.000000    0.000000    0.000000    0.000000    0.000000
+     0.000000    0.000000    0.000000    0.000000    0.000000    0.000000   -0.000000   -0.000000   -0.000000    0.000000
+  
+ ***********************************************
+      Solver Interface to LDA+U
+ ***********************************************
+ 
+   Green_solver: Symmetrizing the self-energy!
+      ID 0202010103     Sig_static after solver (including DC)
+ Real part:
+   3.82756923 -0.00000459 -0.00000000  0.00000000 -0.02557039  0.00000000  0.00000000  0.00000000  0.00000000  0.00000000
+  -0.00000459  3.84232385  0.00000000 -0.00000000 -0.00001144  0.00000000  0.00000000  0.00000000  0.00000000  0.00000000
+  -0.00000000  0.00000000  3.81276512 -0.02953519  0.00000000  0.00000000  0.00000000  0.00000000  0.00000000  0.00000000
+   0.00000000 -0.00000000 -0.02953519  3.81280747  0.00000000  0.00000000  0.00000000  0.00000000  0.00000000  0.00000000
+  -0.02557039 -0.00001144  0.00000000  0.00000000  3.79800460  0.00000000  0.00000000  0.00000000  0.00000000  0.00000000
+   0.00000000  0.00000000  0.00000000  0.00000000  0.00000000  4.04438880  0.00000073  0.00000000  0.00000000  0.21326868
+   0.00000000  0.00000000  0.00000000  0.00000000  0.00000000  0.00000073  3.92126679  0.00000000 -0.00000000  0.00002210
+   0.00000000  0.00000000  0.00000000  0.00000000  0.00000000  0.00000000  0.00000000  4.16758978  0.24627403  0.00000000
+   0.00000000  0.00000000  0.00000000  0.00000000  0.00000000  0.00000000 -0.00000000  0.24627403  4.16752130  0.00000000
+   0.00000000  0.00000000  0.00000000  0.00000000  0.00000000  0.21326868  0.00002210  0.00000000  0.00000000  4.29071484
+ Imaginary part:
+   0.00000000 -0.00000000  0.00000000  0.00000000 -0.00000000  0.00000000  0.00000000  0.00000000  0.00000000  0.00000000
+   0.00000000  0.00000000  0.00000000 -0.00000000  0.00000000  0.00000000  0.00000000  0.00000000  0.00000000  0.00000000
+  -0.00000000  0.00000000  0.00000000 -0.00000000 -0.00000000  0.00000000  0.00000000  0.00000000  0.00000000  0.00000000
+   0.00000000  0.00000000  0.00000000  0.00000000 -0.00000000  0.00000000  0.00000000  0.00000000  0.00000000  0.00000000
+   0.00000000 -0.00000000  0.00000000  0.00000000  0.00000000  0.00000000  0.00000000  0.00000000  0.00000000  0.00000000
+   0.00000000  0.00000000  0.00000000  0.00000000  0.00000000  0.00000000  0.00000000 -0.00000000 -0.00000000 -0.00000000
+   0.00000000  0.00000000  0.00000000  0.00000000  0.00000000 -0.00000000  0.00000000 -0.00000000  0.00000000 -0.00000000
+   0.00000000  0.00000000  0.00000000  0.00000000  0.00000000  0.00000000  0.00000000  0.00000000  0.00000000  0.00000000
+   0.00000000  0.00000000  0.00000000  0.00000000  0.00000000  0.00000000 -0.00000000 -0.00000000  0.00000000  0.00000000
+   0.00000000  0.00000000  0.00000000  0.00000000  0.00000000  0.00000000  0.00000000 -0.00000000 -0.00000000  0.00000000
+  
+      ID 0202010103     Sig at last Matsubara after solver (including DC)
+ Real part:
+   3.82756923 -0.00000459 -0.00000000  0.00000000 -0.02557039  0.00000000  0.00000000  0.00000000  0.00000000  0.00000000
+  -0.00000459  3.84232385  0.00000000 -0.00000000 -0.00001144  0.00000000  0.00000000  0.00000000  0.00000000  0.00000000
+   0.00000000  0.00000000  3.81276512 -0.02953519  0.00000000  0.00000000  0.00000000  0.00000000  0.00000000  0.00000000
+   0.00000000 -0.00000000 -0.02953519  3.81280747  0.00000000  0.00000000  0.00000000  0.00000000  0.00000000  0.00000000
+  -0.02557039 -0.00001144  0.00000000  0.00000000  3.79800460  0.00000000  0.00000000  0.00000000  0.00000000  0.00000000
+   0.00000000  0.00000000  0.00000000  0.00000000  0.00000000  4.04438880  0.00000073  0.00000000  0.00000000  0.21326868
+   0.00000000  0.00000000  0.00000000  0.00000000  0.00000000  0.00000073  3.92126679  0.00000000 -0.00000000  0.00002210
+   0.00000000  0.00000000  0.00000000  0.00000000  0.00000000  0.00000000  0.00000000  4.16758978  0.24627403  0.00000000
+   0.00000000  0.00000000  0.00000000  0.00000000  0.00000000  0.00000000 -0.00000000  0.24627403  4.16752130  0.00000000
+   0.00000000  0.00000000  0.00000000  0.00000000  0.00000000  0.21326868  0.00002210  0.00000000  0.00000000  4.29071484
+ Imaginary part:
+   0.00000000 -0.00000000  0.00000000  0.00000000 -0.00000000  0.00000000  0.00000000  0.00000000  0.00000000  0.00000000
+   0.00000000  0.00000000  0.00000000 -0.00000000  0.00000000  0.00000000  0.00000000  0.00000000  0.00000000  0.00000000
+  -0.00000000  0.00000000  0.00000000 -0.00000000 -0.00000000  0.00000000  0.00000000  0.00000000  0.00000000  0.00000000
+   0.00000000  0.00000000  0.00000000  0.00000000 -0.00000000  0.00000000  0.00000000  0.00000000  0.00000000  0.00000000
+   0.00000000 -0.00000000  0.00000000  0.00000000  0.00000000  0.00000000  0.00000000  0.00000000  0.00000000  0.00000000
+   0.00000000  0.00000000  0.00000000  0.00000000  0.00000000  0.00000000  0.00000000 -0.00000000 -0.00000000 -0.00000000
+   0.00000000  0.00000000  0.00000000  0.00000000  0.00000000 -0.00000000  0.00000000 -0.00000000  0.00000000 -0.00000000
+   0.00000000  0.00000000  0.00000000  0.00000000  0.00000000  0.00000000  0.00000000  0.00000000  0.00000000  0.00000000
+   0.00000000  0.00000000  0.00000000  0.00000000  0.00000000  0.00000000 -0.00000000 -0.00000000 -0.00000000  0.00000000
+   0.00000000  0.00000000  0.00000000  0.00000000  0.00000000  0.00000000  0.00000000 -0.00000000 -0.00000000  0.00000000
+  
+ 
+ ***********************************************
+      ID 0202010103     Applying Double_counting
+ ***********************************************
+ No double counting calculated after the solver:           2
+      ID 0202010103     Static part of the self-energy after DC
+ Real part:
+  -0.23382769 -0.00000459 -0.00000000 -0.00000000 -0.02557039  0.00000000  0.00000000  0.00000000  0.00000000  0.00000000
+  -0.00000459 -0.21907307 -0.00000000 -0.00000000 -0.00001144  0.00000000  0.00000000  0.00000000  0.00000000  0.00000000
+  -0.00000000 -0.00000000 -0.24863180 -0.02953519  0.00000000  0.00000000  0.00000000  0.00000000  0.00000000  0.00000000
+  -0.00000000 -0.00000000 -0.02953519 -0.24858945  0.00000000  0.00000000  0.00000000  0.00000000  0.00000000  0.00000000
+  -0.02557039 -0.00001144  0.00000000  0.00000000 -0.26339233  0.00000000  0.00000000  0.00000000  0.00000000  0.00000000
+   0.00000000  0.00000000  0.00000000  0.00000000  0.00000000 -0.13323314  0.00000073  0.00000000  0.00000000  0.21326868
+   0.00000000  0.00000000  0.00000000  0.00000000  0.00000000  0.00000073 -0.25635514  0.00000000  0.00000000  0.00002210
+   0.00000000  0.00000000  0.00000000  0.00000000  0.00000000  0.00000000  0.00000000 -0.01003215  0.24627403 -0.00000000
+   0.00000000  0.00000000  0.00000000  0.00000000  0.00000000  0.00000000  0.00000000  0.24627403 -0.01010064 -0.00000000
+   0.00000000  0.00000000  0.00000000  0.00000000  0.00000000  0.21326868  0.00002210 -0.00000000 -0.00000000  0.11309290
+ Imaginary part:
+  -0.00000000 -0.00000000  0.00000000  0.00000000 -0.00000000  0.00000000  0.00000000  0.00000000  0.00000000  0.00000000
+   0.00000000  0.00000000  0.00000000 -0.00000000  0.00000000  0.00000000  0.00000000  0.00000000  0.00000000  0.00000000
+  -0.00000000 -0.00000000  0.00000000 -0.00000000  0.00000000  0.00000000  0.00000000  0.00000000  0.00000000  0.00000000
+  -0.00000000  0.00000000  0.00000000  0.00000000  0.00000000  0.00000000  0.00000000  0.00000000  0.00000000  0.00000000
+   0.00000000 -0.00000000 -0.00000000 -0.00000000  0.00000000  0.00000000  0.00000000  0.00000000  0.00000000  0.00000000
+   0.00000000  0.00000000  0.00000000  0.00000000  0.00000000  0.00000000  0.00000000 -0.00000000 -0.00000000 -0.00000000
+   0.00000000  0.00000000  0.00000000  0.00000000  0.00000000 -0.00000000 -0.00000000 -0.00000000  0.00000000 -0.00000000
+   0.00000000  0.00000000  0.00000000  0.00000000  0.00000000  0.00000000  0.00000000 -0.00000000  0.00000000 -0.00000000
+   0.00000000  0.00000000  0.00000000  0.00000000  0.00000000  0.00000000 -0.00000000 -0.00000000 -0.00000000 -0.00000000
+   0.00000000  0.00000000  0.00000000  0.00000000  0.00000000  0.00000000  0.00000000  0.00000000  0.00000000 -0.00000000
+  
+ The self-energy of cluster 0202010103 is mixed linearly.
+ 
+ ***********************************************
+    green_cycle: local problem for cluster 0102010103
+ ***********************************************
+ 
+ ***********************************************
+      ID 0102010103     Double_counting Data
+ ***********************************************
+ Orbital sets:     1     1        1     1
+ Occupation:     7.8938782     7.8938782     Tr(rho^2):     7.4057580     7.4057580
+ Spin moments:     0.0000000     0.0000000     1.7570242           0.0000000     0.0000000     1.7570242
+      FLL double counting
+ Double counting energy:    15.1785643
+ 
+ 
+      ID 0102010103     Double counting correction
+ Real:
+     4.177622    0.000000   -0.000000   -0.000000   -0.000000    0.000000    0.000000    0.000000    0.000000    0.000000
+     0.000000    4.177622   -0.000000   -0.000000    0.000000    0.000000    0.000000    0.000000    0.000000    0.000000
+    -0.000000   -0.000000    4.177622   -0.000000    0.000000    0.000000    0.000000    0.000000    0.000000    0.000000
+    -0.000000   -0.000000   -0.000000    4.177622    0.000000    0.000000    0.000000    0.000000    0.000000    0.000000
+    -0.000000    0.000000    0.000000    0.000000    4.177622    0.000000    0.000000    0.000000    0.000000    0.000000
+     0.000000    0.000000    0.000000    0.000000    0.000000    4.061397   -0.000000    0.000000    0.000000    0.000000
+     0.000000    0.000000    0.000000    0.000000    0.000000   -0.000000    4.061397    0.000000    0.000000   -0.000000
+     0.000000    0.000000    0.000000    0.000000    0.000000    0.000000    0.000000    4.061397    0.000000   -0.000000
+     0.000000    0.000000    0.000000    0.000000    0.000000    0.000000    0.000000    0.000000    4.061397   -0.000000
+     0.000000    0.000000    0.000000    0.000000    0.000000    0.000000   -0.000000   -0.000000   -0.000000    4.061397
+ Imag:
+    -0.000000   -0.000000    0.000000    0.000000    0.000000    0.000000    0.000000    0.000000    0.000000    0.000000
+     0.000000    0.000000    0.000000   -0.000000    0.000000    0.000000    0.000000    0.000000    0.000000    0.000000
+    -0.000000   -0.000000    0.000000   -0.000000    0.000000    0.000000    0.000000    0.000000    0.000000    0.000000
+    -0.000000    0.000000    0.000000    0.000000    0.000000    0.000000    0.000000    0.000000    0.000000    0.000000
+     0.000000   -0.000000   -0.000000   -0.000000    0.000000    0.000000    0.000000    0.000000    0.000000    0.000000
+     0.000000    0.000000    0.000000    0.000000    0.000000    0.000000    0.000000   -0.000000   -0.000000    0.000000
+     0.000000    0.000000    0.000000    0.000000    0.000000   -0.000000   -0.000000   -0.000000    0.000000   -0.000000
+     0.000000    0.000000    0.000000    0.000000    0.000000    0.000000    0.000000   -0.000000    0.000000   -0.000000
+     0.000000    0.000000    0.000000    0.000000    0.000000    0.000000   -0.000000   -0.000000   -0.000000   -0.000000
+     0.000000    0.000000    0.000000    0.000000    0.000000    0.000000    0.000000    0.000000    0.000000   -0.000000
+  
+ ***********************************************
+      Solver Interface to LDA+U
+ ***********************************************
+ 
+   Green_solver: Symmetrizing the self-energy!
+      ID 0102010103     Sig_static after solver (including DC)
+ Real part:
+   4.04438880  0.00000073  0.00000000  0.00000000  0.21326868  0.00000000  0.00000000  0.00000000  0.00000000  0.00000000
+   0.00000073  3.92126679  0.00000000 -0.00000000  0.00002210  0.00000000  0.00000000  0.00000000  0.00000000  0.00000000
+   0.00000000  0.00000000  4.16758978  0.24627403  0.00000000  0.00000000  0.00000000  0.00000000  0.00000000  0.00000000
+   0.00000000 -0.00000000  0.24627403  4.16752130  0.00000000  0.00000000  0.00000000  0.00000000  0.00000000  0.00000000
+   0.21326868  0.00002210  0.00000000  0.00000000  4.29071484  0.00000000  0.00000000  0.00000000  0.00000000  0.00000000
+   0.00000000  0.00000000  0.00000000  0.00000000  0.00000000  3.82756923 -0.00000459 -0.00000000  0.00000000 -0.02557039
+   0.00000000  0.00000000  0.00000000  0.00000000  0.00000000 -0.00000459  3.84232385  0.00000000 -0.00000000 -0.00001144
+   0.00000000  0.00000000  0.00000000  0.00000000  0.00000000 -0.00000000  0.00000000  3.81276512 -0.02953519  0.00000000
+   0.00000000  0.00000000  0.00000000  0.00000000  0.00000000  0.00000000 -0.00000000 -0.02953519  3.81280747  0.00000000
+   0.00000000  0.00000000  0.00000000  0.00000000  0.00000000 -0.02557039 -0.00001144  0.00000000  0.00000000  3.79800460
+ Imaginary part:
+   0.00000000  0.00000000  0.00000000 -0.00000000  0.00000000  0.00000000  0.00000000  0.00000000  0.00000000  0.00000000
+  -0.00000000  0.00000000  0.00000000  0.00000000 -0.00000000  0.00000000  0.00000000  0.00000000  0.00000000  0.00000000
+  -0.00000000 -0.00000000  0.00000000  0.00000000  0.00000000  0.00000000  0.00000000  0.00000000  0.00000000  0.00000000
+   0.00000000 -0.00000000 -0.00000000  0.00000000 -0.00000000  0.00000000  0.00000000  0.00000000  0.00000000  0.00000000
+  -0.00000000  0.00000000 -0.00000000  0.00000000  0.00000000  0.00000000  0.00000000  0.00000000  0.00000000  0.00000000
+   0.00000000  0.00000000  0.00000000  0.00000000  0.00000000  0.00000000 -0.00000000  0.00000000  0.00000000  0.00000000
+   0.00000000  0.00000000  0.00000000  0.00000000  0.00000000  0.00000000  0.00000000  0.00000000  0.00000000  0.00000000
+   0.00000000  0.00000000  0.00000000  0.00000000  0.00000000 -0.00000000 -0.00000000  0.00000000  0.00000000  0.00000000
+   0.00000000  0.00000000  0.00000000  0.00000000  0.00000000  0.00000000  0.00000000 -0.00000000  0.00000000 -0.00000000
+   0.00000000  0.00000000  0.00000000  0.00000000  0.00000000 -0.00000000 -0.00000000  0.00000000  0.00000000  0.00000000
+  
+      ID 0102010103     Sig at last Matsubara after solver (including DC)
+ Real part:
+   4.04438880  0.00000073  0.00000000  0.00000000  0.21326868  0.00000000  0.00000000  0.00000000  0.00000000  0.00000000
+   0.00000073  3.92126679  0.00000000 -0.00000000  0.00002210  0.00000000  0.00000000  0.00000000  0.00000000  0.00000000
+   0.00000000  0.00000000  4.16758978  0.24627403  0.00000000  0.00000000  0.00000000  0.00000000  0.00000000  0.00000000
+   0.00000000 -0.00000000  0.24627403  4.16752130  0.00000000  0.00000000  0.00000000  0.00000000  0.00000000  0.00000000
+   0.21326868  0.00002210  0.00000000  0.00000000  4.29071484  0.00000000  0.00000000  0.00000000  0.00000000  0.00000000
+   0.00000000  0.00000000  0.00000000  0.00000000  0.00000000  3.82756923 -0.00000459 -0.00000000  0.00000000 -0.02557039
+   0.00000000  0.00000000  0.00000000  0.00000000  0.00000000 -0.00000459  3.84232385  0.00000000 -0.00000000 -0.00001144
+   0.00000000  0.00000000  0.00000000  0.00000000  0.00000000  0.00000000  0.00000000  3.81276512 -0.02953519  0.00000000
+   0.00000000  0.00000000  0.00000000  0.00000000  0.00000000  0.00000000 -0.00000000 -0.02953519  3.81280747  0.00000000
+   0.00000000  0.00000000  0.00000000  0.00000000  0.00000000 -0.02557039 -0.00001144  0.00000000  0.00000000  3.79800460
+ Imaginary part:
+   0.00000000  0.00000000  0.00000000 -0.00000000  0.00000000  0.00000000  0.00000000  0.00000000  0.00000000  0.00000000
+  -0.00000000  0.00000000  0.00000000  0.00000000 -0.00000000  0.00000000  0.00000000  0.00000000  0.00000000  0.00000000
+  -0.00000000 -0.00000000  0.00000000  0.00000000  0.00000000  0.00000000  0.00000000  0.00000000  0.00000000  0.00000000
+   0.00000000 -0.00000000 -0.00000000  0.00000000 -0.00000000  0.00000000  0.00000000  0.00000000  0.00000000  0.00000000
+  -0.00000000  0.00000000 -0.00000000  0.00000000  0.00000000  0.00000000  0.00000000  0.00000000  0.00000000  0.00000000
+   0.00000000  0.00000000  0.00000000  0.00000000  0.00000000  0.00000000 -0.00000000  0.00000000  0.00000000  0.00000000
+   0.00000000  0.00000000  0.00000000  0.00000000  0.00000000  0.00000000  0.00000000  0.00000000  0.00000000  0.00000000
+   0.00000000  0.00000000  0.00000000  0.00000000  0.00000000 -0.00000000 -0.00000000  0.00000000  0.00000000  0.00000000
+   0.00000000  0.00000000  0.00000000  0.00000000  0.00000000  0.00000000  0.00000000 -0.00000000 -0.00000000 -0.00000000
+   0.00000000  0.00000000  0.00000000  0.00000000  0.00000000 -0.00000000 -0.00000000  0.00000000  0.00000000  0.00000000
+  
+ 
+ ***********************************************
+      ID 0102010103     Applying Double_counting
+ ***********************************************
+ No double counting calculated after the solver:           2
+      ID 0102010103     Static part of the self-energy after DC
+ Real part:
+  -0.13323314  0.00000073  0.00000000  0.00000000  0.21326868  0.00000000  0.00000000  0.00000000  0.00000000  0.00000000
+   0.00000073 -0.25635514  0.00000000  0.00000000  0.00002210  0.00000000  0.00000000  0.00000000  0.00000000  0.00000000
+   0.00000000  0.00000000 -0.01003215  0.24627403 -0.00000000  0.00000000  0.00000000  0.00000000  0.00000000  0.00000000
+   0.00000000  0.00000000  0.24627403 -0.01010064 -0.00000000  0.00000000  0.00000000  0.00000000  0.00000000  0.00000000
+   0.21326868  0.00002210 -0.00000000 -0.00000000  0.11309290  0.00000000  0.00000000  0.00000000  0.00000000  0.00000000
+   0.00000000  0.00000000  0.00000000  0.00000000  0.00000000 -0.23382769 -0.00000459 -0.00000000 -0.00000000 -0.02557039
+   0.00000000  0.00000000  0.00000000  0.00000000  0.00000000 -0.00000459 -0.21907307 -0.00000000 -0.00000000 -0.00001144
+   0.00000000  0.00000000  0.00000000  0.00000000  0.00000000 -0.00000000 -0.00000000 -0.24863180 -0.02953519  0.00000000
+   0.00000000  0.00000000  0.00000000  0.00000000  0.00000000 -0.00000000 -0.00000000 -0.02953519 -0.24858945  0.00000000
+   0.00000000  0.00000000  0.00000000  0.00000000  0.00000000 -0.02557039 -0.00001144  0.00000000  0.00000000 -0.26339233
+ Imaginary part:
+   0.00000000  0.00000000 -0.00000000 -0.00000000  0.00000000  0.00000000  0.00000000  0.00000000  0.00000000  0.00000000
+  -0.00000000 -0.00000000 -0.00000000  0.00000000 -0.00000000  0.00000000  0.00000000  0.00000000  0.00000000  0.00000000
+   0.00000000  0.00000000 -0.00000000  0.00000000 -0.00000000  0.00000000  0.00000000  0.00000000  0.00000000  0.00000000
+   0.00000000 -0.00000000 -0.00000000 -0.00000000 -0.00000000  0.00000000  0.00000000  0.00000000  0.00000000  0.00000000
+  -0.00000000  0.00000000  0.00000000  0.00000000 -0.00000000  0.00000000  0.00000000  0.00000000  0.00000000  0.00000000
+   0.00000000  0.00000000  0.00000000  0.00000000  0.00000000 -0.00000000 -0.00000000  0.00000000  0.00000000  0.00000000
+   0.00000000  0.00000000  0.00000000  0.00000000  0.00000000  0.00000000  0.00000000  0.00000000 -0.00000000  0.00000000
+   0.00000000  0.00000000  0.00000000  0.00000000  0.00000000 -0.00000000 -0.00000000  0.00000000  0.00000000  0.00000000
+   0.00000000  0.00000000  0.00000000  0.00000000  0.00000000 -0.00000000  0.00000000 -0.00000000  0.00000000  0.00000000
+   0.00000000  0.00000000  0.00000000  0.00000000  0.00000000 -0.00000000 -0.00000000 -0.00000000 -0.00000000  0.00000000
+  
+ The self-energy of cluster 0102010103 is mixed linearly.
+ 
+ ########### End of Iteration nr.   2 ##########
+ 
+ 
+ ############### Iteration nr.   3 ##############
+ 
+ ***************** Green's function summary ****************
+ It :  3,         mu =           0.748052222078
+ Total occupation    =          32.000000000000
+ Sigdiff             =           0.000001147585
+ ***********************************************************
+ green_cycle: Cycle the DMFT loop to calculate the local green's function and fu
+ ll dmtx.
+ 
+ 
+ ############### Iteration nr.   4 ##############
+ 
+ Griffin: The local dmtx is projected from the global dmtx
+      ID: 0102010103    Galitskii-Migdal Energy from local rho:         -9.282244E-01
+      ID: 0202010103    Galitskii-Migdal Energy from local rho:         -9.282244E-01
+ ***************** Green's function summary ****************
+ It :  4,         mu =           0.748052222078
+ Total occupation    =          32.000000000000
+ Sigdiff             =           0.000001147585
+ Spin moment (mu_B)  =           0.000000000002
+ Total energy        =           9.220162582220
+ RSPt eigen energy   =           8.906779879552
+ Energy correction   =           0.313382702669
+ DMFT eigen energy   =           9.016939147117
+ Global GM energies  =           0.203223435103
+ ***********************************************************
+  
+ ***********************************************
+      Local properties
+ ***********************************************
+  
+      ID 0102010103     Local dmtx: rho
+ Real:
+   0.74110224 -0.00000690 -0.00000000  0.00000000 -0.36766916  0.00000000  0.00000000  0.00000000  0.00000000  0.00000000
+  -0.00000690  0.95335542  0.00000000  0.00000000 -0.00003658  0.00000000  0.00000000  0.00000000  0.00000000  0.00000000
+  -0.00000000  0.00000000  0.52870383 -0.42457319 -0.00000000  0.00000000  0.00000000  0.00000000  0.00000000  0.00000000
+   0.00000000  0.00000000 -0.42457319  0.52882710  0.00000000  0.00000000  0.00000000  0.00000000  0.00000000  0.00000000
+  -0.36766916 -0.00003658 -0.00000000  0.00000000  0.31643726  0.00000000  0.00000000  0.00000000  0.00000000  0.00000000
+   0.00000000  0.00000000  0.00000000  0.00000000  0.00000000  0.96220374  0.00000585 -0.00000000 -0.00000000  0.00826524
+   0.00000000  0.00000000  0.00000000  0.00000000  0.00000000  0.00000585  0.95744247  0.00000000  0.00000000  0.00001619
+   0.00000000  0.00000000  0.00000000  0.00000000  0.00000000 -0.00000000  0.00000000  0.96703217  0.00955554 -0.00000000
+   0.00000000  0.00000000  0.00000000  0.00000000  0.00000000 -0.00000000  0.00000000  0.00955554  0.96697350  0.00000000
+   0.00000000  0.00000000  0.00000000  0.00000000  0.00000000  0.00826524  0.00001619 -0.00000000  0.00000000  0.97179947
+ Imag:
+   0.00000000 -0.00000000  0.00000000  0.00000000 -0.00000000  0.00000000  0.00000000  0.00000000  0.00000000  0.00000000
+   0.00000000 -0.00000000 -0.00000000  0.00000000  0.00000000  0.00000000  0.00000000  0.00000000  0.00000000  0.00000000
+  -0.00000000  0.00000000  0.00000000 -0.00000000  0.00000000  0.00000000  0.00000000  0.00000000  0.00000000  0.00000000
+  -0.00000000 -0.00000000  0.00000000 -0.00000000  0.00000000  0.00000000  0.00000000  0.00000000  0.00000000  0.00000000
+   0.00000000 -0.00000000  0.00000000 -0.00000000 -0.00000000  0.00000000  0.00000000  0.00000000  0.00000000  0.00000000
+   0.00000000  0.00000000  0.00000000  0.00000000  0.00000000 -0.00000000  0.00000000  0.00000000  0.00000000 -0.00000000
+   0.00000000  0.00000000  0.00000000  0.00000000  0.00000000 -0.00000000  0.00000000 -0.00000000  0.00000000 -0.00000000
+   0.00000000  0.00000000  0.00000000  0.00000000  0.00000000  0.00000000  0.00000000 -0.00000000 -0.00000000  0.00000000
+   0.00000000  0.00000000  0.00000000  0.00000000  0.00000000 -0.00000000 -0.00000000  0.00000000 -0.00000000  0.00000000
+   0.00000000  0.00000000  0.00000000  0.00000000  0.00000000  0.00000000  0.00000000 -0.00000000  0.00000000 -0.00000000
+ 
+      ID:0102010103 c   Occupation:                       7.893877E+00
+      ID:0102010103 c   Energy [Tr(HG)]:                  4.623127E+00
+                                                             Cartesian        Spin axis
+      ID:0102010103 c   Spin moment [Sx] (mu_B):          0.000000E+00     0.000000E+00
+      ID:0102010103 c   Spin moment [Sy] (mu_B):          0.000000E+00     0.000000E+00
+      ID:0102010103 c   Spin moment [Sz] (mu_B):          1.759063E+00     1.759063E+00
+      ID:0102010103 c   Total Spin moment [S] (mu_B):     1.759063E+00     1.759063E+00
+      ID:0102010103 c   Orbital moment [Lx] (mu_B):      -2.733165E-11    -2.733165E-11
+      ID:0102010103 c   Orbital moment [Ly] (mu_B):       2.733140E-11     2.733140E-11
+      ID:0102010103 c   Orbital moment [Lz] (mu_B):      -1.321042E-15    -1.321042E-15
+      ID:0102010103 c   Total Orbital moment [L] (mu_B):  3.865261E-11     3.865261E-11
+      ID:0102010103 c   Total moment [Jx=Lx+Sx] (mu_B):  -2.733165E-11    -2.733165E-11
+      ID:0102010103 c   Total moment [Jy=Ly+Sy] (mu_B):   2.733140E-11     2.733140E-11
+      ID:0102010103 c   Total moment [Jz=Lz+Sz] (mu_B):   1.759063E+00     1.759063E+00
+      ID:0102010103 c   Total moment [J=L+S] (mu_B):      1.759063E+00     1.759063E+00
+      ID:0102010103 c   Direction of S (Cartesian):       0.00000000  0.00000000  1.00000000
+      ID:0102010103 c   Direction of L (Cartesian):      -0.70711000  0.70710356 -0.00003418
+      ID:0102010103 c   Direction of J (Cartesian):      -0.00000000  0.00000000  1.00000000
+      ID:0102010103 c   Angle between L and S vec (deg): 90.00195822
+  
+  
+      ID 0202010103     Local dmtx: rho
+ Real:
+   0.96220374  0.00000585 -0.00000000 -0.00000000  0.00826524  0.00000000  0.00000000  0.00000000  0.00000000  0.00000000
+   0.00000585  0.95744247  0.00000000  0.00000000  0.00001619  0.00000000  0.00000000  0.00000000  0.00000000  0.00000000
+  -0.00000000  0.00000000  0.96703217  0.00955554 -0.00000000  0.00000000  0.00000000  0.00000000  0.00000000  0.00000000
+  -0.00000000  0.00000000  0.00955554  0.96697350  0.00000000  0.00000000  0.00000000  0.00000000  0.00000000  0.00000000
+   0.00826524  0.00001619 -0.00000000  0.00000000  0.97179947  0.00000000  0.00000000  0.00000000  0.00000000  0.00000000
+   0.00000000  0.00000000  0.00000000  0.00000000  0.00000000  0.74110224 -0.00000690 -0.00000000  0.00000000 -0.36766916
+   0.00000000  0.00000000  0.00000000  0.00000000  0.00000000 -0.00000690  0.95335542  0.00000000  0.00000000 -0.00003658
+   0.00000000  0.00000000  0.00000000  0.00000000  0.00000000 -0.00000000  0.00000000  0.52870383 -0.42457319 -0.00000000
+   0.00000000  0.00000000  0.00000000  0.00000000  0.00000000  0.00000000  0.00000000 -0.42457319  0.52882710  0.00000000
+   0.00000000  0.00000000  0.00000000  0.00000000  0.00000000 -0.36766916 -0.00003658 -0.00000000  0.00000000  0.31643726
+ Imag:
+  -0.00000000  0.00000000  0.00000000  0.00000000  0.00000000  0.00000000  0.00000000  0.00000000  0.00000000  0.00000000
+  -0.00000000  0.00000000  0.00000000  0.00000000 -0.00000000  0.00000000  0.00000000  0.00000000  0.00000000  0.00000000
+   0.00000000 -0.00000000 -0.00000000  0.00000000  0.00000000  0.00000000  0.00000000  0.00000000  0.00000000  0.00000000
+  -0.00000000 -0.00000000 -0.00000000  0.00000000 -0.00000000  0.00000000  0.00000000  0.00000000  0.00000000  0.00000000
+  -0.00000000  0.00000000  0.00000000  0.00000000  0.00000000  0.00000000  0.00000000  0.00000000  0.00000000  0.00000000
+   0.00000000  0.00000000  0.00000000  0.00000000  0.00000000 -0.00000000 -0.00000000  0.00000000 -0.00000000 -0.00000000
+   0.00000000  0.00000000  0.00000000  0.00000000  0.00000000  0.00000000 -0.00000000  0.00000000 -0.00000000  0.00000000
+   0.00000000  0.00000000  0.00000000  0.00000000  0.00000000 -0.00000000  0.00000000  0.00000000  0.00000000 -0.00000000
+   0.00000000  0.00000000  0.00000000  0.00000000  0.00000000  0.00000000  0.00000000 -0.00000000  0.00000000  0.00000000
+   0.00000000  0.00000000  0.00000000  0.00000000  0.00000000  0.00000000 -0.00000000  0.00000000 -0.00000000 -0.00000000
+ 
+      ID:0202010103 c   Occupation:                       7.893877E+00
+      ID:0202010103 c   Energy [Tr(HG)]:                  4.623127E+00
+                                                             Cartesian        Spin axis
+      ID:0202010103 c   Spin moment [Sx] (mu_B):          0.000000E+00     0.000000E+00
+      ID:0202010103 c   Spin moment [Sy] (mu_B):          0.000000E+00     0.000000E+00
+      ID:0202010103 c   Spin moment [Sz] (mu_B):         -1.759063E+00    -1.759063E+00
+      ID:0202010103 c   Total Spin moment [S] (mu_B):     1.759063E+00     1.759063E+00
+      ID:0202010103 c   Orbital moment [Lx] (mu_B):      -1.512367E-11    -1.512367E-11
+      ID:0202010103 c   Orbital moment [Ly] (mu_B):       1.512342E-11     1.512342E-11
+      ID:0202010103 c   Orbital moment [Lz] (mu_B):      -1.321042E-15    -1.321042E-15
+      ID:0202010103 c   Total Orbital moment [L] (mu_B):  2.138793E-11     2.138793E-11
+      ID:0202010103 c   Total moment [Jx=Lx+Sx] (mu_B):  -1.512367E-11    -1.512367E-11
+      ID:0202010103 c   Total moment [Jy=Ly+Sy] (mu_B):   1.512342E-11     1.512342E-11
+      ID:0202010103 c   Total moment [Jz=Lz+Sz] (mu_B):  -1.759063E+00    -1.759063E+00
+      ID:0202010103 c   Total moment [J=L+S] (mu_B):      1.759063E+00     1.759063E+00
+      ID:0202010103 c   Direction of S (Cartesian):       0.00000000  0.00000000 -1.00000000
+      ID:0202010103 c   Direction of L (Cartesian):      -0.70711260  0.70710096 -0.00006177
+      ID:0202010103 c   Direction of J (Cartesian):      -0.00000000  0.00000000 -1.00000000
+      ID:0202010103 c   Angle between L and S vec (deg): 89.99646108
+  
+ 
+ ################################################
+       Hurray! The DMFT cycle is converged!
+ ################################################
+ 
+ green_cycle: The charge self-consistency will generate a new LDA Hamiltonian.
+ 
+ +---------------------------- END OF BRIANNA -----------------------------+
+ 
+ 
+ TIME: DMFT:      0.020m in,      0.004m added,      0.024m total
+ Output from conden
+ Conden: Muffin tin density from the density matrix.
+
+    Muffin tin charge from density matrix:
+      type  spin                 Q
+         1  down   3.2424491690409
+         2  down   4.9803211163947
+         3  down   2.7702111356993
+     total  down   13.763192556834
+
+         1    up   4.9803211163936
+         2    up   3.2424491690466
+         3    up   2.7702111356976
+     total    up   13.763192556835
+
+      Time (min) ... 
+            Read time      Dens mtrx      Dens cofs      pr e cofs
+               0.0000         0.0242         0.0001         0.0010
+              scaling       rad dens          total
+               0.0000         0.0006         0.0259
+  setbex1 =            6
+  setbex1 =            7
+ Fourier transform parameters 
+ radii and arguments:
+ 1.7278894     6
+ 2.0264080     6
+    Lm    m1    m2    m3
+     2     6     6    12
+   condng0:
+      Interstitial charge from density matrix:
+              spin                 Q              dQ/Q               fix
+              down  2.23680744316669 -.000116403267903  1.00011641681920
+                up  2.23680744316586 -.000116403269366  1.00011641682066
+
+ Cpulog for condng0:
+    Dens from Oint           Density
+            .00100            .00653
+ TIME: condng0:      0.050m in,      0.008m added,      0.058m total
+
+
+
+ Valence Charge Summary
+        type  spin                 Q
+           1  down   3.2424491690409
+                up   4.9803211163936
+           2  down   4.9803211163947
+                up   3.2424491690466
+           3  down   2.7702111356993
+                up   2.7702111356976
+           I  down   2.2368074431666
+                up   2.2368074431658
+
+  -.00000000000255 electrons added
+
+ L-projected averages ...
+      Muffin tins
+        t  l     e  spin              E           dE/E              Q
+        1  0     1  down      0.1531134      0.0000032      0.1030099
+                      up      0.1106674      0.0000043      0.1025973
+           1     1  down      0.1843025     -0.0001780      0.1043376
+                      up      0.1377189     -0.0002039      0.1023721
+           2     1  down      0.5896609      0.0000271      3.0225924
+                      up      0.4353183      0.0000323      4.7628446
+           3     1  down      0.2615257      0.0000901      0.0101180
+                      up      0.2414113      0.0001100      0.0100380
+           4     1  down      0.1369652      0.0001159      0.0018179
+                      up      0.1675317      0.0000926      0.0018959
+           5     1  down      0.1783366      0.0001746      0.0004367
+                      up      0.1602094      0.0001974      0.0004329
+           6     1  down      0.1433133      0.0001988      0.0001049
+                      up      0.1849880      0.0001541      0.0001089
+           7     1  down      0.2540162      0.0001519      0.0000262
+                      up      0.2339408      0.0001774      0.0000257
+           8     1  down      0.1641885      0.0001911      0.0000056
+                      up      0.1878046      0.0001555      0.0000058
+        2  0     1  down      0.1106674      0.0000043      0.1025973
+                      up      0.1531134      0.0000032      0.1030099
+           1     1  down      0.1377189     -0.0002039      0.1023721
+                      up      0.1843025     -0.0001780      0.1043376
+           2     1  down      0.4353183      0.0000323      4.7628446
+                      up      0.5896609      0.0000271      3.0225924
+           3     1  down      0.2414113      0.0001100      0.0100380
+                      up      0.2615257      0.0000901      0.0101180
+           4     1  down      0.1675317      0.0000926      0.0018959
+                      up      0.1369652      0.0001159      0.0018179
+           5     1  down      0.1602094      0.0001974      0.0004329
+                      up      0.1783366      0.0001746      0.0004367
+           6     1  down      0.1849880      0.0001541      0.0001089
+                      up      0.1433133      0.0001988      0.0001049
+           7     1  down      0.2339408      0.0001774      0.0000257
+                      up      0.2540162      0.0001519      0.0000262
+           8     1  down      0.1878046      0.0001555      0.0000058
+                      up      0.1641885      0.0001911      0.0000056
+        3  0     1  down     -0.6409902     -0.0000525      0.8266063
+                      up     -0.6409902     -0.0000525      0.8266063
+           1     1  down      0.3062465      0.0000706      1.9310917
+                      up      0.3062465      0.0000706      1.9310917
+           2     1  down      0.6162241     -0.0001200      0.0097868
+                      up      0.6162241     -0.0001200      0.0097868
+           3     1  down      0.5446175      0.0000975      0.0020282
+                      up      0.5446175      0.0000975      0.0020282
+           4     1  down      0.5842454      0.0000093      0.0005306
+                      up      0.5842454      0.0000093      0.0005306
+           5     1  down      0.4874659      0.0000545      0.0001284
+                      up      0.4874659      0.0000545      0.0001284
+           6     1  down      0.5228785      0.0000138      0.0000305
+                      up      0.5228785      0.0000138      0.0000305
+           7     1  down      0.4786071      0.0000546      0.0000070
+                      up      0.4786071      0.0000546      0.0000070
+           8     1  down      0.5184249      0.0000482      0.0000017
+                      up      0.5184249      0.0000482      0.0000017
+      Interstitial
+        spin                 E                 Q
+         down   .00000000000000   2.2368074431659
+           up   .00000000000000   2.2368074431651
+      Interstitial points:   16980
+     interstitial:         max         min
+                     0.3267157  -0.4656282
+   Orbital Moments:
+   atom type     l        orbital moment
+         1       0           0.0000000
+         1       1          -0.0000000
+         1       2          -0.0000000
+         1       3          -0.0000000
+         1       4          -0.0000000
+         1       5           0.0000000
+         1       6           0.0000000
+         1       7           0.0000000
+         1       8           0.0000000
+         2       0           0.0000000
+         2       1          -0.0000000
+         2       2          -0.0000000
+         2       3           0.0000000
+         2       4          -0.0000000
+         2       5          -0.0000000
+         2       6           0.0000000
+         2       7          -0.0000000
+         2       8           0.0000000
+         3       0           0.0000000
+         3       1           0.0000000
+         3       2           0.0000000
+         3       3          -0.0000000
+         3       4           0.0000000
+         3       5           0.0000000
+         3       6           0.0000000
+         3       7           0.0000000
+         3       8           0.0000000
+
+ Charge densities at boundaries
+     t     h     n(down)     n(  up)
+     1     1  .020456428  .021664281 ... mt
+              .020444409  .021646632 ... int
+           2 -.000007502  .000009350 ... mt
+             -.000014287 -.000000556 ... int
+           3  .000013293 -.000015943 ... mt
+              .000024675 -.000000387 ... int
+           4  .000023113 -.000024702 ... mt
+              .000005849 -.000047654 ... int
+           5 -.000005840  .000005957 ... mt
+              .000008734  .000025170 ... int
+           6  .007693977  .010468415 ... mt
+              .007741798  .010513184 ... int
+           7 -.001716425 -.002345335 ... mt
+             -.001717430 -.002342395 ... int
+           8  .000006614 -.000006766 ... mt
+             -.000009555 -.000027773 ... int
+           9 -.004356299 -.005941241 ... mt
+             -.004369035 -.005946370 ... int
+          10  .001573403  .001251683 ... mt
+              .001602096  .001284603 ... int
+          11 -.000049191  .000045479 ... mt
+             -.000038998  .000053688 ... int
+          12 -.001091071 -.000815516 ... mt
+             -.001116303 -.000838297 ... int
+          13 -.001871289 -.001545510 ... mt
+             -.001899209 -.001578258 ... int
+          14 -.000022356  .000021866 ... mt
+             -.000015191  .000029775 ... int
+          15 -.001946613 -.001532117 ... mt
+             -.001984941 -.001572203 ... int
+          16  .000035335 -.000032417 ... mt
+              .000029666 -.000035856 ... int
+          17 -.000008053  .000008378 ... mt
+             -.000004173  .000010562 ... int
+          18 -.001171989 -.000967607 ... mt
+             -.001342019 -.001125513 ... int
+          19 -.000000938  .000001472 ... mt
+             -.000000349 -.000001909 ... int
+          20 -.000524319 -.000435885 ... mt
+             -.000600259 -.000505407 ... int
+          21  .000849577  .000700223 ... mt
+              .000973232  .000816521 ... int
+          22  .000005155 -.000005294 ... mt
+              .000002966 -.000006984 ... int
+          23 -.001244367 -.001045346 ... mt
+             -.001422887 -.001214080 ... int
+          24  .000004865 -.000004704 ... mt
+              .000002880 -.000008604 ... int
+          25  .000684779  .000570452 ... mt
+              .000785397  .000661307 ... int
+     2     1  .021664281  .020456428 ... mt
+              .021646632  .020444409 ... int
+           2  .000009350 -.000007502 ... mt
+             -.000000556 -.000014287 ... int
+           3 -.000015943  .000013293 ... mt
+             -.000000387  .000024675 ... int
+           4 -.000024702  .000023113 ... mt
+             -.000047654  .000005849 ... int
+           5  .000005957 -.000005840 ... mt
+              .000025170  .000008734 ... int
+           6  .010468415  .007693977 ... mt
+              .010513184  .007741798 ... int
+           7 -.002345335 -.001716425 ... mt
+             -.002342395 -.001717430 ... int
+           8 -.000006766  .000006614 ... mt
+             -.000027773 -.000009555 ... int
+           9 -.005941241 -.004356299 ... mt
+             -.005946370 -.004369035 ... int
+          10  .001251683  .001573403 ... mt
+              .001284603  .001602096 ... int
+          11  .000045479 -.000049191 ... mt
+              .000053688 -.000038998 ... int
+          12 -.000815516 -.001091071 ... mt
+             -.000838297 -.001116303 ... int
+          13 -.001545510 -.001871289 ... mt
+             -.001578258 -.001899209 ... int
+          14  .000021866 -.000022356 ... mt
+              .000029775 -.000015191 ... int
+          15 -.001532117 -.001946613 ... mt
+             -.001572203 -.001984941 ... int
+          16 -.000032417  .000035335 ... mt
+             -.000035856  .000029666 ... int
+          17  .000008378 -.000008053 ... mt
+              .000010562 -.000004173 ... int
+          18 -.000967607 -.001171989 ... mt
+             -.001125513 -.001342019 ... int
+          19  .000001472 -.000000938 ... mt
+             -.000001909 -.000000349 ... int
+          20 -.000435885 -.000524319 ... mt
+             -.000505407 -.000600259 ... int
+          21  .000700223  .000849577 ... mt
+              .000816521  .000973232 ... int
+          22 -.000005294  .000005155 ... mt
+             -.000006984  .000002966 ... int
+          23 -.001045346 -.001244367 ... mt
+             -.001214080 -.001422887 ... int
+          24 -.000004704  .000004865 ... mt
+             -.000008604  .000002880 ... int
+          25  .000570452  .000684779 ... mt
+              .000661307  .000785397 ... int
+     3     1  .037697361  .037697361 ... mt
+              .037682672  .037682672 ... int
+           2  .000555128 -.000555128 ... mt
+              .000554656 -.000554656 ... int
+           3  .000095247 -.000095247 ... mt
+              .000095123 -.000095123 ... int
+           4  .000006944  .000006944 ... mt
+             -.000006061 -.000006061 ... int
+           5 -.000011296 -.000011296 ... mt
+              .000003343  .000003343 ... int
+           6 -.000017437 -.000017437 ... mt
+             -.000034046 -.000034046 ... int
+           7  .000451930 -.000451930 ... mt
+              .000450564 -.000450564 ... int
+           8  .000229454 -.000229454 ... mt
+              .000229053 -.000229053 ... int
+           9  .000641697 -.000641697 ... mt
+              .000640082 -.000640082 ... int
+          10  .000077028 -.000077028 ... mt
+              .000076936 -.000076936 ... int
+          11 -.000001890 -.000001890 ... mt
+              .000004268  .000004268 ... int
+          12  .003728728  .003728728 ... mt
+              .003745420  .003745420 ... int
+          13 -.000832042 -.000832042 ... mt
+             -.000832493 -.000832493 ... int
+          14  .000002198  .000002198 ... mt
+             -.000004271 -.000004271 ... int
+          15 -.002111503 -.002111503 ... mt
+             -.002110497 -.002110497 ... int
+          16  .000119995 -.000119995 ... mt
+              .000121563 -.000121563 ... int
+          17 -.000102102  .000102102 ... mt
+             -.000103400  .000103400 ... int
+          18  .000001137 -.000001137 ... mt
+              .000001164 -.000001164 ... int
+          19  .000128336 -.000128336 ... mt
+              .000130107 -.000130107 ... int
+          20  .000233127 -.000233127 ... mt
+              .000235822 -.000235822 ... int
+          21 -.000061484  .000061484 ... mt
+             -.000062115  .000062115 ... int
+          22  .000214210  .000214210 ... mt
+              .000214310  .000214310 ... int
+          23  .000002199  .000002199 ... mt
+             -.000003013 -.000003013 ... int
+          24 -.000142370 -.000142370 ... mt
+             -.000140490 -.000140490 ... int
+          25 -.000260266 -.000260266 ... mt
+             -.000270102 -.000270102 ... int
+          26  .000000537  .000000537 ... mt
+             -.000004994 -.000004994 ... int
+          27 -.000262900 -.000262900 ... mt
+             -.000263589 -.000263589 ... int
+          28 -.000001690 -.000001690 ... mt
+              .000001348  .000001348 ... int
+          29  .000083710 -.000083710 ... mt
+              .000088493 -.000088493 ... int
+          30  .000047770 -.000047770 ... mt
+              .000050372 -.000050372 ... int
+          31 -.000111303  .000111303 ... mt
+             -.000117488  .000117488 ... int
+          32  .000141812 -.000141812 ... mt
+              .000149836 -.000149836 ... int
+          33  .000052538 -.000052538 ... mt
+              .000055508 -.000055508 ... int
+          34  .000017467 -.000017467 ... mt
+              .000018335 -.000018335 ... int
+          35  .000152881 -.000152881 ... mt
+              .000161330 -.000161330 ... int
+          36  .000057142 -.000057142 ... mt
+              .000060150 -.000060150 ... int
+          37  .000000392  .000000392 ... mt
+             -.000002510 -.000002510 ... int
+          38 -.000026506 -.000026506 ... mt
+             -.000054470 -.000054470 ... int
+          39  .000000104  .000000104 ... mt
+              .000003365  .000003365 ... int
+          40 -.000011955 -.000011955 ... mt
+             -.000028128 -.000028128 ... int
+          41  .000019179  .000019179 ... mt
+              .000040169  .000040169 ... int
+          42 -.000000240 -.000000240 ... mt
+              .000001518  .000001518 ... int
+          43 -.000028827 -.000028827 ... mt
+             -.000064698 -.000064698 ... int
+          44 -.000000185 -.000000185 ... mt
+              .000003779  .000003779 ... int
+          45  .000015662  .000015662 ... mt
+              .000039048  .000039048 ... int
+ TIME: conden:      0.024m in,      0.034m added,      0.058m total
+ core states
+ type:     1
+      z              rm        dx              s(i)             rn(i)
+   28.0   0.2642632E-05 0.0250000   2.0264080( 543)   2.4139509( 550)
+   n  k               e    occ    ctp     dq      g(s)
+   1 -1  -600.934060090  2.000  0.073 0.0000  0.000000
+   2 -1   -70.737556907  2.000  0.327 0.0000 -0.000001
+   2  1   -61.626936012  2.000  0.352 0.0000  0.000002
+   2 -2   -60.344948887  4.000  0.352 0.0000  0.000002
+   3 -1    -6.905119422  2.000  0.957 0.0009  0.036625
+   3  1    -4.136653152  2.000  1.140 0.0028 -0.059253
+   3 -2    -3.974885877  4.000  1.140 0.0031 -0.062557
+ core electrons: 18.0   fix =  1.00000000000000
+      spin down:  9.00000000000000
+      spin   up:  9.00000000000000
+             mt:  17.9801829296713        leakage:  .019817070328692
+      spin down:  .009908535164346                  8.99009146483565
+      spin   up:  .009908535164346                  8.99009146483565
+ type:     2
+      z              rm        dx              s(i)             rn(i)
+   28.0   0.2642632E-05 0.0250000   2.0264080( 543)   2.4139509( 550)
+   n  k               e    occ    ctp     dq      g(s)
+   1 -1  -600.934060090  2.000  0.073 0.0000  0.000000
+   2 -1   -70.737556907  2.000  0.327 0.0000 -0.000001
+   2  1   -61.626936013  2.000  0.352 0.0000  0.000002
+   2 -2   -60.344948887  4.000  0.352 0.0000  0.000002
+   3 -1    -6.905119422  2.000  0.957 0.0009  0.036625
+   3  1    -4.136653152  2.000  1.140 0.0028 -0.059253
+   3 -2    -3.974885877  4.000  1.140 0.0031 -0.062557
+ core electrons: 18.0   fix =  1.00000000000000
+      spin down:  9.00000000000000
+      spin   up:  9.00000000000000
+             mt:  17.9801829296712        leakage:  .019817070328702
+      spin down:  .009908535164351                  8.99009146483564
+      spin   up:  .009908535164351                  8.99009146483564
+ type:     3
+      z              rm        dx              s(i)             rn(i)
+    8.0   0.1116084E-04 0.0250000   1.7278895( 479)   2.3914520( 492)
+   n  k               e    occ    ctp     dq      g(s)
+   1 -1   -36.229089619  2.000  0.265 0.0000  0.000232
+ core electrons:  2.0   fix =  1.00000000000000
+      spin down:  1.00000000000000
+      spin   up:  1.00000000000000
+             mt:  1.99999997332020        leakage:  .000000026679795
+      spin down:  .000000013339897                  .999999986660102
+      spin   up:  .000000013339897                  .999999986660102
+ electrons added to  muffin tins:          external             total
+                       spin down:  .000608777504811  19.9807916804963
+                       spin   up:  .000608777504811  19.9807916804963
+                           total:  .001217555009622  39.9615833609926
+ electrons added to interstitial:
+                       spin down:  .019208319503681
+                       spin   up:  .019208319503681
+                           total:  .038416639007362
+ TIME: CORED:      0.058m in,      0.000m added,      0.059m total
+
+ Output from conpot:
+
+ ... check interstitial valence density
+ ... check interstitial core density
+
+ Density normalization:
+       72.0000000000000 electrons
+       71.9999999999999 protons
+
+  MAGNETIC MOMENTS 
+   Muffin-tins
+
+       type        spin
+          1       1.7378719
+          2      -1.7378719
+          3      -0.0000000
+
+   Interstitial  -0.0000000
+
+   Magnetic moment ...    0.0000000 Bohr magnetons
+
+ potential constant r**2 * n0:        true      pseudo
+                                .737956624  .181887672
+ Parameters for Ewald Sums
+            eta      nstmcg   (rlstars)      nstmcr     (nstdl)
+  0.2728446             135        7969         135        7969
+
+ Exponents for harmonic fourier expansions
+
+    t   l  nmax   n      l  nmax   n      l  nmax   n      l  nmax   n
+    1   0    19  19      2    17  17      2    17  17      2    17  17
+        4    15  15      4    15  15      4    15  15      4    15  15
+        4    15  15      6    13  13      6    13  13      6    13  13
+        6    13  13      6    13  13      6    13  13      6    13  13
+        8    11  11      8    11  11      8    11  11      8    11  11
+        8    11  11      8    11  11      8    11  11      8    11  11
+        8    11  11
+
+ (/ (24i3))
+ density exponents for TYPE:   1
+ 19 17 17 17 15 15 15 15 15 13 13 13 13 13 13 13 11 11 11 11 11 11 11 11
+ 11
+
+    t   l  nmax   n      l  nmax   n      l  nmax   n      l  nmax   n
+    2   0    19  19      2    17  17      2    17  17      2    17  17
+        4    15  15      4    15  15      4    15  15      4    15  15
+        4    15  15      6    13  13      6    13  13      6    13  13
+        6    13  13      6    13  13      6    13  13      6    13  13
+        8    11  11      8    11  11      8    11  11      8    11  11
+        8    11  11      8    11  11      8    11  11      8    11  11
+        8    11  11
+
+ (/ (24i3))
+ density exponents for TYPE:   2
+ 19 17 17 17 15 15 15 15 15 13 13 13 13 13 13 13 11 11 11 11 11 11 11 11
+ 11
+
+    t   l  nmax   n      l  nmax   n      l  nmax   n      l  nmax   n
+    3   0    19  16      1    18  15      1    18  15      2    17  14
+        2    17  14      2    17  14      3    16  13      3    16  13
+        3    16  13      3    16  13      4    15  12      4    15  12
+        4    15  12      4    15  12      4    15  12      5    14  11
+        5    14  11      5    14  11      5    14  11      5    14  11
+        5    14  11      6    13  10      6    13  10      6    13  10
+        6    13  10      6    13  10      6    13  10      6    13  10
+        7    12   9      7    12   9      7    12   9      7    12   9
+        7    12   9      7    12   9      7    12   9      7    12   9
+        8    11   8      8    11   8      8    11   8      8    11   8
+        8    11   8      8    11   8      8    11   8      8    11   8
+        8    11   8
+
+ (/ (24i3))
+ density exponents for TYPE:   3
+ 16 15 15 14 14 14 13 13 13 13 12 12 12 12 12 11 11 11 11 11 11 10 10 10
+ 10 10 10 10  9  9  9  9  9  9  9  9  8  8  8  8  8  8  8  8  8
+ pseudocell density: n(1)+pden =  .000000000000000
+      First component of the interstitial potential (before constant):
+                  Re{Vt}            Im{Vt}
+        -.642653479745605  .000000000000000
+                  Re{Vm}            Im{Vm}
+        .000000000000558  .000000000000000
+      Average of the scalar potential over the interstitial:
+            Vbar =  .379266466526657
+
+ MUFFIN TIN COULOMB POTENTIAL PARAMETERS:
+
+      type     z         z-n              n(s)
+         1    28   1.7970463  .044138912444613
+
+                Coulomb potential at sphere boundaries
+                      convoluted                      pseudo
+     lh       external          total       external          total
+      0    1.867763667    0.094136352    2.640376355    0.866749040
+      2    0.062385683    0.062393997   -0.000090505   -0.000082191
+      2   -0.108067537   -0.108080712    0.000144999    0.000131824
+      2   -0.176718697   -0.176729706    0.000066238    0.000055229
+      4    0.013196862    0.013197458   -0.000023527   -0.000022931
+      4    0.019214025    0.011705064   -0.027943738   -0.035452699
+      4   -0.013652594   -0.011974495    0.006296621    0.007974720
+      4   -0.014962890   -0.014963562    0.000027513    0.000026841
+      4   -0.024062057   -0.019805970    0.015920489    0.020176575
+      6   -0.004311881   -0.002780792   -0.005239171   -0.003708082
+      6    0.001809382    0.001804877    0.000034763    0.000030258
+      6    0.002957105    0.001922484    0.003554275    0.002519654
+      6    0.002176498    0.000326084    0.006311747    0.004461333
+      6    0.002602578    0.002601412    0.000023676    0.000022511
+      6    0.004858100    0.002972308    0.006454940    0.004569148
+      6   -0.000899583   -0.000896163   -0.000022836   -0.000019416
+      8    0.000157058    0.000157047    0.000006483    0.000006472
+      8    0.009414546    0.008712652    0.011790902    0.011089008
+      8   -0.000201051   -0.000200937    0.000009413    0.000009528
+      8    0.004131517    0.003816527    0.005296201    0.004981211
+      8   -0.006884507   -0.006376097   -0.008540993   -0.008032583
+      8   -0.000126859   -0.000126834   -0.000003328   -0.000003303
+      8    0.009907310    0.009156326    0.012604149    0.011853165
+      8   -0.000247587   -0.000247495    0.000001895    0.000001988
+      8   -0.005379730   -0.004967976   -0.006921543   -0.006509788
+
+                                Moments
+          lh             mt         pseudo         npa(s)
+           0   -1.797046290   -8.675775659    0.000000191
+           2    0.000034591   -0.000367868    0.000000204
+           2   -0.000054819    0.000518020   -0.000000318
+           2   -0.000045804   -0.000570612    0.000000493
+           4    0.000010185    0.000136870   -0.000000636
+           4   -0.128287487   -0.102626894   -0.000000143
+           4    0.028669628    0.022986762   -0.000000425
+           4   -0.000011481   -0.000147049    0.000000740
+           4    0.072713473    0.058473577   -0.000000657
+           6    0.107413447   -0.000628417   -0.000002172
+           6   -0.000316060   -0.000186611   -0.000000491
+           6   -0.072583780    0.000326294    0.000000939
+           6   -0.129815658    0.000732307    0.000000690
+           6   -0.000081775   -0.000337661   -0.000001719
+           6   -0.132297644    0.000768008    0.000002107
+           6    0.000239959    0.000056026    0.000000095
+           8   -0.000003278   -0.000949781   -0.000000155
+           8   -0.202201171    0.024795603   -0.000000614
+           8    0.000033082    0.000883747    0.000000917
+           8   -0.090741973    0.011395954   -0.000000847
+           8    0.146462360   -0.019207452    0.000000201
+           8    0.000007279    0.000617609    0.000000242
+           8   -0.216342894    0.026884368   -0.000001030
+           8    0.000026689    0.001212983    0.000000764
+           8    0.118618060   -0.014875568    0.000001227
+
+      type     z         z-n              n(s)
+         2    28   1.7970463  .044138912444546
+
+                Coulomb potential at sphere boundaries
+                      convoluted                      pseudo
+     lh       external          total       external          total
+      0    0.427239984   -1.346387330    2.640376355    0.866749040
+      2   -0.000065319   -0.000057005   -0.000090505   -0.000082191
+      2    0.000101310    0.000088134    0.000144999    0.000131824
+      2   -0.000079817   -0.000090826    0.000066238    0.000055229
+      4    0.000063970    0.000064566   -0.000023527   -0.000022931
+      4    0.014122342    0.006613381   -0.027943738   -0.035452699
+      4   -0.003095718   -0.001417619    0.006296621    0.007974720
+      4   -0.000071669   -0.000072341    0.000027513    0.000026841
+      4   -0.007908986   -0.003652900    0.015920489    0.020176575
+      6   -0.005784557   -0.004253468   -0.005239171   -0.003708082
+      6    0.000005815    0.000001310    0.000034763    0.000030258
+      6    0.003891712    0.002857091    0.003554275    0.002519654
+      6    0.006979864    0.005129450    0.006311747    0.004461333
+      6   -0.000005206   -0.000006371    0.000023676    0.000022511
+      6    0.007112996    0.005227203    0.006454940    0.004569148
+      6   -0.000005580   -0.000002160   -0.000022836   -0.000019416
+      8    0.000007368    0.000007356    0.000006483    0.000006472
+      8    0.009070653    0.008368759    0.011790902    0.011089008
+      8   -0.000035681   -0.000035566    0.000009413    0.000009528
+      8    0.004094355    0.003779365    0.005296201    0.004981211
+      8   -0.006557790   -0.006049380   -0.008540993   -0.008032583
+      8   -0.000009293   -0.000009268   -0.000003328   -0.000003303
+      8    0.009713177    0.008962193    0.012604149    0.011853165
+      8   -0.000030095   -0.000030002    0.000001895    0.000001988
+      8   -0.005353358   -0.004941603   -0.006921543   -0.006509788
+
+                                Moments
+          lh             mt         pseudo         npa(s)
+           0   -1.797046290   -8.675775659    0.000000191
+           2    0.000034591   -0.000367868    0.000000204
+           2   -0.000054819    0.000518020   -0.000000318
+           2   -0.000045804   -0.000570612    0.000000493
+           4    0.000010185    0.000136870   -0.000000636
+           4   -0.128287487   -0.102626894   -0.000000143
+           4    0.028669628    0.022986762   -0.000000425
+           4   -0.000011481   -0.000147049    0.000000740
+           4    0.072713473    0.058473577   -0.000000657
+           6    0.107413447   -0.000628417   -0.000002172
+           6   -0.000316060   -0.000186611   -0.000000491
+           6   -0.072583780    0.000326294    0.000000939
+           6   -0.129815658    0.000732307    0.000000690
+           6   -0.000081775   -0.000337661   -0.000001719
+           6   -0.132297644    0.000768008    0.000002107
+           6    0.000239959    0.000056026    0.000000095
+           8   -0.000003278   -0.000949781   -0.000000155
+           8   -0.202201171    0.024795603   -0.000000614
+           8    0.000033082    0.000883747    0.000000917
+           8   -0.090741973    0.011395954   -0.000000847
+           8    0.146462360   -0.019207452    0.000000201
+           8    0.000007279    0.000617609    0.000000242
+           8   -0.216342894    0.026884368   -0.000001030
+           8    0.000026689    0.001212983    0.000000764
+           8    0.118618060   -0.014875568    0.000001227
+
+      type     z         z-n              n(s)
+         3     8   0.4589695  .075497737411989
+
+                Coulomb potential at sphere boundaries
+                      convoluted                      pseudo
+     lh       external          total       external          total
+      0    0.570779082    0.039530433    1.598017590    1.066768941
+      1    0.000000000   -0.000000000   -0.000000000   -0.000000000
+      1    0.000000000    0.000000000   -0.000000000    0.000000000
+      2    0.000010154    0.000140534    0.000045121    0.000175501
+      2   -0.000016752   -0.000242547   -0.000076645   -0.000302441
+      2   -0.000134945   -0.000515108   -0.000034690   -0.000414853
+      3   -0.000000000   -0.000000000   -0.000000000   -0.000000000
+      3   -0.000000000    0.000000000   -0.000000000   -0.000000000
+      3    0.000000000    0.000000000    0.000000000   -0.000000000
+      3   -0.000000000   -0.000000000   -0.000000000   -0.000000000
+      4    0.000111797    0.000107312   -0.000014648   -0.000019133
+      4   -0.044313799   -0.037666072   -0.168700401   -0.162052675
+      4    0.009998771    0.008516265    0.037716891    0.036234386
+      4   -0.000127050   -0.000121823    0.000016285    0.000021512
+      4    0.025237821    0.021474658    0.095624050    0.091860887
+      5   -0.000000000   -0.000000000    0.000000000    0.000000000
+      5    0.000000000    0.000000000    0.000000000    0.000000000
+      5    0.000000000    0.000000000    0.000000000    0.000000000
+      5    0.000000000    0.000000000    0.000000000    0.000000000
+      5    0.000000000    0.000000000    0.000000000    0.000000000
+      5   -0.000000000   -0.000000000   -0.000000000   -0.000000000
+      6   -0.005895873   -0.005688289   -0.012373155   -0.012165571
+      6    0.000045829    0.000048111    0.000008998    0.000011280
+      6    0.003952373    0.003814550    0.008343099    0.008205276
+      6    0.007149932    0.006897637    0.014954290    0.014701995
+      6    0.000020500    0.000021056   -0.000000281    0.000000275
+      6    0.007249128    0.006994417    0.015228703    0.014973992
+      6   -0.000033693   -0.000035449   -0.000008066   -0.000009822
+      7   -0.000000000   -0.000000000   -0.000000000   -0.000000000
+      7    0.000000000    0.000000000    0.000000000    0.000000000
+      7    0.000000000    0.000000000    0.000000000    0.000000000
+      7   -0.000000000   -0.000000000   -0.000000000   -0.000000000
+      7   -0.000000000   -0.000000000   -0.000000000   -0.000000000
+      7   -0.000000000   -0.000000000    0.000000000    0.000000000
+      7   -0.000000000   -0.000000000   -0.000000000   -0.000000000
+      7   -0.000000000   -0.000000000   -0.000000000   -0.000000000
+      8    0.000059476    0.000059697    0.000002601    0.000002823
+      8    0.003958882    0.003924667    0.007210646    0.007176431
+      8   -0.000086845   -0.000086786    0.000001597    0.000001656
+      8    0.001831756    0.001816366    0.003234951    0.003219561
+      8   -0.002827171   -0.002802401   -0.005220718   -0.005195947
+      8   -0.000049486   -0.000049621   -0.000001793   -0.000001928
+      8    0.004302160    0.004265282    0.007715179    0.007678301
+      8   -0.000101143   -0.000101247   -0.000000706   -0.000000809
+      8   -0.002404343   -0.002384202   -0.004229054   -0.004208914
+
+                                Moments
+          lh             mt         pseudo         npa(s)
+           0   -0.458969473   -5.502164533   -0.000002936
+           1   -0.000000000   -0.000000000    0.000000000
+           1    0.000000000    0.000000000   -0.000000000
+           2    0.000336302    0.000225697   -0.000002142
+           2   -0.000582416   -0.000234221    0.000003668
+           2   -0.000980591    0.000121799   -0.000005991
+           3   -0.000000000    0.000000000    0.000000000
+           3    0.000000000   -0.000000000    0.000000000
+           3   -0.000000000   -0.000000000    0.000000000
+           3   -0.000000000   -0.000000000   -0.000000000
+           4   -0.000034540   -0.000109540    0.000004325
+           4    0.051194454    0.000875123    0.000006950
+           4   -0.011416847   -0.000246860    0.000001529
+           4    0.000040254    0.000118555   -0.000004917
+           4   -0.028980302   -0.000723813    0.000000516
+           5    0.000000000    0.000000000   -0.000000000
+           5    0.000000000    0.000000000    0.000000000
+           5    0.000000000    0.000000000   -0.000000000
+           5    0.000000000    0.000000000    0.000000000
+           5    0.000000000   -0.000000000   -0.000000000
+           5   -0.000000000    0.000000000    0.000000000
+           6    0.004772823   -0.000210055    0.000012107
+           6    0.000052456   -0.000005095    0.000006702
+           6   -0.003168864    0.000109921   -0.000008330
+           6   -0.005800832    0.000086473   -0.000003026
+           6    0.000012781   -0.000008782    0.000009736
+           6   -0.005856386    0.000190277   -0.000013143
+           6   -0.000040377   -0.000014491   -0.000003430
+           7   -0.000000000    0.000000000   -0.000000000
+           7    0.000000000    0.000000000   -0.000000000
+           7    0.000000000   -0.000000000    0.000000000
+           7   -0.000000000    0.000000000   -0.000000000
+           7   -0.000000000   -0.000000000    0.000000000
+           7   -0.000000000    0.000000000   -0.000000000
+           7   -0.000000000   -0.000000000   -0.000000000
+           7   -0.000000000   -0.000000000    0.000000000
+           8    0.000015210    0.000197316    0.000004047
+           8   -0.002348707    0.000928101    0.000004371
+           8    0.000004055   -0.000137414   -0.000004089
+           8   -0.001056472    0.000565433    0.000005122
+           8    0.001700388   -0.000639923   -0.000001402
+           8   -0.000009298   -0.000148025   -0.000003118
+           8   -0.002531517    0.001332920    0.000009691
+           8   -0.000007130   -0.000227959   -0.000005653
+           8    0.001382545   -0.000840466   -0.000007440
+
+      Average of vxc(T) over cell: -1.00578170851648
+ Nearest neighbors:
+ neighbor  site  type  site  type                       d
+        1     1     1     3     3    .5000000000 .5000000000 .2500000000
+                          3     3   -.5000000000 .5000000000 .2500000000
+                          3     3    .5000000000-.5000000000 .2500000000
+                          4     3   -.5000000000 .5000000000-.2500000000
+                          4     3    .5000000000-.5000000000-.2500000000
+                          4     3   -.5000000000-.5000000000-.2500000000
+              2     2     3     3   -.5000000000 .5000000000-.2500000000
+                          3     3    .5000000000-.5000000000-.2500000000
+                          3     3   -.5000000000-.5000000000-.2500000000
+                          4     3    .5000000000 .5000000000 .2500000000
+                          4     3   -.5000000000 .5000000000 .2500000000
+                          4     3    .5000000000-.5000000000 .2500000000
+              3     3     1     1   -.5000000000-.5000000000-.2500000000
+                          1     1   -.5000000000 .5000000000-.2500000000
+                          1     1    .5000000000-.5000000000-.2500000000
+                          2     2   -.5000000000 .5000000000 .2500000000
+                          2     2    .5000000000-.5000000000 .2500000000
+                          2     2    .5000000000 .5000000000 .2500000000
+              4     3     1     1   -.5000000000 .5000000000 .2500000000
+                          1     1    .5000000000-.5000000000 .2500000000
+                          1     1    .5000000000 .5000000000 .2500000000
+                          2     2   -.5000000000-.5000000000-.2500000000
+                          2     2   -.5000000000 .5000000000-.2500000000
+                          2     2    .5000000000-.5000000000-.2500000000
+        2     1     1     1     1   -.0000000000 1.000000000-.0000000000
+                          1     1   -1.000000000 .0000000000 .0000000000
+                          1     1    .0000000000-1.000000000 .0000000000
+                          1     1    1.000000000-.0000000000-.0000000000
+                          1     1   -1.000000000 1.000000000 .0000000000
+                          1     1    1.000000000-1.000000000-.0000000000
+                          2     2   -.0000000000 .0000000000 .5000000000
+                          2     2   -.0000000000 1.000000000 .5000000000
+                          2     2    1.000000000-.0000000000 .5000000000
+                          2     2   -1.000000000 .0000000000-.5000000000
+                          2     2    .0000000000-1.000000000-.5000000000
+                          2     2    .0000000000-.0000000000-.5000000000
+              2     2     1     1    .0000000000-.0000000000-.5000000000
+                          1     1   -1.000000000 .0000000000-.5000000000
+                          1     1    .0000000000-1.000000000-.5000000000
+                          1     1   -.0000000000 1.000000000 .5000000000
+                          1     1    1.000000000-.0000000000 .5000000000
+                          1     1   -.0000000000 .0000000000 .5000000000
+                          2     2   -.0000000000 1.000000000-.0000000000
+                          2     2   -1.000000000 .0000000000 .0000000000
+                          2     2    .0000000000-1.000000000 .0000000000
+                          2     2    1.000000000-.0000000000-.0000000000
+                          2     2   -1.000000000 1.000000000 .0000000000
+                          2     2    1.000000000-1.000000000-.0000000000
+              3     3     3     3   -.0000000000 1.000000000-.0000000000
+                          3     3   -1.000000000 .0000000000 .0000000000
+                          3     3    .0000000000-1.000000000 .0000000000
+                          3     3    1.000000000-.0000000000-.0000000000
+                          3     3   -1.000000000 1.000000000 .0000000000
+                          3     3    1.000000000-1.000000000-.0000000000
+                          4     3    .0000000000-.0000000000-.5000000000
+                          4     3   -1.000000000 .0000000000-.5000000000
+                          4     3    .0000000000-1.000000000-.5000000000
+                          4     3   -.0000000000 1.000000000 .5000000000
+                          4     3    1.000000000-.0000000000 .5000000000
+                          4     3   -.0000000000 .0000000000 .5000000000
+              4     3     3     3   -.0000000000 .0000000000 .5000000000
+                          3     3   -.0000000000 1.000000000 .5000000000
+                          3     3    1.000000000-.0000000000 .5000000000
+                          3     3   -1.000000000 .0000000000-.5000000000
+                          3     3    .0000000000-1.000000000-.5000000000
+                          3     3    .0000000000-.0000000000-.5000000000
+                          4     3   -.0000000000 1.000000000-.0000000000
+                          4     3   -1.000000000 .0000000000 .0000000000
+                          4     3    .0000000000-1.000000000 .0000000000
+                          4     3    1.000000000-.0000000000-.0000000000
+                          4     3   -1.000000000 1.000000000 .0000000000
+                          4     3    1.000000000-1.000000000-.0000000000
+        3     1     1     3     3   -.5000000000 1.500000000 .2500000000
+                          3     3    1.500000000-.5000000000 .2500000000
+                          3     3   -.5000000000-.5000000000-.7500000000
+                          3     3   -.5000000000-.5000000000 .2500000000
+                          4     3    .5000000000 .5000000000-.2500000000
+                          4     3    .5000000000 .5000000000 .7500000000
+                          4     3   -1.500000000 .5000000000-.2500000000
+                          4     3    .5000000000-1.500000000-.2500000000
+              2     2     3     3    .5000000000 .5000000000-.2500000000
+                          3     3    .5000000000 .5000000000 .7500000000
+                          3     3   -1.500000000 .5000000000-.2500000000
+                          3     3    .5000000000-1.500000000-.2500000000
+                          4     3   -.5000000000-.5000000000-.7500000000
+                          4     3   -.5000000000 1.500000000 .2500000000
+                          4     3    1.500000000-.5000000000 .2500000000
+                          4     3   -.5000000000-.5000000000 .2500000000
+              3     3     1     1   -1.500000000 .5000000000-.2500000000
+                          1     1    .5000000000-1.500000000-.2500000000
+                          1     1    .5000000000 .5000000000 .7500000000
+                          1     1    .5000000000 .5000000000-.2500000000
+                          2     2   -.5000000000-.5000000000 .2500000000
+                          2     2   -.5000000000-.5000000000-.7500000000
+                          2     2   -.5000000000 1.500000000 .2500000000
+                          2     2    1.500000000-.5000000000 .2500000000
+              4     3     1     1   -.5000000000-.5000000000 .2500000000
+                          1     1   -.5000000000-.5000000000-.7500000000
+                          1     1   -.5000000000 1.500000000 .2500000000
+                          1     1    1.500000000-.5000000000 .2500000000
+                          2     2    .5000000000 .5000000000 .7500000000
+                          2     2   -1.500000000 .5000000000-.2500000000
+                          2     2    .5000000000-1.500000000-.2500000000
+                          2     2    .5000000000 .5000000000-.2500000000
+
+      Spherical components of potentials at muffin tin radii ...
+        t           S                V0
+        1   2.0264080 -.321659388777583
+        2   2.0264080 -.321659388772810
+        3   1.7278895 -.267502350505060
+
+      Potential Summary ...
+        t  h           max(dv)       r               rms
+        1  1  205.988949355358       1  .000029370520069
+           2 -.000000198583106     496  .000000085917672
+           3  .000000345174839     496  .000000148995702
+           4  .000000475755889     496  .000000208325769
+           5 -.000000072347585     501  .000000023893306
+           6 -.000006155723876     543  .000002754977276
+           7  .000001368977903     543  .000000611824279
+           8  .000000082229207     501  .000000027092391
+           9  .000003480094869     543  .000001556182825
+          10 -.000000580640444     542  .000000372182458
+          11 -.000000015104924     484  .000000012805430
+          12  .000000377613182     541  .000000240325822
+          13  .000000713367878     542  .000000457185301
+          14 -.000000007022070     543  .000000003901747
+          15  .000000710143542     542  .000000454398682
+          16  .000000011662706     484  .000000009674891
+          17 -.000000007791416     484  .000000004525655
+          18  .000000228233351     538  .000000150392284
+          19 -.000000009988105     484  .000000005800277
+          20  .000000101329123     538  .000000066246406
+          21 -.000000166128095     538  .000000109747226
+          22  .000000003912637     484  .000000002279879
+          23  .000000247000859     538  .000000164138411
+          24 -.000000001581886     484  .000000000966400
+          25 -.000000132689178     539  .000000086987849
+        2  1  205.988949355385       1  .000029370520032
+           2 -.000000198583193     496  .000000085918065
+           3  .000000345173998     496  .000000148995741
+           4  .000000475761991     496  .000000208329355
+           5 -.000000072349565     501  .000000023893808
+           6 -.000006155724873     543  .000002754977965
+           7  .000001368977861     543  .000000611824452
+           8  .000000082229999     501  .000000027092588
+           9  .000003480095532     543  .000001556183162
+          10 -.000000580640179     542  .000000372182261
+          11 -.000000015105056     484  .000000012805288
+          12  .000000377612719     541  .000000240325533
+          13  .000000713367739     542  .000000457185305
+          14 -.000000007022452     543  .000000003901910
+          15  .000000710143159     542  .000000454398722
+          16  .000000011662903     484  .000000009674840
+          17 -.000000007791580     484  .000000004525783
+          18  .000000228233143     538  .000000150392119
+          19 -.000000009988177     484  .000000005800300
+          20  .000000101328858     538  .000000066246203
+          21 -.000000166128035     538  .000000109747184
+          22  .000000003912675     484  .000000002279926
+          23  .000000247000691     538  .000000164138260
+          24 -.000000001581989     484  .000000000966417
+          25 -.000000132689260     539  .000000086987906
+        3  1  31.9305516835551       1  .000050530644385
+           2 -.000000000003001     479  .000000000002127
+           3 -.000000000000500     479  .000000000000209
+           4 -.000000078543560     454  .000000049960892
+           5  .000000134575415     454  .000000087375920
+           6  .000000211276306     453  .000000141598674
+           7 -.000000000000439     479  .000000000000192
+           8 -.000000000000331     479  .000000000000202
+           9 -.000000000000318     479  .000000000000165
+          10 -.000000000000172     469  .000000000000114
+          11  .000000012298514     479  .000000007331095
+          12 -.000001999367547     478  .000001230311476
+          13  .000000440616642     478  .000000271041801
+          14 -.000000014121800     479  .000000008396292
+          15  .000001121488017     478  .000000690062326
+          16 -.000000000000130     479  .000000000000063
+          17 -.000000000000177     476  .000000000000110
+          18  .000000000000061     477  .000000000000037
+          19  .000000000000037     471  .000000000000026
+          20  .000000000000176     476  .000000000000124
+          21  .000000000001459     479  .000000000000391
+          22 -.000000154659771     474  .000000102520344
+          23 -.000000001543955     474  .000000000953128
+          24  .000000099703402     474  .000000065781236
+          25  .000000190336434     474  .000000126260092
+          26  .000000002194782     479  .000000000746136
+          27  .000000188459259     474  .000000124752958
+          28  .000000001582141     475  .000000001049581
+          29 -.000000000016842     479  .000000000003913
+          30  .000000000000157     479  .000000000000031
+          31 -.000000000000124     479  .000000000000025
+          32 -.000000000000019     478  .000000000000009
+          33 -.000000000000036     479  .000000000000008
+          34  .000000000000056     479  .000000000000030
+          35 -.000000000000665     479  .000000000000183
+          36 -.000000000000247     479  .000000000000041
+          37  .000000000693558     479  .000000000279792
+          38 -.000000298301929     479  .000000092557638
+          39 -.000000000326528     479  .000000000129538
+          40 -.000000134545985     479  .000000041791999
+          41  .000000217056975     479  .000000067417306
+          42 -.000000000138985     478  .000000000062433
+          43 -.000000318785149     479  .000000098893927
+          44 -.000000000534126     479  .000000000208261
+          45  .000000176000710     479  .000000054670722
+
+        m1  m2  m3                dv               rms
+        13  12  12  .003041393665096  .000176811643061
+
+      Maximum difference in Vr ...
+        t     r          max(dVr)
+        2     2  .000544352954014
+
+      Maximum difference in Vi ...
+        star               max(dVi)
+           1  .000036582147037  .000000000000000
+ Energy Vector
+                   Eigenvalue sums
+         Valence :  0.89067798795515E+01            8.906 779 879 5
+            Core : -0.36368363389214E+04       -3,636.836 338 921 3
+                   Coulomb Energy
+ n(vc/2-vin)  mt : -0.23839475036417E+04       -2,383.947 503 641 6
+ n(vc/2-vin) int :  0.27492884308094E+01            2.749 288 430 8
+        -zv(0)/2 : -0.86714678643624E+02          -86.714 678 643 6
+           Total : -0.24679128938545E+04       -2,467.912 893 854 4
+                   Exchange/Correlation
+       n*exc int : -0.26945944028908E+01           -2.694 594 402 8
+       n*exc  mt : -0.27403023945836E+03         -274.030 239 458 3
+           Total : -0.27672483386125E+03         -276.724 833 861 2
+                   Hubbard U correction
+ Tot energy corr :  0.31338270266892E+00            0.313 382 702 6
+                   Total Energy
+               E : -0.63722539040549E+04       -6,372.253 904 054 9
+ Entropy correction:
+       T    =  78.9466932
+       S    =  .000000000035950
+       E(0) = -6372.25390405491
+       E(T) = -6372.25390405491
+       F(T) = -6372.25390405491
+ Miscellaneous contributions to the energy
+
+ Valence Kinetic Energy
+               Tv :         369.933 759 281 1
+ Integral of nv * Vc / 2
+     Interstitial :           2.464 758 633 8
+     Type       j :                  internal                  external
+        1       1           -71.762 162 477 7          10.855 604 115 1
+                2             0.000 000 000 0          -0.000 000 000 3
+                3             0.000 000 000 2          -0.000 000 000 9
+                4             0.000 000 000 2          -0.000 000 000 3
+                5             0.000 000 000 0          -0.000 000 000 0
+                6             0.025 358 057 6           0.000 106 299 0
+                7             0.001 268 269 8           0.000 005 352 9
+                8             0.000 000 000 0          -0.000 000 000 0
+                9             0.008 152 097 5           0.000 034 326 6
+               10             0.000 002 167 6          -0.000 004 063 8
+               11             0.000 000 000 0          -0.000 000 000 0
+               12             0.000 000 991 1          -0.000 001 862 9
+               13             0.000 003 163 5          -0.000 005 916 8
+               14             0.000 000 000 0          -0.000 000 000 0
+               15             0.000 003 289 1          -0.000 006 166 7
+               16             0.000 000 000 0          -0.000 000 000 0
+               17             0.000 000 000 0          -0.000 000 000 0
+               18             0.000 000 465 0          -0.000 004 192 5
+               19             0.000 000 000 0           0.000 000 000 0
+               20             0.000 000 093 6          -0.000 000 845 1
+               21             0.000 000 244 0          -0.000 002 199 8
+               22             0.000 000 000 0          -0.000 000 000 0
+               23             0.000 000 532 2          -0.000 004 795 1
+               24             0.000 000 000 0           0.000 000 000 0
+               25             0.000 000 160 0          -0.000 001 443 7
+        2       1           -71.762 162 477 8          10.855 604 115 1
+                2             0.000 000 000 0          -0.000 000 000 3
+                3             0.000 000 000 2          -0.000 000 000 9
+                4             0.000 000 000 2          -0.000 000 000 3
+                5             0.000 000 000 0          -0.000 000 000 0
+                6             0.025 358 057 6           0.000 106 299 0
+                7             0.001 268 269 8           0.000 005 352 9
+                8             0.000 000 000 0          -0.000 000 000 0
+                9             0.008 152 097 5           0.000 034 326 6
+               10             0.000 002 167 6          -0.000 004 063 8
+               11             0.000 000 000 0          -0.000 000 000 0
+               12             0.000 000 991 1          -0.000 001 862 9
+               13             0.000 003 163 5          -0.000 005 916 8
+               14             0.000 000 000 0          -0.000 000 000 0
+               15             0.000 003 289 1          -0.000 006 166 7
+               16             0.000 000 000 0          -0.000 000 000 0
+               17             0.000 000 000 0          -0.000 000 000 0
+               18             0.000 000 465 0          -0.000 004 192 5
+               19             0.000 000 000 0           0.000 000 000 0
+               20             0.000 000 093 6          -0.000 000 845 1
+               21             0.000 000 244 0          -0.000 002 199 8
+               22             0.000 000 000 0          -0.000 000 000 0
+               23             0.000 000 532 2          -0.000 004 795 1
+               24             0.000 000 000 0           0.000 000 000 0
+               25             0.000 000 160 0          -0.000 001 443 7
+        3       1           -15.591 506 522 7           4.426 846 121 8
+                2             0.000 000 000 0           0.000 000 000 0
+                3             0.000 000 000 0          -0.000 000 000 0
+                4             0.000 000 051 7           0.000 000 002 5
+                5             0.000 000 157 7           0.000 000 007 4
+                6             0.000 000 445 9           0.000 000 005 6
+                7             0.000 000 000 0           0.000 000 000 0
+                8             0.000 000 000 0          -0.000 000 000 0
+                9             0.000 000 000 0          -0.000 000 000 0
+               10             0.000 000 000 0           0.000 000 000 0
+               11             0.000 000 000 0           0.000 000 000 0
+               12             0.000 036 252 5          -0.000 472 357 6
+               13             0.000 001 801 8          -0.000 023 549 6
+               14             0.000 000 000 0           0.000 000 000 0
+               15             0.000 011 612 9          -0.000 151 560 1
+               16             0.000 000 000 0           0.000 000 000 0
+               17             0.000 000 000 0           0.000 000 000 0
+               18             0.000 000 000 0           0.000 000 000 0
+               19             0.000 000 000 0           0.000 000 000 0
+               20             0.000 000 000 0           0.000 000 000 0
+               21             0.000 000 000 0           0.000 000 000 0
+               22             0.000 000 033 8          -0.000 001 008 1
+               23             0.000 000 000 0           0.000 000 000 0
+               24             0.000 000 014 8          -0.000 000 450 6
+               25             0.000 000 050 0          -0.000 001 481 6
+               26             0.000 000 000 0          -0.000 000 000 0
+               27             0.000 000 050 9          -0.000 001 522 0
+               28             0.000 000 000 0           0.000 000 000 0
+               29             0.000 000 000 0           0.000 000 000 0
+               30             0.000 000 000 0           0.000 000 000 0
+               31             0.000 000 000 0           0.000 000 000 0
+               32             0.000 000 000 0           0.000 000 000 0
+               33             0.000 000 000 0           0.000 000 000 0
+               34             0.000 000 000 0          -0.000 000 000 0
+               35             0.000 000 000 0           0.000 000 000 0
+               36             0.000 000 000 0           0.000 000 000 0
+               37             0.000 000 000 0           0.000 000 000 0
+               38             0.000 000 000 5          -0.000 000 053 2
+               39             0.000 000 000 0           0.000 000 000 0
+               40             0.000 000 000 1          -0.000 000 010 7
+               41             0.000 000 000 2          -0.000 000 027 8
+               42             0.000 000 000 0           0.000 000 000 0
+               43             0.000 000 000 6          -0.000 000 061 8
+               44             0.000 000 000 0           0.000 000 000 0
+               45             0.000 000 000 1          -0.000 000 018 4
+    Total                            internal                  external
+              j=1 :        -174.707 338 001 0          30.564 900 474 0
+              j>1 :           0.069 680 013 2          -0.001 075 192 9
+    Total
+              j=1 :        -144.142 437 527 0
+              j>1 :           0.068 604 820 3
+
+    Total         :        -144.073 832 706 6
+
+ Integral of Ion-core * Vc / 2
+     Type         :                  internal                  external
+        1         :        -136.909 583 735 4         -13.228 043 381 2
+        2         :        -136.909 583 735 6         -13.228 043 381 2
+        3         :         -42.659 025 127 1          -4.793 566 767 0
+                                     internal                  external
+    Total         :        -359.137 217 725 3         -36.043 220 296 6
+
+    Total         :        -395.180 438 021 9
+
+ MT exchange and correlation
+     Type       j
+        1       1 :        -121.089 499 526 2
+                2 :          -0.000 000 000 0
+                3 :          -0.000 000 000 2
+                4 :          -0.000 000 000 2
+                5 :          -0.000 000 000 0
+                6 :          -0.021 901 140 6
+                7 :          -0.001 095 351 6
+                8 :          -0.000 000 000 0
+                9 :          -0.007 040 662 7
+               10 :          -0.000 016 802 9
+               11 :          -0.000 000 000 0
+               12 :          -0.000 007 664 2
+               13 :          -0.000 024 567 6
+               14 :          -0.000 000 000 0
+               15 :          -0.000 025 486 3
+               16 :          -0.000 000 000 0
+               17 :           0.000 000 000 0
+               18 :          -0.000 005 197 4
+               19 :          -0.000 000 000 0
+               20 :          -0.000 001 046 6
+               21 :          -0.000 002 726 0
+               22 :           0.000 000 000 0
+               23 :          -0.000 005 958 0
+               24 :           0.000 000 000 0
+               25 :          -0.000 001 790 5
+        2       1 :        -121.089 499 526 3
+                2 :          -0.000 000 000 0
+                3 :          -0.000 000 000 2
+                4 :          -0.000 000 000 2
+                5 :          -0.000 000 000 0
+                6 :          -0.021 901 140 6
+                7 :          -0.001 095 351 6
+                8 :          -0.000 000 000 0
+                9 :          -0.007 040 662 7
+               10 :          -0.000 016 802 9
+               11 :          -0.000 000 000 0
+               12 :          -0.000 007 664 2
+               13 :          -0.000 024 567 6
+               14 :          -0.000 000 000 0
+               15 :          -0.000 025 486 3
+               16 :          -0.000 000 000 0
+               17 :           0.000 000 000 0
+               18 :          -0.000 005 197 4
+               19 :          -0.000 000 000 0
+               20 :          -0.000 001 046 6
+               21 :          -0.000 002 726 0
+               22 :           0.000 000 000 0
+               23 :          -0.000 005 958 0
+               24 :           0.000 000 000 0
+               25 :          -0.000 001 790 5
+        3       1 :         -15.895 328 350 4
+                2 :           0.000 000 000 0
+                3 :           0.000 000 000 0
+                4 :          -0.000 000 044 8
+                5 :          -0.000 000 136 8
+                6 :          -0.000 000 384 3
+                7 :           0.000 000 000 0
+                8 :           0.000 000 000 0
+                9 :           0.000 000 000 0
+               10 :           0.000 000 000 0
+               11 :          -0.000 000 000 1
+               12 :          -0.000 118 184 2
+               13 :          -0.000 005 863 4
+               14 :          -0.000 000 000 1
+               15 :          -0.000 037 821 5
+               16 :          -0.000 000 000 0
+               17 :           0.000 000 000 0
+               18 :          -0.000 000 000 0
+               19 :           0.000 000 000 0
+               20 :           0.000 000 000 0
+               21 :          -0.000 000 000 0
+               22 :          -0.000 000 225 9
+               23 :          -0.000 000 000 0
+               24 :          -0.000 000 097 6
+               25 :          -0.000 000 338 7
+               26 :          -0.000 000 000 0
+               27 :          -0.000 000 339 2
+               28 :          -0.000 000 000 0
+               29 :           0.000 000 000 0
+               30 :           0.000 000 000 0
+               31 :          -0.000 000 000 0
+               32 :          -0.000 000 000 0
+               33 :           0.000 000 000 0
+               34 :           0.000 000 000 0
+               35 :           0.000 000 000 0
+               36 :           0.000 000 000 0
+               37 :           0.000 000 000 0
+               38 :          -0.000 000 005 9
+               39 :           0.000 000 000 0
+               40 :          -0.000 000 001 2
+               41 :          -0.000 000 003 1
+               42 :          -0.000 000 000 0
+               43 :          -0.000 000 006 8
+               44 :          -0.000 000 000 0
+               45 :          -0.000 000 002 0
+
+    Total     j>1 :          -0.060 583 704 8
+ Delta e(l,t,n)
+  1 Energy Set(s), LMAX =  8
+  Type   Set
+     1     1
+ ebar-el      0.00000     -0.00003      0.07516      0.00002      0.00002
+              0.00003      0.00003      0.00004      0.00003
+ emix-el      0.00000      0.00000      0.07515      0.00000      0.00000
+              0.00000      0.00000      0.00000      0.00000
+     2     1
+ ebar-el      0.00000     -0.00003      0.04537      0.00003      0.00002
+              0.00003      0.00003      0.00004      0.00003
+ emix-el      0.00000      0.00000      0.04535      0.00000      0.00000
+              0.00000      0.00000      0.00000      0.00000
+     3     1
+ ebar-el      0.00003      0.00002     -0.00007      0.00005      0.00001
+              0.00003      0.00001      0.00003      0.00002
+ emix-el      0.00000      0.00000      0.00000      0.00000      0.00000
+              0.00000      0.00000      0.00000      0.00000
+  ebar:
+  .153113359  .184302507  .589660852  .261525684  .136965177  .178336595  .143313255
+  .254016177  .164188511
+  emix:
+  .153112872  .184335319  .589644875  .261502110  .136949303  .178305454  .143284769
+  .253977600  .164157139
+
+ Broydn:
+    itr         fsq      length        ierr
+      8  6.3010E-13       74225           0
+
+
+ Time in conpot in minutes:
+
+        Conv     Moments     Mad con      Pd exp    V(S) (2)   Ipot/V(S)
+        0.00        0.00        0.00        0.00        0.00        0.00
+         Ixc       MTpot        MTxc       NNlst        PlVN      CutMTp
+        0.00        0.00        0.00        0.00        0.00        0.00
+    O-I diff     Mix O-I
+        0.00        0.00
+ TIME: conpot:      0.059m in,      0.009m added,      0.068m total
+
+ TIME: rspt:      0.002m in,      0.065m added,      0.068m total
+
+ Cpulog for DIAGONAL:
+             Total          Cholesky
+
+            .00020            .00006
+
