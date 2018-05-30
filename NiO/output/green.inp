@@ -1,17 +1,19 @@
-!matsubara
-!1024   60  60   0
+#
+
+matsubara
+1  1  0  0          ! nmats head body tail
 
 inputoutput
-T T T
+T T T               ! readloc readsig csc
 
 convergency
-1d-6 1d-5 999 999
+1d-6 1d-5 999 999   ! ndelta sigma_acc maxiter maxsolveriter
 
 energymesh
-1001 -1.0 1.0 0.001
+1001 -1.0 1.0 0.001    
 
 projection
-1
+1                   ! 1: MT, 2: ORT
 
 verbose
 Solver Dc Projection Interface

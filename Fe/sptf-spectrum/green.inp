@@ -1,0 +1,32 @@
+!matsubara
+!1024  60  60  10
+
+inputoutput
+T T T
+
+convergency
+1d-6 1d-5 1 0
+
+!energymesh
+!1001 -1.0 1.0 0.001
+
+projection
+2
+
+verbose
+Solver Dc Projection Interface
+
+debug
+Renorm_corr 
+
+spectrum
+Dos Pdos
+
+cluster
+1 2 eV                  ! ntot udef [nsites]
+1 2 1 1 0 3.0 0.9       ! t l e site basis[cubic harm] U J or F0 F2 F4 (F6)
+1 -1 0.1                ! solv DC sigma_mix [symbrk]
+1 1000 1e-9 0.1d0          ! # sptf_mode sptf_niter sptf_conv sptf_mix
+.false.                   ! # spin_average
+
+
