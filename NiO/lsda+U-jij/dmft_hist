@@ -1,0 +1,33 @@
+ ------------     Starting iteration     --------------
+System -    Date: 31 05 18        Time: 16h 13m 13s 
+ ------------------------------------------------------
+ Total it, Solver it =            1           0  F
+ Chemical potential  =       0.7480522233456188  T  T
+ Number of electrons =      32.0000000000000000  T
+ Sigdiff             =       0.0000009899028645  T
+ ------------     Starting iteration     --------------
+System -    Date: 31 05 18        Time: 16h 13m 13s 
+ ------------------------------------------------------
+ Total it, Solver it =            2           0  F
+ Chemical potential  =       0.7480522233456188  T  T
+ Number of electrons =      32.0000000000000000  T
+ Sigdiff             =       0.0000009899028645  T
+ ------------     Starting iteration     --------------
+System -    Date: 31 05 18        Time: 16h 13m 13s 
+ ------------------------------------------------------
+ Total it, Solver it =            3           1  T
+ Chemical potential  =       0.7480522233456188  T  T
+ Number of electrons =      32.0000000000000000  T
+ Sigdiff             =       0.0000005344373770  T
+ ------------     Starting iteration     --------------
+System -    Date: 31 05 18        Time: 16h 13m 13s 
+ ------------------------------------------------------
+ Total it, Solver it =            4           1  T
+ Chemical potential  =       0.7480522233456188  T  T
+ Number of electrons =      32.0000000000000000  T
+ Sigdiff             =       0.0000005344373770  T
+ Spin moment (mu_B)  =       0.0000000000003095
+ Energy correction   =       0.3136247219262316
+ ------------     End of the DMFT cycle  --------------
+System -    Date: 31 05 18        Time: 16h 13m 14s 
+ ------------------------------------------------------

@@ -1,27 +1,300 @@
- History
-    Start runs aprun -n 90 ./rspt 1.00e-12 500 on beskow-login4.pdc.kth.se, Wed May 30 11:51:53 2018
+ history
   Iter   <f**2>   (<fe**2>)         Moment                          E
-e   22 3.85E-13 ( 2.98E-11)     2.08334454       -2,541.085 258 780 0
-@      79.6100440 -2541.08525877998
+e    0 1.84E-02 ( 7.90E-01)     2.25000000       -2,540.788 981 131 5
+@      79.6100440 -2540.78898113157
                    EF    Q(max)      MixR  spin mix       SCALE
-         0.715 120 44     0.000     0.050     0.100   5.4200000
+         0.905 549 02     0.000     0.050     0.100   5.4200000
                dvr            R(dvi)            I(dvi)
-         0.0005932        -0.0000002         0.0000000
+         0.7898337        -0.3089682         0.0000000
    user time:  0 hr  0 min  0 sec
  system time:  0 hr  0 min  0 sec
-    end runs, Wed May 30 11:54:42 2018
-
-    Start runs aprun -n 90 ./rspt 1.00e-12 500 on beskow-login4.pdc.kth.se, Wed May 30 11:56:51 2018
-1527674211
-    Start runs aprun -n 90 ./rspt 1.00e-12 500 on beskow-login4.pdc.kth.se, Wed May 30 14:30:29 2018
   Iter   <f**2>   (<fe**2>)         Moment                          E
-e   40 7.27E-13 ( 5.51E-11)     2.08084543       -2,541.336 034 079 2
-@      79.6100440 -2541.33603407924
+e    1 1.41E-02 ( 7.27E-01)     2.26240537       -2,540.888 848 674 9
+@      79.6100440 -2540.88884867489
                    EF    Q(max)      MixR  spin mix       SCALE
-         0.718 805 99     0.000     0.050     0.100   5.4200000
+         0.870 214 71     0.000     0.050     0.100   5.4200000
                dvr            R(dvi)            I(dvi)
-         0.0005932        -0.0000015         0.0000000
-   user time:  0 hr  0 min  7 sec
- system time:  0 hr  0 min  1 sec
-    end runs, Wed May 30 14:39:51 2018
-
+         0.6430988        -0.2684083         0.0000000
+   user time:  0 hr  0 min  0 sec
+ system time:  0 hr  0 min  0 sec
+  Iter   <f**2>   (<fe**2>)         Moment                          E
+e    2 4.92E-03 ( 4.44E-01)     2.34259259       -2,541.072 945 630 7
+@      79.6100440 -2541.07294563073
+                   EF    Q(max)      MixR  spin mix       SCALE
+         0.695 026 01     0.000     0.050     0.100   5.4200000
+               dvr            R(dvi)            I(dvi)
+         0.1403305        -0.0560202         0.0000000
+   user time:  0 hr  0 min  0 sec
+ system time:  0 hr  0 min  0 sec
+  Iter   <f**2>   (<fe**2>)         Moment                          E
+e    3 4.27E-03 ( 4.07E-01)     2.28703703       -2,541.081 793 627 1
+@      79.6100440 -2541.08179362710
+                   EF    Q(max)      MixR  spin mix       SCALE
+         0.710 005 77     0.000     0.050     0.100   5.4200000
+               dvr            R(dvi)            I(dvi)
+         0.0672338        -0.0694025         0.0000000
+   user time:  0 hr  0 min  0 sec
+ system time:  0 hr  0 min  0 sec
+  Iter   <f**2>   (<fe**2>)         Moment                          E
+e    4 2.75E-03 ( 2.56E-01)     2.28703703       -2,541.081 022 182 8
+@      79.6100440 -2541.08102218283
+                   EF    Q(max)      MixR  spin mix       SCALE
+         0.705 837 88     0.000     0.050     0.100   5.4200000
+               dvr            R(dvi)            I(dvi)
+         0.0808601        -0.0425066         0.0000000
+   user time:  0 hr  0 min  0 sec
+ system time:  0 hr  0 min  0 sec
+  Iter   <f**2>   (<fe**2>)         Moment                          E
+e    5 3.43E-05 ( 3.15E-03)     2.10302257       -2,541.085 174 892 5
+@      79.6100440 -2541.08517489249
+                   EF    Q(max)      MixR  spin mix       SCALE
+         0.711 271 12     0.000     0.050     0.100   5.4200000
+               dvr            R(dvi)            I(dvi)
+         0.0095946         0.0129721         0.0000000
+   user time:  0 hr  0 min  0 sec
+ system time:  0 hr  0 min  0 sec
+  Iter   <f**2>   (<fe**2>)         Moment                          E
+e    6 2.90E-05 ( 2.66E-03)     2.09690805       -2,541.085 199 875 6
+@      79.6100440 -2541.08519987563
+                   EF    Q(max)      MixR  spin mix       SCALE
+         0.711 824 96     0.000     0.050     0.100   5.4200000
+               dvr            R(dvi)            I(dvi)
+         0.0075162         0.0122350         0.0000000
+   user time:  0 hr  0 min  0 sec
+ system time:  0 hr  0 min  0 sec
+  Iter   <f**2>   (<fe**2>)         Moment                          E
+e    7 9.08E-06 ( 8.33E-04)     2.08760522       -2,541.085 277 181 1
+@      79.6100440 -2541.08527718113
+                   EF    Q(max)      MixR  spin mix       SCALE
+         0.712 664 08     0.000     0.050     0.100   5.4200000
+               dvr            R(dvi)            I(dvi)
+         0.0044480         0.0075822         0.0000000
+   user time:  0 hr  0 min  0 sec
+ system time:  0 hr  0 min  0 sec
+  Iter   <f**2>   (<fe**2>)         Moment                          E
+e    8 9.76E-07 ( 9.08E-05)     2.08333333       -2,541.085 265 296 4
+@      79.6100440 -2541.08526529644
+                   EF    Q(max)      MixR  spin mix       SCALE
+         0.713 839 98     0.000     0.050     0.100   5.4200000
+               dvr            R(dvi)            I(dvi)
+         0.0012957         0.0018591         0.0000000
+   user time:  0 hr  0 min  0 sec
+ system time:  0 hr  0 min  0 sec
+  Iter   <f**2>   (<fe**2>)         Moment                          E
+e    9 7.81E-07 ( 7.20E-05)     2.08333333       -2,541.085 268 636 1
+@      79.6100440 -2541.08526863610
+                   EF    Q(max)      MixR  spin mix       SCALE
+         0.713 916 21     0.000     0.050     0.100   5.4200000
+               dvr            R(dvi)            I(dvi)
+         0.0013202         0.0021075         0.0000000
+   user time:  0 hr  0 min  0 sec
+ system time:  0 hr  0 min  0 sec
+  Iter   <f**2>   (<fe**2>)         Moment                          E
+e   10 4.49E-07 ( 4.11E-05)     2.08333333       -2,541.085 267 175 3
+@      79.6100440 -2541.08526717528
+                   EF    Q(max)      MixR  spin mix       SCALE
+         0.714 197 34     0.000     0.050     0.100   5.4200000
+               dvr            R(dvi)            I(dvi)
+         0.0010846         0.0017937         0.0000000
+   user time:  0 hr  0 min  0 sec
+ system time:  0 hr  0 min  0 sec
+  Iter   <f**2>   (<fe**2>)         Moment                          E
+e   11 3.76E-07 ( 3.44E-05)     2.08333333       -2,541.085 266 575 2
+@      79.6100440 -2541.08526657520
+                   EF    Q(max)      MixR  spin mix       SCALE
+         0.714 272 16     0.000     0.050     0.100   5.4200000
+               dvr            R(dvi)            I(dvi)
+         0.0010255         0.0016894         0.0000000
+   user time:  0 hr  0 min  0 sec
+ system time:  0 hr  0 min  0 sec
+  Iter   <f**2>   (<fe**2>)         Moment                          E
+e   12 2.97E-08 ( 2.70E-06)     2.08333333       -2,541.085 260 037 2
+@      79.6100440 -2541.08526003723
+                   EF    Q(max)      MixR  spin mix       SCALE
+         0.715 011 84     0.000     0.050     0.100   5.4200000
+               dvr            R(dvi)            I(dvi)
+         0.0005932         0.0006229         0.0000000
+   user time:  0 hr  0 min  0 sec
+ system time:  0 hr  0 min  0 sec
+  Iter   <f**2>   (<fe**2>)         Moment                          E
+e   13 2.48E-08 ( 2.26E-06)     2.08333333       -2,541.085 259 944 4
+@      79.6100440 -2541.08525994445
+                   EF    Q(max)      MixR  spin mix       SCALE
+         0.715 023 25     0.000     0.050     0.100   5.4200000
+               dvr            R(dvi)            I(dvi)
+         0.0005932         0.0005806         0.0000000
+   user time:  0 hr  0 min  0 sec
+ system time:  0 hr  0 min  0 sec
+  Iter   <f**2>   (<fe**2>)         Moment                          E
+e   14 3.50E-09 ( 3.29E-07)     2.08333333       -2,541.085 258 879 0
+@      79.6100440 -2541.08525887905
+                   EF    Q(max)      MixR  spin mix       SCALE
+         0.715 137 48     0.000     0.050     0.100   5.4200000
+               dvr            R(dvi)            I(dvi)
+         0.0005932         0.0001695         0.0000000
+   user time:  0 hr  0 min  0 sec
+ system time:  0 hr  0 min  0 sec
+  Iter   <f**2>   (<fe**2>)         Moment                          E
+e   15 2.96E-09 ( 2.78E-07)     2.08333333       -2,541.085 258 856 4
+@      79.6100440 -2541.08525885646
+                   EF    Q(max)      MixR  spin mix       SCALE
+         0.715 134 77     0.000     0.050     0.100   5.4200000
+               dvr            R(dvi)            I(dvi)
+         0.0005932         0.0001564         0.0000000
+   user time:  0 hr  0 min  0 sec
+ system time:  0 hr  0 min  0 sec
+  Iter   <f**2>   (<fe**2>)         Moment                          E
+e   16 2.61E-10 ( 2.27E-08)     2.08333333       -2,541.085 258 632 6
+@      79.6100440 -2541.08525863266
+                   EF    Q(max)      MixR  spin mix       SCALE
+         0.715 109 97     0.000     0.050     0.100   5.4200000
+               dvr            R(dvi)            I(dvi)
+         0.0005932         0.0000220         0.0000000
+   user time:  0 hr  0 min  0 sec
+ system time:  0 hr  0 min  0 sec
+  Iter   <f**2>   (<fe**2>)         Moment                          E
+e   17 2.20E-10 ( 1.94E-08)     2.08333333       -2,541.085 258 646 8
+@      79.6100440 -2541.08525864687
+                   EF    Q(max)      MixR  spin mix       SCALE
+         0.715 111 67     0.000     0.050     0.100   5.4200000
+               dvr            R(dvi)            I(dvi)
+         0.0005932         0.0000194         0.0000000
+   user time:  0 hr  0 min  0 sec
+ system time:  0 hr  0 min  0 sec
+  Iter   <f**2>   (<fe**2>)         Moment                          E
+e   18 2.77E-11 ( 1.73E-09)     2.08333333       -2,541.085 258 786 0
+@      79.6100440 -2541.08525878602
+                   EF    Q(max)      MixR  spin mix       SCALE
+         0.715 126 18     0.000     0.050     0.100   5.4200000
+               dvr            R(dvi)            I(dvi)
+         0.0005932        -0.0000026         0.0000000
+   user time:  0 hr  0 min  0 sec
+ system time:  0 hr  0 min  0 sec
+  Iter   <f**2>   (<fe**2>)         Moment                          E
+e   19 2.11E-11 ( 1.36E-09)     2.08333333       -2,541.085 258 794 2
+@      79.6100440 -2541.08525879426
+                   EF    Q(max)      MixR  spin mix       SCALE
+         0.715 125 18     0.000     0.050     0.100   5.4200000
+               dvr            R(dvi)            I(dvi)
+         0.0005932        -0.0000022         0.0000000
+   user time:  0 hr  0 min  0 sec
+ system time:  0 hr  0 min  0 sec
+  Iter   <f**2>   (<fe**2>)         Moment                          E
+e   20 2.25E-12 ( 1.84E-10)     2.08333333       -2,541.085 258 841 8
+@      79.6100440 -2541.08525884184
+                   EF    Q(max)      MixR  spin mix       SCALE
+         0.715 119 15     0.000     0.050     0.100   5.4200000
+               dvr            R(dvi)            I(dvi)
+         0.0005932         0.0000008         0.0000000
+   user time:  0 hr  0 min  0 sec
+ system time:  0 hr  0 min  0 sec
+  Iter   <f**2>   (<fe**2>)         Moment                          E
+e   21 1.89E-12 ( 1.58E-10)     2.08333333       -2,541.085 258 841 5
+@      79.6100440 -2541.08525884155
+                   EF    Q(max)      MixR  spin mix       SCALE
+         0.715 119 30     0.000     0.050     0.100   5.4200000
+               dvr            R(dvi)            I(dvi)
+         0.0005932         0.0000006         0.0000000
+   user time:  0 hr  0 min  0 sec
+ system time:  0 hr  0 min  0 sec
+  Iter   <f**2>   (<fe**2>)         Moment                          E
+e   22 4.52E-13 ( 2.88E-11)     2.08333333       -2,541.085 258 839 2
+@      79.6100440 -2541.08525883920
+                   EF    Q(max)      MixR  spin mix       SCALE
+         0.715 120 29     0.000     0.050     0.100   5.4200000
+               dvr            R(dvi)            I(dvi)
+         0.0005932        -0.0000004         0.0000000
+   user time:  0 hr  0 min  0 sec
+ system time:  0 hr  0 min  0 sec
+   user time:  0 hr  0 min  1 sec
+ system time:  0 hr  0 min  0 sec
+  Iter   <f**2>   (<fe**2>)         Moment                          E
+e   23 8.01E-06 ( 6.91E-04)     2.08224404       -2,541.336 788 078 4
+@      79.6100440 -2541.33678807844
+                   EF    Q(max)      MixR  spin mix       SCALE
+         0.715 120 79     0.000     0.050     0.100   5.4200000
+               dvr            R(dvi)            I(dvi)
+         0.0069255         0.0089174         0.0000000
+   user time:  0 hr  1 min 34 sec
+ system time:  0 hr  0 min 27 sec
+  Iter   <f**2>   (<fe**2>)         Moment                          E
+e   24 8.00E-06 ( 6.91E-04)     2.08224188       -2,541.336 787 775 8
+@      79.6100440 -2541.33678777587
+                   EF    Q(max)      MixR  spin mix       SCALE
+         0.715 120 85     0.000     0.050     0.100   5.4200000
+               dvr            R(dvi)            I(dvi)
+         0.0069255         0.0089174         0.0000000
+   user time:  0 hr  0 min 16 sec
+ system time:  0 hr  0 min  4 sec
+  Iter   <f**2>   (<fe**2>)         Moment                          E
+e   25 5.16E-06 ( 4.86E-04)     2.08169092       -2,541.336 299 669 6
+@      79.6100440 -2541.33629966959
+                   EF    Q(max)      MixR  spin mix       SCALE
+         0.716 988 82     0.000     0.050     0.100   5.4200000
+               dvr            R(dvi)            I(dvi)
+         0.0023316         0.0066826         0.0000000
+   user time:  0 hr  1 min 37 sec
+ system time:  0 hr  0 min 26 sec
+  Iter   <f**2>   (<fe**2>)         Moment                          E
+e   26 2.30E-06 ( 1.68E-04)     2.08054129       -2,541.335 408 974 1
+@      79.6100440 -2541.33540897417
+                   EF    Q(max)      MixR  spin mix       SCALE
+         0.720 583 26     0.000     0.050     0.100   5.4200000
+               dvr            R(dvi)            I(dvi)
+         0.0060371         0.0019937         0.0000000
+   user time:  0 hr  1 min 51 sec
+ system time:  0 hr  0 min 26 sec
+  Iter   <f**2>   (<fe**2>)         Moment                          E
+e   27 2.15E-06 ( 1.28E-04)     2.08027389       -2,541.335 244 028 6
+@      79.6100440 -2541.33524402865
+                   EF    Q(max)      MixR  spin mix       SCALE
+         0.721 219 27     0.000     0.050     0.100   5.4200000
+               dvr            R(dvi)            I(dvi)
+         0.0073296         0.0009504         0.0000000
+   user time:  0 hr  1 min  9 sec
+ system time:  0 hr  0 min 19 sec
+  Iter   <f**2>   (<fe**2>)         Moment                          E
+e   28 1.81E-06 ( 1.10E-04)     2.08030883       -2,541.335 301 174 9
+@      79.6100440 -2541.33530117490
+                   EF    Q(max)      MixR  spin mix       SCALE
+         0.721 025 60     0.000     0.050     0.100   5.4200000
+               dvr            R(dvi)            I(dvi)
+         0.0066077         0.0009319         0.0000000
+   user time:  0 hr  0 min 50 sec
+ system time:  0 hr  0 min 11 sec
+  Iter   <f**2>   (<fe**2>)         Moment                          E
+e   29 9.09E-08 ( 6.76E-06)     2.08018391       -2,541.335 786 712 1
+@      79.6100440 -2541.33578671212
+                   EF    Q(max)      MixR  spin mix       SCALE
+         0.719 715 45     0.000     0.050     0.100   5.4200000
+               dvr            R(dvi)            I(dvi)
+         0.0007472        -0.0003923         0.0000000
+   user time:  0 hr  1 min  8 sec
+ system time:  0 hr  0 min 19 sec
+  Iter   <f**2>   (<fe**2>)         Moment                          E
+e   30 7.34E-08 ( 5.64E-06)     2.08024443       -2,541.335 820 576 9
+@      79.6100440 -2541.33582057691
+                   EF    Q(max)      MixR  spin mix       SCALE
+         0.719 602 99     0.000     0.050     0.100   5.4200000
+               dvr            R(dvi)            I(dvi)
+         0.0005932        -0.0004139         0.0000000
+   user time:  0 hr  0 min 43 sec
+ system time:  0 hr  0 min 11 sec
+  Iter   <f**2>   (<fe**2>)         Moment                          E
+e   31 6.00E-08 ( 4.68E-06)     2.08029241       -2,541.335 851 762 2
+@      79.6100440 -2541.33585176220
+                   EF    Q(max)      MixR  spin mix       SCALE
+         0.719 509 12     0.000     0.050     0.100   5.4200000
+               dvr            R(dvi)            I(dvi)
+         0.0005932        -0.0003645         0.0000000
+   user time:  0 hr  0 min 49 sec
+ system time:  0 hr  0 min 11 sec
+  Iter   <f**2>   (<fe**2>)         Moment                          E
+e   32 1.45E-08 ( 7.62E-07)     2.08065610       -2,541.336 045 494 9
+@      79.6100440 -2541.33604549496
+                   EF    Q(max)      MixR  spin mix       SCALE
+         0.718 891 02     0.000     0.050     0.100   5.4200000
+               dvr            R(dvi)            I(dvi)
+         0.0005932        -0.0000546         0.0000000
+   user time:  0 hr  1 min  9 sec
+ system time:  0 hr  0 min 19 sec

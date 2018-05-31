@@ -2,7 +2,7 @@
 !1024  60  60  10
 
 inputoutput
-T T T
+T T
 
 convergency
 1d-6 1d-5 999 999
@@ -15,9 +15,6 @@ projection
 
 verbose
 Solver Dc Projection Interface
-
-debug
-Renorm_corr 
 
 !spectrum
 !Dos Pdos
