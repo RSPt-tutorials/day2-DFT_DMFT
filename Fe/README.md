@@ -43,6 +43,40 @@ cluster
 Run csc DFT+SPTF until convergence.  
 For an explaination of the keywords in the `green.inp`-file, check the `documentation/manual/` folder in the RSPt repository.
 
+Interesting generated files:
+- `out` - contains also DMFT information. Everything inbetween two `BRIANNA` statements is DMFT related. and roughly has this structure:
+   1. Interface information of DFT and DMFT with the title: 
+```
++---------------------------- BRIANNA --------------------------------+
+
+ ***********************************************
+      Initialization of the DMFT code
+ ***********************************************
+```
+  2. Many variables are set by (conservative) defaults and input information, listed below this banner:
+```
+ ***********************************************
+     Formated and processed input data
+ ***********************************************
+```
+  3. Cluster information. Each cluster has a ID-tag of the format: type, l, energy-set, site, basis-type. Local hamiltonian and local overlap are printed.
+  4. Read-information about the self-energy.
+  5. DMFT-iteration information
+  6. Green's function summary after all iterations. Spin and orbital moments, occupation, Galitskii-Migdal energy, etc..
+  7. End of DMFT part:
+```
+ ################################################
+       Hurray! The DMFT cycle is converged!
+ ################################################
+
+ green_cycle: The charge self-consistency will generate a new LDA Hamiltonian.
+
+ +---------------------------- END OF BRIANNA -----------------------------+
+```
+
+- `dmft_hist` - contains a summary of DMFT interation information.
+- `sig` - contains the self-energy. Stored in a binary format so can not be opened with a text editor. 
+
 #### 3. PDOS
 Uncomment the spectrum block and change the number of DMFT-solver iterations to 0 and the number of total DMFT-iterations to 1 in the `green.inp`-file. It should now look like:
 ```bash
