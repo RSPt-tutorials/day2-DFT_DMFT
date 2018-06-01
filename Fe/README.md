@@ -41,6 +41,7 @@ cluster
 .false.                   ! # spin_average
 ```
 Run csc DFT+SPTF until convergence.  
+For an explaination of the keywords in the `green.inp`-file, check the [manual](documentation/manual/).
 
 #### 3. PDOS
 Uncomment the spectrum block and change the number of DMFT-solver iterations to 0 and the number of total DMFT-iterations to 1 in the `green.inp`-file. It should now look like:
