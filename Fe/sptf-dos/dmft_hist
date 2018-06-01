@@ -1,14 +1,14 @@
  ------------     Starting iteration     --------------
-System -    Date: 31 05 18        Time: 15h 02m 39s 
+System -    Date: 01 06 18        Time: 10h 37m 18s 
  ------------------------------------------------------
- Total it, Solver it =            1           0  T
- Chemical potential  =       0.7196007440353027  T  T
- Number of electrons =      16.0000000020814959  T
- Sigdiff             =       0.0000157215215383  F
+ Total it, Solver it =            1           0  F
+ Chemical potential  =       0.7195929657444688  T  F
+ Number of electrons =      15.9998938030960378  F
+ Sigdiff             =       0.0000028089719152  T
  ------------     End of the DMFT cycle  --------------
-System -    Date: 31 05 18        Time: 15h 02m 40s 
+System -    Date: 01 06 18        Time: 10h 37m 19s 
  ------------ Start of the Spectrum loop --------------
-System -    Date: 31 05 18        Time: 15h 02m 41s 
+System -    Date: 01 06 18        Time: 10h 37m 20s 
  ------------  End of the Spectrum loop  --------------
-System -    Date: 31 05 18        Time: 15h 02m 42s 
+System -    Date: 01 06 18        Time: 10h 37m 21s 
  ------------------------------------------------------

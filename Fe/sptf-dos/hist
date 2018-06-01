@@ -298,5 +298,14 @@ e   32 1.45E-08 ( 7.62E-07)     2.08065610       -2,541.336 045 494 9
          0.0005932        -0.0000546         0.0000000
    user time:  0 hr  1 min  9 sec
  system time:  0 hr  0 min 19 sec
+  Iter   <f**2>   (<fe**2>)         Moment                          E
+e   33 1.15E-08 ( 6.30E-07)     2.08066260       -2,541.336 054 862 2
+@      79.6100440 -2541.33605486226
+                   EF    Q(max)      MixR  spin mix       SCALE
+         0.718 884 12     0.000     0.050     0.100   5.4200000
+               dvr            R(dvi)            I(dvi)
+         0.0005932        -0.0000537         0.0000000
+   user time:  0 hr  0 min 30 sec
+ system time:  0 hr  0 min  8 sec
    user time:  0 hr  0 min  4 sec
  system time:  0 hr  0 min  0 sec

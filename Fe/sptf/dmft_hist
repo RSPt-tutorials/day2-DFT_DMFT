@@ -1,56 +1,75 @@
  ------------     Starting iteration     --------------
-System -    Date: 31 05 18        Time: 14h 30m 39s 
+System -    Date: 01 06 18        Time: 10h 33m 58s 
  ------------------------------------------------------
- Total it, Solver it =            1           0  F
- Chemical potential  =       0.7195995053270152  T  F
- Number of electrons =      15.9999816663787016  F
- Sigdiff             =       0.0000063894455143  T
+ Total it, Solver it =            1           0  T
+ Chemical potential  =       0.7196007440353027  T  T
+ Number of electrons =      16.0000000020814959  T
+ Sigdiff             =       0.0000157215215383  F
  ------------     Starting iteration     --------------
-System -    Date: 31 05 18        Time: 14h 30m 40s 
+System -    Date: 01 06 18        Time: 10h 33m 59s 
  ------------------------------------------------------
- Total it, Solver it =            2           0  F
- Chemical potential  =       0.7195999178334944  T  F
- Number of electrons =      15.9999852757872283  F
- Sigdiff             =       0.0000063894455143  T
+ Total it, Solver it =            2           0  T
+ Chemical potential  =       0.7196007440353027  T  T
+ Number of electrons =      16.0000000020814959  T
+ Sigdiff             =       0.0000157215215383  F
  ------------     Starting iteration     --------------
-System -    Date: 31 05 18        Time: 14h 30m 40s 
+System -    Date: 01 06 18        Time: 10h 34m 14s 
  ------------------------------------------------------
- Total it, Solver it =            3           0  F
- Chemical potential  =       0.7196016006114688  T  T
- Number of electrons =      16.0000000121635253  T
- Sigdiff             =       0.0000063894455143  T
+ Total it, Solver it =            3           1  T
+ Chemical potential  =       0.7196007440353027  T  F
+ Number of electrons =      16.0000617832211312  F
+ Sigdiff             =       0.0000141660035945  F
  ------------     Starting iteration     --------------
-System -    Date: 31 05 18        Time: 14h 30m 41s 
+System -    Date: 01 06 18        Time: 10h 34m 15s 
  ------------------------------------------------------
- Total it, Solver it =            4           0  F
- Chemical potential  =       0.7196016006114688  T  T
- Number of electrons =      16.0000000121635253  T
- Sigdiff             =       0.0000063894455143  T
+ Total it, Solver it =            4           1  T
+ Chemical potential  =       0.7195993539128273  T  F
+ Number of electrons =      16.0000496295586316  F
+ Sigdiff             =       0.0000141660035945  F
  ------------     Starting iteration     --------------
-System -    Date: 31 05 18        Time: 14h 30m 56s 
+System -    Date: 01 06 18        Time: 10h 34m 16s 
  ------------------------------------------------------
  Total it, Solver it =            5           1  T
- Chemical potential  =       0.7196016006114688  T  F
- Number of electrons =      16.0000075047816459  F
- Sigdiff             =       0.0000157215215383  F
+ Chemical potential  =       0.7195936773387983  T  T
+ Number of electrons =      16.0000001384663300  T
+ Sigdiff             =       0.0000141660035945  F
  ------------     Starting iteration     --------------
-System -    Date: 31 05 18        Time: 14h 30m 56s 
+System -    Date: 01 06 18        Time: 10h 34m 17s 
  ------------------------------------------------------
  Total it, Solver it =            6           1  T
- Chemical potential  =       0.7196014317538818  T  F
- Number of electrons =      16.0000060253576670  F
- Sigdiff             =       0.0000157215215383  F
+ Chemical potential  =       0.7195936773387983  T  T
+ Number of electrons =      16.0000001384663300  T
+ Sigdiff             =       0.0000141660035945  F
  ------------     Starting iteration     --------------
-System -    Date: 31 05 18        Time: 14h 30m 57s 
+System -    Date: 01 06 18        Time: 10h 34m 32s 
  ------------------------------------------------------
- Total it, Solver it =            7           1  T
- Chemical potential  =       0.7196007440353027  T  T
- Number of electrons =      16.0000000020896849  T
- Sigdiff             =       0.0000157215215383  F
+ Total it, Solver it =            7           2  T
+ Chemical potential  =       0.7195936773387983  T  F
+ Number of electrons =      16.0000061927282360  F
+ Sigdiff             =       0.0000028089719152  T
  ------------     Starting iteration     --------------
-System -    Date: 31 05 18        Time: 14h 30m 58s 
+System -    Date: 01 06 18        Time: 10h 34m 33s 
  ------------------------------------------------------
- Total it, Solver it =            8           1  T
- Chemical potential  =       0.7196007440353027  T  T
- Number of electrons =      16.0000000020896849  T
- Sigdiff             =       0.0000157215215383  F
+ Total it, Solver it =            8           2  T
+ Chemical potential  =       0.7195935380024130  T  F
+ Number of electrons =      16.0000049801379554  F
+ Sigdiff             =       0.0000028089719152  T
+ ------------     Starting iteration     --------------
+System -    Date: 01 06 18        Time: 10h 34m 33s 
+ ------------------------------------------------------
+ Total it, Solver it =            9           2  T
+ Chemical potential  =       0.7195929657444688  T  T
+ Number of electrons =      16.0000000013604975  T
+ Sigdiff             =       0.0000028089719152  T
+ ------------     Starting iteration     --------------
+System -    Date: 01 06 18        Time: 10h 34m 34s 
+ ------------------------------------------------------
+ Total it, Solver it =           10           2  T
+ Chemical potential  =       0.7195929657444688  T  T
+ Number of electrons =      16.0000000013604975  T
+ Sigdiff             =       0.0000028089719152  T
+ Spin moment (mu_B)  =       2.0830755385949096
+ Energy correction   =      -0.2509602469103243
+ ------------     End of the DMFT cycle  --------------
+System -    Date: 01 06 18        Time: 10h 34m 36s 
+ ------------------------------------------------------
